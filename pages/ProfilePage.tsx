@@ -30,6 +30,20 @@ const ProfilePage: React.FC = () => {
             <h2 className="!mt-0">Modelo de Negocio Principal: {profile.mainBusinessModel}</h2>
             <p className="whitespace-pre-wrap font-light text-gray-300">{profile.detailedGuide}</p>
           </div>
+          
+          {/* Add link to blog post for the specific profile */}
+          {profile.id === 'gestor-de-proyectos' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Hemos creado una guía completa, paso a paso, para que lances tu negocio de Dropping Services. Es el plan de proyecto definitivo.</p>
+              <Link
+                to="/blog/guia-dropping-services"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
 
           <div className="bg-gray-800 rounded-xl p-6 my-8">
             <h2>Herramientas Recomendadas</h2>

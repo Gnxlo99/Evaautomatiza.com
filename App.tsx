@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Quiz from './components/Quiz';
 import ProfilePage from './pages/ProfilePage';
+import BlogDroppingServices from './pages/BlogDroppingServices';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/generador" element={<Quiz />} />
           <Route path="/perfil/:profileId" element={<ProfilePage />} />
+          <Route path="/blog/guia-dropping-services" element={<BlogDroppingServices />} />
         </Routes>
       </div>
     </HashRouter>
