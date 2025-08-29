@@ -107,14 +107,20 @@ const Quiz: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 transition-all duration-500">
-        <div className="w-full bg-gray-700 rounded-full h-2.5 mb-6">
-          <div className="bg-brand-accent h-2.5 rounded-full" style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}></div>
+        <div className="w-full bg-gray-700 rounded-full h-5 mb-6 relative">
+          <div 
+            className="bg-brand-accent h-5 rounded-full" 
+            style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}
+          ></div>
+          <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">
+            {`${Math.round(progress)}%`}
+          </div>
         </div>
 
         {!showEmailForm ? (
           <div className="animate-fade-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100">{questions[currentQuestionIndex].text}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <button
                   key={index}
