@@ -107,7 +107,6 @@ export const profiles: Profile[] = [
     Luego, tu trabajo humano de alto valor es verificar la información, editar el texto para darle un toque personal y optimizarlo para los motores de búsqueda. La monetización se logra a través de marketing de afiliados (recomendando productos) y publicidad display. Es un juego de volumen y SEO. Con la IA, puedes crear un sitio con cientos de artículos en cuestión de meses, algo que antes tomaba años.`,
     recommendedTools: [
       { name: 'ChatGPT-4o o Claude 3', affiliateUrl: '#' },
-      // FIX: Corrected a typo in the property name from `name:g:` to `name:`.
       { name: 'SurferSEO o Frase.io', affiliateUrl: '#' },
       { name: 'WordPress con un tema rápido', affiliateUrl: '#' },
     ],

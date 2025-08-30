@@ -31,13 +31,129 @@ const ProfilePage: React.FC = () => {
             <p className="whitespace-pre-wrap font-light text-gray-300">{profile.detailedGuide}</p>
           </div>
           
-          {/* Add link to blog post for the specific profile */}
           {profile.id === 'gestor-de-proyectos' && (
             <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
               <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
               <p className="text-indigo-200 mt-2 mb-4">Hemos creado una guía completa, paso a paso, para que lances tu negocio de Dropping Services. Es el plan de proyecto definitivo.</p>
               <Link
                 to="/blog/guia-dropping-services"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'curador-estrategico' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Descubre cómo transformar tu habilidad para filtrar información en un negocio rentable con nuestra guía completa para crear una newsletter de éxito.</p>
+              <Link
+                to="/blog/guia-curador-estrategico"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'arquitecto-digital' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Descubre el plano exacto para construir sitios web que generan ingresos pasivos con nuestra guía completa de SEO Programático.</p>
+              <Link
+                to="/blog/guia-arquitecto-digital"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'conector-de-oportunidades' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Aprende a monetizar tu red de contactos con nuestra guía completa para vender leads de alto valor a empresas B2B.</p>
+              <Link
+                to="/blog/guia-conector-oportunidades"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'mercader-digital' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Aprende a comprar y vender activos digitales con nuestra guía completa sobre el Flipping de Dominios y Sitios Web.</p>
+              <Link
+                to="/blog/guia-mercader-digital"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'creador-de-soluciones' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Aprende a empaquetar tu conocimiento en activos digitales con nuestra guía completa para crear y vender micro-productos.</p>
+              <Link
+                to="/blog/guia-creador-soluciones"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'editor-con-ia' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Descubre el sistema para escalar la creación de contenido con nuestra guía completa para construir Sitios de Nicho con IA.</p>
+              <Link
+                to="/blog/guia-editor-ia"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'operador-de-ecommerce' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Descubre el sistema para construir una marca rentable en marketplaces con nuestra guía completa de Amazon FBA / Mercado Libre.</p>
+              <Link
+                to="/blog/guia-operador-ecommerce"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+          
+          {profile.id === 'consultor-especialista' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Descubre el sistema para posicionarte como una autoridad y atraer clientes que paguen por tu experiencia con nuestra guía de Freelancing de Alto Valor.</p>
+              <Link
+                to="/blog/guia-consultor-especialista"
+                className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
+              >
+                Leer la Guía Definitiva
+              </Link>
+            </div>
+          )}
+
+          {profile.id === 'moderador-de-comunidades' && (
+            <div className="bg-indigo-900/50 border border-indigo-700 rounded-xl p-6 my-8 text-center">
+              <h3 className="text-xl font-bold text-white !mt-0">¿Quieres profundizar?</h3>
+              <p className="text-indigo-200 mt-2 mb-4">Aprende a convertir tu empatía en un negocio estable con nuestra guía completa para gestionar comunidades de pago.</p>
+              <Link
+                to="/blog/guia-moderador-comunidades"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
                 Leer la Guía Definitiva
