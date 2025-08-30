@@ -29,6 +29,11 @@ const HomePage: React.FC = () => {
           >
             [ ROMPER EL BUCLE ]
           </Link>
+          <div className="mt-8">
+            <Link to="/sobre" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+              Sobre esta herramienta
+            </Link>
+          </div>
         </footer>
       </div>
     </div>
