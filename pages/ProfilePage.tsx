@@ -10,7 +10,7 @@ const ProfilePage: React.FC = () => {
   if (!profile) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
-        <h1 className="text-4xl font-bold text-red-500 mb-4">Perfil no encontrado</h1>
+        <h1 className="text-4xl font-bold text-red-500 mb-4 font-display">Perfil no encontrado</h1>
         <p className="text-lg text-gray-300 mb-8">No pudimos encontrar el perfil que estás buscando.</p>
         <Link to="/" className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg">
           Volver al Inicio
@@ -22,7 +22,7 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <article className="prose prose-invert lg:prose-xl max-w-none prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-400 prose-h1:to-purple-500 prose-a:text-brand-accent hover:prose-a:text-indigo-400">
+        <article className="prose prose-invert lg:prose-xl max-w-none prose-h1:font-display prose-h2:font-display prose-h3:font-display prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-400 prose-h1:to-purple-500 prose-a:text-brand-accent hover:prose-a:text-indigo-400">
           <h1>{profile.name}</h1>
           <p className="lead text-xl text-gray-400">{profile.description}</p>
 

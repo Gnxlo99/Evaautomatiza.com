@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import Quiz from './components/Quiz';
 import ProfilePage from './pages/ProfilePage';
-import BlogPage from './src/pages/BlogPage';
+import BlogIndexPage from './pages/BlogIndexPage';
 import BlogDroppingServices from './pages/BlogDroppingServices';
 import BlogCuradorEstrategico from './pages/BlogCuradorEstrategico';
 import BlogArquitectoDigital from './pages/BlogArquitectoDigital';
@@ -24,14 +24,14 @@ import CookiePolicyPage from './pages/CookiePolicyPage';
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="bg-brand-dark text-brand-light min-h-screen font-sans flex flex-col">
+      <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/generador" element={<Quiz />} />
             <Route path="/perfil/:profileId" element={<ProfilePage />} />
-            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog" element={<BlogIndexPage />} />
             <Route path="/blog/guia-dropping-services" element={<BlogDroppingServices />} />
             <Route path="/blog/guia-curador-estrategico" element={<BlogCuradorEstrategico />} />
             <Route path="/blog/guia-arquitecto-digital" element={<BlogArquitectoDigital />} />

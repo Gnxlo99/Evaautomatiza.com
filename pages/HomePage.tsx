@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
       <div className="max-w-2xl w-full">
         <header className="mb-8 animate-fade-in-down">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-4 font-display">
             <span className="block">Basta de buscar.</span>
             <span className="block">Es hora de construir.</span>
           </h1>

@@ -119,7 +119,7 @@ const Quiz: React.FC = () => {
 
         {!showEmailForm ? (
           <div className="animate-fade-in">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100">{questions[currentQuestionIndex].text}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{questions[currentQuestionIndex].text}</h2>
             <div className="flex flex-col gap-4">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <button
@@ -134,8 +134,8 @@ const Quiz: React.FC = () => {
           </div>
         ) : (
           <div className="animate-fade-in text-center">
-            <h2 className="text-3xl font-bold mb-2 text-gray-100">Tu plan de acción está listo.</h2>
-            <h3 className="text-2xl font-bold mb-4 text-brand-accent">¿Dónde lo envío?</h3>
+            <h2 className="text-3xl font-bold mb-2 text-gray-100 font-display">Tu plan de acción está listo.</h2>
+            <h3 className="text-2xl font-bold mb-4 text-brand-accent font-display">¿Dónde lo envío?</h3>
             <p className="text-gray-400 mb-6">
               Te voy a mandar por mail una copia de tu análisis detallado para que la guardes y la tengas siempre a mano. Pero no tenés que esperar: apenas confirmes, vas a poder leer tu hoja de ruta completa ahora mismo en el blog. Además, vas a tener acceso a los análisis de los otros perfiles. Cero spam.
             </p>
