@@ -6,7 +6,10 @@ const BlogMercaderDigital: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <article className="[&_a]:text-brand-accent [&_a:hover]:underline [&_strong]:font-semibold [&_strong]:text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">La Guía Definitiva para Mercaderes Digitales: Cómo Generar Ganancias Rápidas con el Flipping de Activos Digitales</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">
+              <span className="block">La Guía Definitiva para Mercaderes Digitales</span>
+              <span className="block mt-2 text-2xl font-medium text-gray-300 md:text-3xl">Cómo Generar Ganancias Rápidas con el Flipping de Activos Digitales</span>
+            </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 ¿Eres de esas personas que, al mirar un objeto antiguo o una tienda descuidada, no ven lo que es, sino lo que podría llegar a ser con un poco de ingenio? ¿Te emociona la idea de encontrar una ganga, pulirla rápidamente y venderla obteniendo una ganancia sustancial? Si tu instinto te lleva a cazar oportunidades, negociar con astucia y disfrutas de la adrenalina de la compraventa, tienes el alma de un Mercader Digital.
             </p>

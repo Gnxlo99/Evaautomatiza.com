@@ -6,7 +6,10 @@ const BlogConsultorEspecialista: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <article className="[&_a]:text-brand-accent [&_a:hover]:underline [&_strong]:font-semibold [&_strong]:text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">La Guía Definitiva para Consultores Especialistas: Cómo Convertir tu Habilidad Técnica en un Negocio de Freelance de Alto Valor</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">
+              <span className="block">La Guía Definitiva para Consultores Especialistas</span>
+              <span className="block mt-2 text-2xl font-medium text-gray-300 md:text-3xl">Cómo Convertir tu Habilidad Técnica en un Negocio de Freelance de Alto Valor</span>
+            </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 ¿Eres esa persona a la que todos en tu campo acuden cuando se enfrentan a un problema realmente complejo? ¿Disfrutas más de un desafío técnico profundo que de gestionar diez proyectos superficiales a la vez? Si tu mayor activo es tu conocimiento profundo en un área específica y prefieres tener relaciones de trabajo significativas con pocos clientes que estén dispuestos a pagar por una verdadera experiencia, tienes la vocación de un Consultor Especialista.
             </p>

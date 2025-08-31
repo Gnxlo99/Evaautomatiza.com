@@ -6,7 +6,10 @@ const BlogModeradorComunidades: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <article className="[&_a]:text-brand-accent [&_a:hover]:underline [&_strong]:font-semibold [&_strong]:text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">La Guía Definitiva para Moderadores de Comunidades: Cómo Construir un Negocio Estable Gestionando Grupos Pagos</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">
+              <span className="block">La Guía Definitiva para Moderadores de Comunidades</span>
+              <span className="block mt-2 text-2xl font-medium text-gray-300 md:text-3xl">Cómo Construir un Negocio Estable Gestionando Grupos Pagos</span>
+            </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 ¿Eres esa persona que, en un grupo online, interviene de forma natural para calmar los ánimos, dar la bienvenida a los nuevos miembros o iniciar una conversación interesante? ¿Disfrutas creando un ambiente donde todos se sientan cómodos y escuchados, actuando más como un anfitrión atento que como el protagonista de la fiesta? Si tu talento natural es la empatía, la diplomacia y la organización, tienes el corazón de un Moderador de Comunidades.
             </p>

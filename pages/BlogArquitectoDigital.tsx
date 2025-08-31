@@ -6,7 +6,10 @@ const BlogArquitectoDigital: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <article className="[&_a]:text-brand-accent [&_a:hover]:underline [&_strong]:font-semibold [&_strong]:text-white [&_code]:bg-gray-700 [&_code]:text-indigo-300 [&_code]:font-mono [&_code]:rounded-md [&_code]:px-2 [&_code]:py-1 [&_code]:text-base">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">La Guía Definitiva para Arquitectos Digitales: Cómo Construir un Imperio de Ingresos Pasivos con SEO Programático</h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">
+            <span className="block">La Guía Definitiva para Arquitectos Digitales</span>
+            <span className="block mt-2 text-2xl font-medium text-gray-300 md:text-3xl">Cómo Construir un Imperio de Ingresos Pasivos con SEO Programático</span>
+          </h1>
           <p className="text-xl text-gray-400 mb-8 leading-relaxed">
             ¿Eres de esas personas que, en lugar de ver tareas repetitivas, ven la oportunidad de crear un sistema? ¿Disfrutas más diseñando el flujo de trabajo que ejecutando el trabajo en sí? Si tu mente se ilumina con hojas de cálculo, bases de datos y la idea de construir un motor que funcione solo, déjame decirte algo: tienes la mentalidad de un Arquitecto Digital.
           </p>

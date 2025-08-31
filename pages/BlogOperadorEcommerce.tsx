@@ -6,7 +6,10 @@ const BlogOperadorEcommerce: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <article className="[&_a]:text-brand-accent [&_a:hover]:underline [&_strong]:font-semibold [&_strong]:text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">La Guía Definitiva para Operadores de E-commerce: Cómo Construir una Marca Rentable con Amazon FBA o Mercado Libre</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-8 leading-relaxed font-display">
+              <span className="block">La Guía Definitiva para Operadores de E-commerce</span>
+              <span className="block mt-2 text-2xl font-medium text-gray-300 md:text-3xl">Cómo Construir una Marca Rentable con Amazon FBA o Mercado Libre</span>
+            </h1>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 ¿Eres de esas personas que disfrutan más optimizando una cadena de suministro que siendo la cara de una marca? ¿Te apasiona investigar un mercado, encontrar un producto ganador basándote en datos y construir un sistema eficiente para llevarlo del fabricante al cliente? Si tu talento natural es la investigación, la logística y la optimización de procesos, tienes la mentalidad de un Operador de E-commerce.
             </p>
