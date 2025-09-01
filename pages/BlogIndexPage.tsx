@@ -21,7 +21,7 @@ const BlogIndexPage: React.FC = () => {
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 leading-relaxed font-display">
                 El Blog de Eva
             </h1>
             <p className="text-xl text-gray-300">
@@ -34,15 +34,22 @@ const BlogIndexPage: React.FC = () => {
                 <Link 
                     key={profile.id}
                     to={blogLinks[profile.id]} 
-                    className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden"
+                    className="group relative block bg-black rounded-xl shadow-lg overflow-hidden aspect-[4/5]"
                 >
                     {profile.imageUrl && (
-                        <img src={profile.imageUrl} alt={`Imagen para ${profile.name}`} className="w-full h-48 object-cover" />
+                        <img 
+                            src={profile.imageUrl} 
+                            alt={`Imagen para ${profile.name}`} 
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                        />
                     )}
-                    <div className="p-6 flex-grow flex flex-col">
-                        <h2 className="text-2xl font-bold text-indigo-400 mb-2">{profile.name}</h2>
-                        <p className="text-gray-400 font-medium mb-3">{profile.mainBusinessModel}</p>
-                        <p className="text-gray-300 text-sm flex-grow">{profile.description}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
+                    <div className="relative p-6 h-full flex flex-col justify-end">
+                        <h2 className="text-2xl font-bold text-white mb-2 transition-colors duration-300 group-hover:text-indigo-300 font-display">{profile.name}</h2>
+                        <p className="text-indigo-200 font-semibold mb-3">{profile.mainBusinessModel}</p>
+                        <p className="text-gray-300 text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-h-0 group-hover:max-h-full">
+                            {profile.description}
+                        </p>
                     </div>
                 </Link>
             ))}
