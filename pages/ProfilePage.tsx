@@ -28,7 +28,11 @@ const ProfilePage: React.FC = () => {
 
           <div className="bg-gray-800 rounded-xl p-6 my-8">
             <h2 className="!mt-0">Modelo de Negocio Principal: {profile.mainBusinessModel}</h2>
-            <p className="whitespace-pre-wrap font-light text-gray-300">{profile.detailedGuide}</p>
+            {profile.detailedGuide.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-lg text-gray-300 leading-relaxed mb-6 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
           </div>
           
           {profile.id === 'gestor-de-proyectos' && (
