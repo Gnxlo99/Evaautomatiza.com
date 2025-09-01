@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogArquitectoDigital: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'arquitecto-digital');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -31,9 +34,23 @@ const BlogArquitectoDigital: React.FC = () => {
           <p>En esta guía detallada, te mostraré el plano exacto para construir sitios web de nicho con cientos, o incluso miles, de páginas generadas de forma semi-automática. No se trata de escribir sin parar, sino de diseñar un sistema basado en datos que responda a miles de preguntas específicas que tu audiencia ya está buscando. Usarás tu superpoder para la lógica y la optimización para construir activos digitales que trabajen para ti 24/7.</p>
           <p>¿Listo para dejar de construir ladrillo a ladrillo y empezar a diseñar rascacielos? Empecemos.</p>
 
+          {profile?.imageUrl && (
+            <figure className="my-12">
+              <img 
+                src={profile.imageUrl} 
+                alt={`Representación visual de ${profile.mainBusinessModel}`}
+                className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                style={{ aspectRatio: '16/9' }}
+              />
+              <figcaption className="text-center text-sm text-gray-500 mt-4">
+                El SEO Programático construye sistemas que generan miles de páginas optimizadas a partir de una base de datos.
+              </figcaption>
+            </figure>
+          )}
+
           <h2>¿Qué es el SEO Programático y Por Qué Es Perfecto para Ti?</h2>
-          <p>Imagina que eres un director de orquesta. No tocas todos los instrumentos, pero te aseguras de que el violinista, el pianista y el percusionista toquen en perfecta armonía para crear una sinfonía espectacular.</p>
-          <p>El SEO Programático es exactamente eso. Tú creas una plantilla de página optimizada y la conectas a una base de datos estructurada. Al combinar ambas, puedes generar cientos de páginas, cada una dirigida a una búsqueda de nicho muy específica (una <strong>long-tail keyword</strong>). Por ejemplo, en lugar de escribir un artículo genérico sobre "el mejor café", generas páginas para "el mejor café de Colombia para prensa francesa" y "el mejor café de Etiopía para espresso".</p>
+          <p>Imagina que en lugar de construir una casa ladrillo a ladrillo, diseñas un sistema prefabricado. Creas un plano maestro (una plantilla) y un catálogo de componentes (una base de datos). Luego, con solo presionar un botón, puedes ensamblar cientos de casas únicas, cada una perfectamente adaptada a su terreno.</p>
+          <p>Este es el concepto central del SEO Programático. Tú creas una plantilla de página optimizada y la conectas a una base de datos estructurada. Al combinar ambas, puedes generar cientos de páginas, cada una dirigida a una búsqueda de nicho muy específica (una <strong>long-tail keyword</strong>). Por ejemplo, en lugar de escribir un artículo genérico sobre "el mejor café", generas páginas para "el mejor café de Colombia para prensa francesa" y "el mejor café de Etiopía para espresso".</p>
           <h3>¿Por qué es tu modelo de negocio ideal?</h3>
           <ul>
             <li><strong>Enfoque en tus Fortalezas:</strong> Este modelo es 90% sistema y 10% escritura. Tu éxito depende de la lógica, la estructura de datos y la optimización de procesos, no de la prosa poética.</li>

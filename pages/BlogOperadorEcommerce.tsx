@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogOperadorEcommerce: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'operador-de-ecommerce');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -38,6 +41,20 @@ const BlogOperadorEcommerce: React.FC = () => {
             <p>
                 ¿Listo para dejar de ser un consumidor y convertirte en el cerebro detrás de una marca exitosa? Comencemos.
             </p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  Utiliza la logística de gigantes como Amazon o Mercado Libre para construir tu propia marca de productos físicos.
+                </figcaption>
+              </figure>
+            )}
 
             <h2>¿Qué es la Marca Privada en FBA/Full y Por Qué Es Perfecta para Ti?</h2>
             <p>
@@ -104,7 +121,7 @@ const BlogOperadorEcommerce: React.FC = () => {
                 <strong>La Plataforma Principal:</strong> <a href="https://www.alibaba.com" target="_blank" rel="noopener noreferrer"><strong>Alibaba.com</strong></a>. Es el directorio de fabricantes y mayoristas más grande del mundo. Aquí es donde buscarás a tu socio de producción.
             </p>
             <p>
-                <strong>La Checklist de Verificación del Proveedor:</strong>
+                <strong>El Checklist de Verificación del Proveedor:</strong>
             </p>
             <ul>
                 <li><strong>Gold Supplier:</strong> Busca proveedores que tengan la insignia "Gold Supplier" por varios años.</li>

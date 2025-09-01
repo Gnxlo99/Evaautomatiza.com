@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogConectorOportunidades: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'conector-de-oportunidades');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -30,6 +33,20 @@ const BlogConectorOportunidades: React.FC = () => {
           <p>Te presento el modelo de negocio de la <strong>Generación de Leads B2B (Venta de Contactos)</strong>.</p>
           <p>En esta guía detallada, te mostraré el mapa exacto para construir un negocio lucrativo que consiste en una sola cosa: encontrar clientes potenciales (leads) para otras empresas y ganar una comisión por ello. No vendes un producto, no entregas un servicio técnico. <strong>Vendes la oportunidad más valiosa de todas: una puerta abierta a un nuevo cliente.</strong> Usarás tu don de gentes para convertirte en un socio de crecimiento indispensable.</p>
           <p>¿Listo para monetizar tu red de contactos y tu habilidad para crear relaciones? Vamos al grano.</p>
+
+          {profile?.imageUrl && (
+            <figure className="my-12">
+              <img 
+                src={profile.imageUrl} 
+                alt={`Representación visual de ${profile.mainBusinessModel}`}
+                className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                style={{ aspectRatio: '16/9' }}
+              />
+              <figcaption className="text-center text-sm text-gray-500 mt-4">
+                Tu habilidad para conectar personas se convierte en un servicio de alto valor: generar oportunidades de negocio calificadas.
+              </figcaption>
+            </figure>
+          )}
 
           <h2>¿Qué es la Generación de Leads B2B y Por Qué Es Perfecta para Ti?</h2>
           <p>Imagina que eres un cazatalentos de élite para el mundo de los negocios. Las empresas (tus clientes) están desesperadas por encontrar a su próximo "fichaje estrella" (un nuevo cliente que les compre). En lugar de buscarlo ellas mismas, te contratan a ti por tu habilidad única para encontrar a los candidatos perfectos, verificar su interés y presentárselos en bandeja de plata.</p>

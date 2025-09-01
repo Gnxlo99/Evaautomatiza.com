@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogConsultorEspecialista: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'consultor-especialista');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -38,6 +41,20 @@ const BlogConsultorEspecialista: React.FC = () => {
             <p>
                 ¿Listo para dejar de ser un técnico y convertirte en un estratega indispensable? Comencemos.
             </p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  Posiciónate como una autoridad para que clientes de alto valor te busquen por tus soluciones, no por tu precio.
+                </figcaption>
+              </figure>
+            )}
 
             <h2>¿Qué es el Freelancing de Alto Valor y Por Qué Es Perfecto para Ti?</h2>
             <p>

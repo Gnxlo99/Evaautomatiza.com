@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogDroppingServices: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'gestor-de-proyectos');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -34,6 +37,20 @@ const BlogDroppingServices: React.FC = () => {
           <p>Te presento el modelo de negocio de <strong>Dropping Services</strong> (también conocido como arbitraje de servicios).</p>
           <p>En esta guía detallada, te llevaré paso a paso por el camino para construir tu propia agencia de servicios digitales, sin necesidad de ser un experto en el servicio que vendes. Usarás tu superpoder para planificar, comunicar y organizar, convirtiéndote en el puente de confianza entre clientes que necesitan un servicio y freelancers talentosos que pueden ejecutarlo.</p>
           <p>Suena bien, ¿verdad? Pues prepárate, porque estás a punto de descubrir cómo tu perfil de "Project Manager" es el ideal para este modelo de negocio.</p>
+
+          {profile?.imageUrl && (
+            <figure className="my-12">
+              <img 
+                src={profile.imageUrl} 
+                alt={`Representación visual de ${profile.mainBusinessModel}`}
+                className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                style={{ aspectRatio: '16/9' }}
+              />
+              <figcaption className="text-center text-sm text-gray-500 mt-4">
+                El modelo de Dropping Services se centra en la gestión y coordinación, no en la ejecución técnica.
+              </figcaption>
+            </figure>
+          )}
           
           <h2>¿Qué es Exactamente el Dropping Services y Por Qué Es Perfecto para Ti?</h2>
           <p>Imagina que eres un director de orquesta. No tocas todos los instrumentos, pero te aseguras de que el violinista, el pianista y el percusionista toquen en perfecta armonía para crear una sinfonía espectacular.</p>

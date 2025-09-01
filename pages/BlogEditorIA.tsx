@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogEditorIA: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'editor-con-ia');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -38,6 +41,20 @@ const BlogEditorIA: React.FC = () => {
             <p>
                 ¿Listo para dejar de ser un simple blogger y convertirte en el arquitecto de un imperio de contenido? Comencemos.
             </p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  Combina tu estrategia editorial con el poder de la IA para crear contenido de calidad a una escala sin precedentes.
+                </figcaption>
+              </figure>
+            )}
             
             <h2>¿Qué es un Sitio de Nicho con IA y Por Qué Es Perfecto para Ti?</h2>
             <p>

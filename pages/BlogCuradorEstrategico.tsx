@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogCuradorEstrategico: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'curador-estrategico');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -32,6 +35,20 @@ const BlogCuradorEstrategico: React.FC = () => {
           <p>Te presento el modelo de negocio de la <strong>Newsletter de Curación de Contenido</strong>.</p>
           <p>En esta guía detallada, te mostraré paso a paso cómo transformar tu pasión por aprender en un activo digital de gran valor. No se trata de crear contenido desde cero todos los días, sino de usar tu superpoder para seleccionar y resumir lo mejor de lo mejor para una audiencia que confía en tu criterio. Construirás una comunidad leal, te posicionarás como un experto y crearás un negocio con un potencial increíble.</p>
           <p>¿Listo para convertirte en el faro de tu nicho? Vamos a ello.</p>
+
+          {profile?.imageUrl && (
+            <figure className="my-12">
+              <img 
+                src={profile.imageUrl} 
+                alt={`Representación visual de ${profile.mainBusinessModel}`}
+                className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                style={{ aspectRatio: '16/9' }}
+              />
+              <figcaption className="text-center text-sm text-gray-500 mt-4">
+                La curación de contenido convierte el ruido de la información en una señal clara y valiosa para tu audiencia.
+              </figcaption>
+            </figure>
+          )}
 
           <h2>¿Qué es una Newsletter de Curación y Por Qué Es Perfecta para Ti?</h2>
           <p>Imagina que eres el DJ de una fiesta increíble. No compones la música, pero tu habilidad para seleccionar la canción perfecta en el momento exacto es lo que hace que todos bailen y confíen en tu gusto. Nadie cuestiona tu selección, simplemente disfrutan de la experiencia que has creado para ellos.</p>

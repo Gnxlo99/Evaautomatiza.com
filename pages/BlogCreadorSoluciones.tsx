@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogCreadorSoluciones: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'creador-de-soluciones');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -30,6 +33,20 @@ const BlogCreadorSoluciones: React.FC = () => {
             <p>Te presento el modelo de negocio de la <strong>Venta de Micro-Productos Digitales</strong>.</p>
             <p>En esta guía detallada, te mostraré el proceso exacto para tomar esa idea que tienes en la cabeza —una plantilla, una guía, un sistema— y convertirla en un producto digital que la gente compre mientras duermes. No se trata de construir un software complicado, sino de crear soluciones pequeñas y enfocadas que resuelven un problema muy específico. Usarás tu don para la creatividad práctica para construir un negocio con márgenes de ganancia cercanos al 100%.</p>
             <p>¿Listo para dejar de ser solo un solucionador de problemas y convertirte en un vendedor de soluciones? Empecemos.</p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  Empaqueta tu conocimiento en soluciones específicas y véndelas infinitas veces como productos digitales.
+                </figcaption>
+              </figure>
+            )}
 
             <h2>¿Qué son los Micro-Productos Digitales y Por Qué Son Perfectos para Ti?</h2>
             <p>Imagina que eres un chef experto que, en lugar de abrir un restaurante, decide embotellar y vender su salsa secreta. No vendes una cena completa y compleja; vendes un ingrediente concentrado que eleva la calidad de la comida de cientos de personas con un esfuerzo mínimo por su parte. Es una solución específica, fácil de adquirir y que aporta un valor inmenso.</p>

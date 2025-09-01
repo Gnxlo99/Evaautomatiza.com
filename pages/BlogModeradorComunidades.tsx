@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogModeradorComunidades: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'moderador-de-comunidades');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -38,6 +41,20 @@ const BlogModeradorComunidades: React.FC = () => {
             <p>
                 ¿Listo para convertir tu paciencia y tus habilidades de comunicación en un servicio indispensable? Empecemos.
             </p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  Convierte tu empatía y organización en un servicio esencial: crear y mantener espacios digitales seguros y vibrantes.
+                </figcaption>
+              </figure>
+            )}
 
             <h2>¿Qué es la Gestión de Comunidades Pagas y Por Qué Es Perfecta para Ti?</h2>
             <p>

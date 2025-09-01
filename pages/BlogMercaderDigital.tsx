@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profiles } from '../data/profiles';
 
 const BlogMercaderDigital: React.FC = () => {
+  const profile = profiles.find(p => p.id === 'mercader-digital');
+
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
@@ -30,6 +33,20 @@ const BlogMercaderDigital: React.FC = () => {
             <p>Te presento el modelo de negocio del <strong>Flipping de Dominios y Sitios Web</strong>.</p>
             <p>En esta guía detallada, te revelaré las tácticas y secretos para comprar activos digitales infravalorados (dominios expirados o sitios web descuidados), aplicarles mejoras mínimas y estratégicas, y revenderlos por un precio significativamente mayor. No se trata de crear algo desde cero, sino de capitalizar las ineficiencias del mercado. Usarás tu instinto para la negociación y tu alta tolerancia al riesgo para generar ganancias rápidas y transaccionales.</p>
             <p>¿Listo para convertir internet en tu propio mercado de valores? Comencemos.</p>
+
+            {profile?.imageUrl && (
+              <figure className="my-12">
+                <img 
+                  src={profile.imageUrl} 
+                  alt={`Representación visual de ${profile.mainBusinessModel}`}
+                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  style={{ aspectRatio: '16/9' }}
+                />
+                <figcaption className="text-center text-sm text-gray-500 mt-4">
+                  El flipping digital es el arte de comprar activos infravalorados, mejorarlos y venderlos para obtener una ganancia rápida.
+                </figcaption>
+              </figure>
+            )}
 
             <h2>¿Qué es el Flipping y Por Qué Es Perfecto para Ti?</h2>
             <p>Imagina que eres un inversionista inmobiliario de la era digital. En lugar de buscar casas en barrios emergentes, buscas propiedades digitales con potencial. A veces, encuentras un "terreno" perfectamente ubicado pero vacío (un dominio premium expirado). Otras veces, encuentras una "casa" con buenos cimientos pero una fachada horrible (un sitio web con buen tráfico pero mal monetizado). Tu trabajo es adquirir estas propiedades a bajo costo, hacer una "reforma" rápida y venderla a un nuevo propietario que pagará por el valor que has desbloqueado.</p>
