@@ -49,7 +49,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-dropping-services"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -62,7 +62,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-curador-estrategico"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -75,7 +75,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-arquitecto-digital"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -88,7 +88,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-conector-oportunidades"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -101,7 +101,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-mercader-digital"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -114,7 +114,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-creador-soluciones"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -127,7 +127,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-editor-ia"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -140,7 +140,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-operador-ecommerce"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -153,7 +153,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-consultor-especialista"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -166,7 +166,7 @@ const ProfilePage: React.FC = () => {
                 to="/blog/guia-moderador-comunidades"
                 className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-2 px-6 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105"
               >
-                Leer la Guía Definitiva
+                Lee la Guía Definitiva GRATIS AHORA
               </Link>
             </div>
           )}
@@ -184,16 +184,6 @@ const ProfilePage: React.FC = () => {
             </ul>
           </div>
           
-          <div className="text-center bg-gradient-to-r from-brand-accent to-purple-600 rounded-xl p-8 my-8 shadow-2xl">
-            <h2 className="!text-white !mt-0 text-3xl font-bold">{profile.microProductTitle}</h2>
-            <p className="text-indigo-200 mt-2 mb-6">Tu atajo para empezar a construir hoy mismo. Todo lo que necesitas en un solo lugar.</p>
-            <a 
-                href={profile.microProductUrl}
-                className="inline-block bg-white text-brand-accent font-bold text-lg py-3 px-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
-            >
-                [ QUIERO EL ACCESO ]
-            </a>
-          </div>
         </article>
          <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
