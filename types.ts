@@ -13,4 +13,5 @@ export interface Profile {
   recommendedTools: Tool[];
   microProductTitle: string;
   microProductUrl: string;
+  imageUrl?: string;
 }

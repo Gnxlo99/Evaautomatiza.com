@@ -34,11 +34,16 @@ const BlogIndexPage: React.FC = () => {
                 <Link 
                     key={profile.id}
                     to={blogLinks[profile.id]} 
-                    className="block p-6 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1"
+                    className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden"
                 >
-                    <h2 className="text-2xl font-bold text-indigo-400 mb-2">{profile.name}</h2>
-                    <p className="text-gray-400 font-medium mb-3">{profile.mainBusinessModel}</p>
-                    <p className="text-gray-300 text-sm">{profile.description}</p>
+                    {profile.imageUrl && (
+                        <img src={profile.imageUrl} alt={`Imagen para ${profile.name}`} className="w-full h-48 object-cover" />
+                    )}
+                    <div className="p-6 flex-grow flex flex-col">
+                        <h2 className="text-2xl font-bold text-indigo-400 mb-2">{profile.name}</h2>
+                        <p className="text-gray-400 font-medium mb-3">{profile.mainBusinessModel}</p>
+                        <p className="text-gray-300 text-sm flex-grow">{profile.description}</p>
+                    </div>
                 </Link>
             ))}
         </div>
