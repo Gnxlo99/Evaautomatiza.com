@@ -103,7 +103,7 @@ const BlogCuradorEstrategico: React.FC = () => {
           <p><strong>Plataformas de Newsletter:</strong> Hay opciones fantásticas que empiezan gratis.</p>
           <ul>
             <li><strong>Substack:</strong> Ideal si quieres simplicidad y una web integrada. Muy enfocado en la escritura.</li>
-            <li><strong>Beehiiv:</strong> Potente, con muchas herramientas de crecimiento y monetización integradas.</li>
+            <li><strong><a href="https://www.beehiiv.com?via=Gonzalo-Navarro" target="_blank" rel="noopener noreferrer">Beehiiv</a>:</strong> Potente, con muchas herramientas de crecimiento y monetización integradas.</li>
             <li><strong>MailerLite:</strong> Muy flexible y con excelentes herramientas de automatización.</li>
           </ul>
           <p><strong>Tu Criterio de Selección:</strong> Elige la que te parezca más intuitiva. Todas son buenas. Lo importante es empezar. Puedes migrar más adelante si es necesario.</p>
