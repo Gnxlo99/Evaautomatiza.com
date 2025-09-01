@@ -72,7 +72,7 @@ const BlogDroppingServices: React.FC = () => {
           <p><strong>Tu Misión:</strong> Identificar un servicio con alta demanda, un buen margen de beneficio y donde tu gestión pueda aportar un valor real.</p>
           
           <h4><strong>Táctica 1: Investigación de Mercado (Análisis de Viabilidad)</strong></h4>
-          <p><strong>Explora Plataformas de Freelancers:</strong> Sumérgete en sitios como Upwork, Fiverr Pro, Workana o Freelancer.com. No busques freelancers todavía. Investiga qué servicios son los más solicitados. Fíjate en categorías como:</p>
+          <p><strong>Explora Plataformas de Freelancers:</strong> Sumérgete en sitios como Upwork, <a href="https://go.fiverr.com/visit/?bta=1143127&brand=fp" target="_blank" rel="noopener noreferrer">Fiverr Pro</a>, Workana o Freelancer.com. No busques freelancers todavía. Investiga qué servicios son los más solicitados. Fíjate en categorías como:</p>
           <ul>
             <li><strong>Diseño Gráfico:</strong> Diseño de logos, branding para empresas, diseño de publicaciones para redes sociales.</li>
             <li><strong>Redacción y Contenidos:</strong> Copywriting para páginas web, redacción de artículos de blog (SEO), guiones para vídeos.</li>
@@ -96,7 +96,7 @@ const BlogDroppingServices: React.FC = () => {
           <p><strong>Tu Misión:</strong> Encontrar, evaluar y construir una base de datos de freelancers talentosos y de confianza.</p>
 
           <h4><strong>Táctica 1: Proceso de Selección (Vetting)</strong></h4>
-          <p><strong>Busca en las Plataformas Correctas:</strong> Vuelve a Upwork, Fiverr Pro, etc., pero ahora con la mentalidad de un reclutador. Busca freelancers con excelentes valoraciones, portafolios sólidos y comentarios de clientes que destaquen su comunicación y puntualidad.</p>
+          <p><strong>Busca en las Plataformas Correctas:</strong> Vuelve a Upwork, <a href="https://go.fiverr.com/visit/?bta=1143127&brand=fp" target="_blank" rel="noopener noreferrer">Fiverr Pro</a>, etc., pero ahora con la mentalidad de un reclutador. Busca freelancers con excelentes valoraciones, portafolios sólidos y comentarios de clientes que destaquen su comunicación y puntualidad.</p>
           <p><strong>No te fíes solo de las estrellas:</strong> Lee las reseñas detalladas. Un comentario que dice "Entregó a tiempo y la comunicación fue excelente" vale oro para ti.</p>
           <p><strong>La Entrevista (Comunicación Asíncrona):</strong> Antes de contratar a alguien para un proyecto real, envíale un mensaje. Plantéale un escenario hipotético simple. Evalúa la claridad de su respuesta, su profesionalismo y su tiempo de reacción.</p>
           
