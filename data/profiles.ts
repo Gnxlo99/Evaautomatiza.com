@@ -13,7 +13,7 @@ export const profiles: Profile[] = [
     Tu día a día consiste en prospectar clientes, entender sus necesidades, preparar propuestas y coordinar al equipo de freelancers. La clave es construir un sistema robusto y una red de profesionales fiables. Empiezas con márgenes más pequeños, pero a medida que optimizas el proceso y consigues clientes recurrentes, la rentabilidad aumenta significativamente. Este modelo es ideal para quienes aman la gestión y son excelentes comunicadores, permitiéndote escalar un negocio sin necesidad de ser un experto técnico en todas las áreas.`,
     recommendedTools: [
       { name: 'Trello o Asana', affiliateUrl: '#' },
-      { name: 'Upwork o Fiverr', affiliateUrl: '#' },
+      { name: 'Fiverr Pro', affiliateUrl: 'https://go.fiverr.com/visit/?bta=1143127&brand=fp' },
       { name: 'Stripe para pagos', affiliateUrl: '#' },
     ],
   },
@@ -28,7 +28,7 @@ export const profiles: Profile[] = [
     
     El modelo se monetiza a través de suscripciones premium (para contenido exclusivo), patrocinios de marcas que quieren llegar a tu audiencia, o marketing de afiliados de productos que recomiendas. El desafío inicial es construir la lista de suscriptores, lo cual requiere constancia y promoción en redes como Twitter o LinkedIn. Sin embargo, una vez que tienes una audiencia fiel, has construido un activo digital increíblemente valioso y una relación directa con tu comunidad.`,
     recommendedTools: [
-      { name: 'Substack o Beehiiv', affiliateUrl: '#' },
+      { name: 'Beehiiv (para newsletters)', affiliateUrl: 'https://www.beehiiv.com?via=Gonzalo-Navarro' },
       { name: 'Twitter / X', affiliateUrl: '#' },
       { name: 'Canva para gráficos', affiliateUrl: '#' },
     ],
@@ -78,6 +78,7 @@ export const profiles: Profile[] = [
     recommendedTools: [
       { name: 'Flippa o Empire Flippers', affiliateUrl: '#' },
       { name: 'GoDaddy Auctions', affiliateUrl: '#' },
+      { name: 'Fiverr Marketplace (para mejorar activos)', affiliateUrl: 'https://go.fiverr.com/visit/?bta=1143127&brand=fiverrmarketplace' },
       { name: 'Google Analytics', affiliateUrl: '#' },
     ],
   },
@@ -126,6 +127,7 @@ export const profiles: Profile[] = [
     recommendedTools: [
       { name: 'Helium 10 o Jungle Scout', affiliateUrl: '#' },
       { name: 'Alibaba para proveedores', affiliateUrl: '#' },
+      { name: 'Fiverr Marketplace (para logos y fotos)', affiliateUrl: 'https://go.fiverr.com/visit/?bta=1143127&brand=fiverrmarketplace' },
       { name: 'Canva para imágenes de producto', affiliateUrl: '#' },
     ],
   },
