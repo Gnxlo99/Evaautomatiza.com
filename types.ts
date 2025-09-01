@@ -11,7 +11,5 @@ export interface Profile {
   mainBusinessModel: string;
   detailedGuide: string;
   recommendedTools: Tool[];
-  microProductTitle: string;
-  microProductUrl: string;
   imageUrl?: string;
 }
