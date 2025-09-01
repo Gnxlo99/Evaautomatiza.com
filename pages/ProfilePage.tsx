@@ -22,10 +22,16 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <article className="prose prose-invert lg:prose-xl max-w-none prose-h1:font-display prose-h2:font-display prose-h3:font-display prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-400 prose-h1:to-purple-500 prose-a:text-brand-accent hover:prose-a:text-indigo-400">
-          <h1>{profile.name}</h1>
-          <p className="lead text-xl text-gray-400">{profile.description}</p>
+        <header className="text-center mb-12">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-4 font-display">
+            {profile.name}
+          </h1>
+          <p className="text-2xl md:text-3xl text-gray-300 font-medium">
+            {profile.description}
+          </p>
+        </header>
 
+        <article className="prose prose-invert lg:prose-xl max-w-none prose-h2:font-display prose-h3:font-display prose-a:text-brand-accent hover:prose-a:text-indigo-400">
           <div className="bg-gray-800 rounded-xl p-6 my-8">
             <h2 className="!mt-0">Modelo de Negocio Principal: {profile.mainBusinessModel}</h2>
             {profile.detailedGuide.split('\n\n').map((paragraph, index) => (
