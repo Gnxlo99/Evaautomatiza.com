@@ -12,4 +12,5 @@ export interface Profile {
   detailedGuide: string;
   recommendedTools: Tool[];
   imageUrl?: string;
+  headerImageUrl?: string;
 }

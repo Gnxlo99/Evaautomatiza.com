@@ -42,10 +42,10 @@ const BlogOperadorEcommerce: React.FC = () => {
                 ¿Listo para dejar de ser un consumidor y convertirte en el cerebro detrás de una marca exitosa? Comencemos.
             </p>
 
-            {profile?.imageUrl && (
+            {profile?.headerImageUrl && (
               <figure className="my-12">
                 <img 
-                  src={profile.imageUrl} 
+                  src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
                   className="w-full h-auto rounded-xl shadow-2xl object-cover"
                   style={{ aspectRatio: '16/9' }}

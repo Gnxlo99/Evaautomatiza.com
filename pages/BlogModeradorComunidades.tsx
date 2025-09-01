@@ -42,10 +42,10 @@ const BlogModeradorComunidades: React.FC = () => {
                 ¿Listo para convertir tu paciencia y tus habilidades de comunicación en un servicio indispensable? Empecemos.
             </p>
 
-            {profile?.imageUrl && (
+            {profile?.headerImageUrl && (
               <figure className="my-12">
                 <img 
-                  src={profile.imageUrl} 
+                  src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
                   className="w-full h-auto rounded-xl shadow-2xl object-cover"
                   style={{ aspectRatio: '16/9' }}

@@ -36,10 +36,10 @@ const BlogCuradorEstrategico: React.FC = () => {
           <p>En esta guía detallada, te mostraré paso a paso cómo transformar tu pasión por aprender en un activo digital de gran valor. No se trata de crear contenido desde cero todos los días, sino de usar tu superpoder para seleccionar y resumir lo mejor de lo mejor para una audiencia que confía en tu criterio. Construirás una comunidad leal, te posicionarás como un experto y crearás un negocio con un potencial increíble.</p>
           <p>¿Listo para convertirte en el faro de tu nicho? Vamos a ello.</p>
 
-          {profile?.imageUrl && (
+          {profile?.headerImageUrl && (
             <figure className="my-12">
               <img 
-                src={profile.imageUrl} 
+                src={profile.headerImageUrl} 
                 alt={`Representación visual de ${profile.mainBusinessModel}`}
                 className="w-full h-auto rounded-xl shadow-2xl object-cover"
                 style={{ aspectRatio: '16/9' }}

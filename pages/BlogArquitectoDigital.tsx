@@ -30,14 +30,14 @@ const BlogArquitectoDigital: React.FC = () => {
             ¿Eres de esas personas que, en lugar de ver tareas repetitivas, ven la oportunidad de crear un sistema? ¿Disfrutas más diseñando el flujo de trabajo que ejecutando el trabajo en sí? Si tu mente se ilumina con hojas de cálculo, bases de datos y la idea de construir un motor que funcione solo, déjame decirte algo: tienes la mentalidad de un Arquitecto Digital.
           </p>
           <p>Olvídate de crear contenido artesanalmente, una pieza a la vez. Hoy no hablaremos de ser un artista, sino de ser un ingeniero. De construir una máquina digital, eficiente y escalable que genere valor e ingresos de forma predecible.</p>
-          <p>Te presento el modelo de negocio del <strong>Marketing de Afiliados con SEO Programático (pSEO)</strong>.</p>
+          <p>Te presento el modelo de negocio del <strong>SEO Programático (pSEO)</strong>.</p>
           <p>En esta guía detallada, te mostraré el plano exacto para construir sitios web de nicho con cientos, o incluso miles, de páginas generadas de forma semi-automática. No se trata de escribir sin parar, sino de diseñar un sistema basado en datos que responda a miles de preguntas específicas que tu audiencia ya está buscando. Usarás tu superpoder para la lógica y la optimización para construir activos digitales que trabajen para ti 24/7.</p>
           <p>¿Listo para dejar de construir ladrillo a ladrillo y empezar a diseñar rascacielos? Empecemos.</p>
 
-          {profile?.imageUrl && (
+          {profile?.headerImageUrl && (
             <figure className="my-12">
               <img 
-                src={profile.imageUrl} 
+                src={profile.headerImageUrl} 
                 alt={`Representación visual de ${profile.mainBusinessModel}`}
                 className="w-full h-auto rounded-xl shadow-2xl object-cover"
                 style={{ aspectRatio: '16/9' }}

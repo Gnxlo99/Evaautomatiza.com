@@ -34,10 +34,10 @@ const BlogMercaderDigital: React.FC = () => {
             <p>En esta guía detallada, te revelaré las tácticas y secretos para comprar activos digitales infravalorados (dominios expirados o sitios web descuidados), aplicarles mejoras mínimas y estratégicas, y revenderlos por un precio significativamente mayor. No se trata de crear algo desde cero, sino de capitalizar las ineficiencias del mercado. Usarás tu instinto para la negociación y tu alta tolerancia al riesgo para generar ganancias rápidas y transaccionales.</p>
             <p>¿Listo para convertir internet en tu propio mercado de valores? Comencemos.</p>
 
-            {profile?.imageUrl && (
+            {profile?.headerImageUrl && (
               <figure className="my-12">
                 <img 
-                  src={profile.imageUrl} 
+                  src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
                   className="w-full h-auto rounded-xl shadow-2xl object-cover"
                   style={{ aspectRatio: '16/9' }}

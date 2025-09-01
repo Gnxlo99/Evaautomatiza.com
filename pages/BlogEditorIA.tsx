@@ -42,10 +42,10 @@ const BlogEditorIA: React.FC = () => {
                 ¿Listo para dejar de ser un simple blogger y convertirte en el arquitecto de un imperio de contenido? Comencemos.
             </p>
 
-            {profile?.imageUrl && (
+            {profile?.headerImageUrl && (
               <figure className="my-12">
                 <img 
-                  src={profile.imageUrl} 
+                  src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
                   className="w-full h-auto rounded-xl shadow-2xl object-cover"
                   style={{ aspectRatio: '16/9' }}

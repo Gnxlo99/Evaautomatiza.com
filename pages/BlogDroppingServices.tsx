@@ -38,10 +38,10 @@ const BlogDroppingServices: React.FC = () => {
           <p>En esta guía detallada, te llevaré paso a paso por el camino para construir tu propia agencia de servicios digitales, sin necesidad de ser un experto en el servicio que vendes. Usarás tu superpoder para planificar, comunicar y organizar, convirtiéndote en el puente de confianza entre clientes que necesitan un servicio y freelancers talentosos que pueden ejecutarlo.</p>
           <p>Suena bien, ¿verdad? Pues prepárate, porque estás a punto de descubrir cómo tu perfil de "Project Manager" es el ideal para este modelo de negocio.</p>
 
-          {profile?.imageUrl && (
+          {profile?.headerImageUrl && (
             <figure className="my-12">
               <img 
-                src={profile.imageUrl} 
+                src={profile.headerImageUrl} 
                 alt={`Representación visual de ${profile.mainBusinessModel}`}
                 className="w-full h-auto rounded-xl shadow-2xl object-cover"
                 style={{ aspectRatio: '16/9' }}

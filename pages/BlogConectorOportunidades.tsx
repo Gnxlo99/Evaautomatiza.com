@@ -34,10 +34,10 @@ const BlogConectorOportunidades: React.FC = () => {
           <p>En esta guía detallada, te mostraré el mapa exacto para construir un negocio lucrativo que consiste en una sola cosa: encontrar clientes potenciales (leads) para otras empresas y ganar una comisión por ello. No vendes un producto, no entregas un servicio técnico. <strong>Vendes la oportunidad más valiosa de todas: una puerta abierta a un nuevo cliente.</strong> Usarás tu don de gentes para convertirte en un socio de crecimiento indispensable.</p>
           <p>¿Listo para monetizar tu red de contactos y tu habilidad para crear relaciones? Vamos al grano.</p>
 
-          {profile?.imageUrl && (
+          {profile?.headerImageUrl && (
             <figure className="my-12">
               <img 
-                src={profile.imageUrl} 
+                src={profile.headerImageUrl} 
                 alt={`Representación visual de ${profile.mainBusinessModel}`}
                 className="w-full h-auto rounded-xl shadow-2xl object-cover"
                 style={{ aspectRatio: '16/9' }}

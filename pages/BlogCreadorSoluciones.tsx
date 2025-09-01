@@ -34,10 +34,10 @@ const BlogCreadorSoluciones: React.FC = () => {
             <p>En esta guía detallada, te mostraré el proceso exacto para tomar esa idea que tienes en la cabeza —una plantilla, una guía, un sistema— y convertirla en un producto digital que la gente compre mientras duermes. No se trata de construir un software complicado, sino de crear soluciones pequeñas y enfocadas que resuelven un problema muy específico. Usarás tu don para la creatividad práctica para construir un negocio con márgenes de ganancia cercanos al 100%.</p>
             <p>¿Listo para dejar de ser solo un solucionador de problemas y convertirte en un vendedor de soluciones? Empecemos.</p>
 
-            {profile?.imageUrl && (
+            {profile?.headerImageUrl && (
               <figure className="my-12">
                 <img 
-                  src={profile.imageUrl} 
+                  src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
                   className="w-full h-auto rounded-xl shadow-2xl object-cover"
                   style={{ aspectRatio: '16/9' }}
