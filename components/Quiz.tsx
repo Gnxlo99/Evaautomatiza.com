@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { profiles } from '../data/profiles';
@@ -59,6 +58,7 @@ const Quiz: React.FC = () => {
   const [answers, setAnswers] = useState<string[]>([]);
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleAnswer = (answer: string) => {
@@ -92,13 +92,49 @@ const Quiz: React.FC = () => {
     return profiles.find(p => p.id === topProfileId);
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     const result = calculateProfile();
     if (result) {
-      // Here you would typically send the email to a backend
-      console.log(`Email captured: ${email}, Profile: ${result.name}`);
+      const mailerLiteApiKey = process.env.MAILERLITE_API_KEY;
+      const mailerLiteGroupId = '164355959067509824';
+
+      if (email && mailerLiteApiKey) {
+        try {
+          const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${mailerLiteApiKey}`,
+            },
+            body: JSON.stringify({
+              email: email,
+              groups: [mailerLiteGroupId],
+              status: 'active',
+            }),
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error('MailerLite API Error:', errorData);
+          } else {
+            console.log('Successfully subscribed to MailerLite.');
+          }
+        } catch (error) {
+          console.error('Failed to send request to MailerLite:', error);
+        }
+      } else if (email && !mailerLiteApiKey) {
+        console.warn('MAILERLITE_API_KEY is not set. Skipping subscription.');
+        console.log(`Email captured locally: ${email}`);
+      }
+      
       navigate(`/perfil/${result.id}`);
+    } else {
+      // In case profile calculation fails, unlock the form
+      setIsSubmitting(false);
     }
   };
 
@@ -146,13 +182,15 @@ const Quiz: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu.email@ejemplo.com"
                 required
-                className="bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"
+                disabled={isSubmitting}
+                className="bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+                disabled={isSubmitting}
+                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
               >
-                [ ENVIAR Y VER MI PLAN DE ACCIÓN ]
+                {isSubmitting ? 'ENVIANDO...' : '[ ENVIAR Y VER MI PLAN DE ACCIÓN ]'}
               </button>
             </form>
           </div>
