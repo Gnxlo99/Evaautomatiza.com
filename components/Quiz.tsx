@@ -96,47 +96,41 @@ const Quiz: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Mantenemos el cálculo del perfil para saber a dónde redirigir al usuario.
     const result = calculateProfile();
-    if (result) {
-      const mailerLiteApiKey = process.env.MAILERLITE_API_KEY;
-      const mailerLiteGroupId = '164355959067509824';
-
-      if (email && mailerLiteApiKey) {
-        try {
-          const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'Authorization': `Bearer ${mailerLiteApiKey}`,
-            },
-            body: JSON.stringify({
-              email: email,
-              groups: [mailerLiteGroupId],
-              status: 'active',
-            }),
-          });
-
-          if (!response.ok) {
-            const errorData = await response.json();
-            console.error('MailerLite API Error:', errorData);
-          } else {
-            console.log('Successfully subscribed to MailerLite.');
-          }
-        } catch (error) {
-          console.error('Failed to send request to MailerLite:', error);
-        }
-      } else if (email && !mailerLiteApiKey) {
-        console.warn('MAILERLITE_API_KEY is not set. Skipping subscription.');
-        console.log(`Email captured locally: ${email}`);
-      }
-      
-      navigate(`/perfil/${result.id}`);
-    } else {
-      // In case profile calculation fails, unlock the form
-      setIsSubmitting(false);
+    if (!result) {
+        console.error("No se pudo calcular el perfil.");
+        setIsSubmitting(false);
+        return;
     }
-  };
+
+    // --- LÓGICA SIMPLIFICADA PARA EL LANZAMIENTO ---
+    // Usamos un único ID de grupo para todos los nuevos suscriptores.
+    const ID_DEL_GRUPO_GENERICO = '164355959067509824';
+
+    if (email) {
+        try {
+            // Llamamos a la función de Netlify, siempre con el mismo ID de grupo.
+            await fetch('/.netlify/functions/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    groupId: ID_DEL_GRUPO_GENERICO,
+                }),
+            });
+            // Nota: No esperamos la respuesta ni la bloqueamos para que el usuario
+            // sea redirigido rápidamente. La suscripción ocurre en segundo plano.
+            console.log('Solicitud de suscripción enviada para:', email);
+
+        } catch (error) {
+            console.error('Falló la llamada a la función de Netlify:', error);
+        }
+    }
+    
+    // Redirigimos al usuario a su página de perfil correcta inmediatamente.
+    navigate(`/perfil/${result.id}`);
+};
 
   const progress = ((currentQuestionIndex + (showEmailForm ? 1 : 0)) / (questions.length + 1)) * 100;
 
