@@ -141,7 +141,7 @@ const BlogOperadorEcommerce: React.FC = () => {
                 <strong>Branding Sencillo:</strong>
             </p>
             <ul>
-                <li><strong>Nombre y Logo:</strong> Elige un nombre de marca corto y memorable. Usa un servicio como Fiverr para obtener un logo profesional por menos de $50 USD.</li>
+                <li><strong>Nombre y Logo:</strong> Elige un nombre de marca corto y memorable. Usa un servicio como <a href="https://go.fiverr.com/visit/?bta=1143127&brand=fiverrmarketplace" target="_blank" rel="noopener noreferrer">Fiverr</a> para obtener un logo profesional por menos de $50 USD.</li>
                 <li><strong>Empaque (Packaging):</strong> Un buen empaque es una forma fácil de diferenciarte. Pídele a tu proveedor que use una caja personalizada con tu logo en lugar de una bolsa de plástico genérica.</li>
             </ul>
             <p>
