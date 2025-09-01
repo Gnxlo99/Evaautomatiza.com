@@ -15,8 +15,6 @@ export const profiles: Profile[] = [
       { name: 'Upwork o Fiverr', affiliateUrl: '#' },
       { name: 'Stripe para pagos', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Kit de Inicio: Plantillas y Contratos para tu Agencia de Dropping Services',
-    microProductUrl: '#',
   },
   {
     id: 'curador-estrategico',
@@ -32,8 +30,6 @@ export const profiles: Profile[] = [
       { name: 'Twitter / X', affiliateUrl: '#' },
       { name: 'Canva para gráficos', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Curso Rápido: Lanza tu Newsletter Monetizable en 30 Días',
-    microProductUrl: '#',
   },
   {
     id: 'arquitecto-digital',
@@ -49,8 +45,6 @@ export const profiles: Profile[] = [
       { name: 'Webflow o Framer con CMS', affiliateUrl: '#' },
       { name: 'Ahrefs o SEMrush', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Playbook de pSEO: Tu Guía Paso a Paso para Crear un Sitio Programático Rentable',
-    microProductUrl: '#',
   },
   {
     id: 'conector-de-oportunidades',
@@ -66,8 +60,6 @@ export const profiles: Profile[] = [
       { name: 'Apollo.io o Lemlist', affiliateUrl: '#' },
       { name: 'HubSpot CRM (Gratis)', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Sistema de Prospección B2B: Scripts y Plantillas para Agendar Reuniones de Alto Valor',
-    microProductUrl: '#',
   },
   {
     id: 'mercader-digital',
@@ -83,8 +75,6 @@ export const profiles: Profile[] = [
       { name: 'GoDaddy Auctions', affiliateUrl: '#' },
       { name: 'Google Analytics', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Guía de Due Diligence: Cómo Analizar y Comprar tu Primer Activo Digital Rentable',
-    microProductUrl: '#',
   },
   {
     id: 'creador-de-soluciones',
@@ -100,8 +90,6 @@ export const profiles: Profile[] = [
       { name: 'Notion o Airtable', affiliateUrl: '#' },
       { name: 'Canva para el diseño', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Lanzamiento Express: El Framework para Crear y Vender tu Primer Micro-Producto en 2 Semanas',
-    microProductUrl: '#',
   },
   {
     id: 'editor-con-ia',
@@ -117,8 +105,6 @@ export const profiles: Profile[] = [
       { name: 'SurferSEO o Frase.io', affiliateUrl: '#' },
       { name: 'WordPress con un tema rápido', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Factoría de Contenido IA: El Sistema para Publicar 30 Artículos de Calidad al Mes',
-    microProductUrl: '#',
   },
   {
     id: 'operador-de-ecommerce',
@@ -134,8 +120,6 @@ export const profiles: Profile[] = [
       { name: 'Alibaba para proveedores', affiliateUrl: '#' },
       { name: 'Canva para imágenes de producto', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Investigación de Producto Ganador: El Método para Encontrar tu Primer Producto para Amazon FBA',
-    microProductUrl: '#',
   },
   {
     id: 'consultor-especialista',
@@ -151,8 +135,6 @@ export const profiles: Profile[] = [
       { name: 'Web personal (portfolio)', affiliateUrl: '#' },
       { name: 'Calendly para agendar reuniones', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Propuesta Irresistible: La Plantilla para Cerrar Clientes Freelance de +$5,000',
-    microProductUrl: '#',
   },
   {
     id: 'moderador-de-comunidades',
@@ -168,7 +150,5 @@ export const profiles: Profile[] = [
       { name: 'Canva para anuncios de eventos', affiliateUrl: '#' },
       { name: 'Notion para planificación', affiliateUrl: '#' },
     ],
-    microProductTitle: 'Kit de Engagement para Comunidades: 100 Ideas y Plantillas para Mantener tu Comunidad Activa',
-    microProductUrl: '#',
   }
 ];
