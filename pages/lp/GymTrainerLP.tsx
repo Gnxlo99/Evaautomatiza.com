@@ -5,10 +5,10 @@ const GymTrainerLP: React.FC = () => {
     <div className="bg-black text-white font-sans" style={{'--accent-color': '#F59E0B'} as React.CSSProperties}>
       {/* Hero Section */}
       <header 
-        className="text-center py-20 px-4 relative overflow-hidden"
+        className="text-center py-20 px-4 relative overflow-hidden bg-center bg-cover"
+        style={{ backgroundImage: "url('/gym-hero-background.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
-        <img src="/gym-hero-background.jpg" alt="Fondo de gimnasio" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--accent-color)] mb-4 font-display tracking-wider uppercase">Transforma Tu Cuerpo. Transforma Tu Vida.</h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">Únete a nuestro programa de 12 semanas y logra resultados reales y duraderos. Sin excusas. Solo resultados.</p>
