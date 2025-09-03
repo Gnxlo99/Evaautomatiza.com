@@ -8,7 +8,7 @@ const GymTrainerLP: React.FC = () => {
         className="text-center py-20 px-4 relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
-        <img src="https://placehold.co/1920x1080/000000/F59E0B/png?text=." alt="Fondo de gimnasio" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
+        <img src="/gym-hero-background.jpg" alt="Fondo de gimnasio" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--accent-color)] mb-4 font-display tracking-wider uppercase">Transforma Tu Cuerpo. Transforma Tu Vida.</h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">Únete a nuestro programa de 12 semanas y logra resultados reales y duraderos. Sin excusas. Solo resultados.</p>
@@ -60,7 +60,7 @@ const GymTrainerLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="https://placehold.co/100x100/F59E0B/000000/png?text=MF" alt="Maria Fernanda" className="rounded-full mx-auto mb-4 border-4 border-[var(--accent-color)]" />
+          <img src="/gym-trainer-testimonial.png" alt="Maria Fernanda" className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-4 border-[var(--accent-color)]" />
           <p className="text-lg italic text-gray-300 mb-4">"Pensé que a mis 40 ya era imposible recuperar mi figura. Este programa no solo me ayudó a perder 10 kilos, sino que me devolvió una energía que no sentía desde hace años. ¡Gracias por cambiar mi vida!"</p>
           <p className="font-bold text-white">- María Fernanda, Cliente Satisfecha</p>
         </div>

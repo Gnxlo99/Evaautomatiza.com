@@ -21,7 +21,7 @@ const SaaSLP: React.FC = () => {
             Hojas de cálculo, chats, gestores de tareas, email... El caos de cambiar entre aplicaciones mata la productividad y hace que la información importante se pierda. Tu equipo pierde tiempo buscando, no trabajando.
           </p>
           <div className="bg-gray-100 p-8 rounded-lg shadow-xl">
-             <img src="https://placehold.co/800x450/E5E7EB/34D399/png?text=SyncFlow+UI" alt="Dashboard de SyncFlow" className="rounded-lg shadow-md mx-auto mb-6 border border-gray-200" />
+             <img src="/saas-ui-mockup.png" alt="Dashboard de SyncFlow" className="rounded-lg shadow-md mx-auto mb-6 border border-gray-200" />
             <h3 className="text-2xl font-bold text-green-600 mb-4 font-display">La Solución: Tu Centro de Mando Unificado</h3>
             <p className="text-lg text-gray-700">
              SyncFlow reúne todo lo que necesitas para llevar un proyecto de principio a fin. Desde la idea inicial hasta la entrega final, todo tu equipo trabaja en sincronía, en la misma plataforma.
@@ -68,7 +68,7 @@ const SaaSLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="https://placehold.co/100x100/1F2937/FFFFFF/png?text=LA" alt="Laura Álvarez" className="rounded-full mx-auto mb-4" />
+          <img src="/saas-testimonial.png" alt="Laura Álvarez" className="w-24 h-24 object-cover rounded-full mx-auto mb-4" />
           <p className="text-lg italic text-gray-700 mb-4">"SyncFlow ha revolucionado nuestra forma de trabajar. Hemos reducido nuestras reuniones a la mitad y la productividad ha aumentado un 30%. Es la primera herramienta que todo el equipo ha adoptado sin quejas."</p>
           <p className="font-bold text-gray-900">- Laura Álvarez, Project Manager en Innovatech</p>
         </div>

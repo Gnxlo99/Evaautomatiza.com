@@ -26,6 +26,7 @@ import GymTrainerLP from './pages/lp/GymTrainerLP';
 import SaaSLP from './pages/lp/SaaSLP';
 import RealEstateLP from './pages/lp/RealEstateLP';
 import BusinessCoachLP from './pages/lp/BusinessCoachLP';
+import ManicuristLP from './pages/lp/ManicuristLP';
 
 
 const App: React.FC = () => {
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <Route path="/portfolio/saas" element={<SaaSLP />} />
             <Route path="/portfolio/real-estate" element={<RealEstateLP />} />
             <Route path="/portfolio/business-coach" element={<BusinessCoachLP />} />
+            <Route path="/portfolio/manicurist" element={<ManicuristLP />} />
             <Route path="/sobre" element={<AboutPage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />

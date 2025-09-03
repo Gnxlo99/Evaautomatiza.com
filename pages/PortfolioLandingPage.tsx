@@ -6,7 +6,7 @@ const portfolioItems = [
     id: 1,
     title: 'Landing Page para Consultor de Marketing',
     description: 'Página de alta conversión diseñada para capturar leads cualificados para servicios de consultoría. El enfoque está en establecer autoridad y mostrar resultados claros.',
-    imageUrl: 'https://placehold.co/1280x800/111827/818CF8/png?text=Marketing\nConsultant',
+    imageUrl: '/portfolio-marketing-consultant.png',
     liveUrl: '/portfolio/marketing-consultant',
     tags: ['Servicios', 'Generación de Leads', 'B2B'],
   },
@@ -14,7 +14,7 @@ const portfolioItems = [
     id: 2,
     title: 'Landing Page para Gimnasio / Entrenador',
     description: 'Diseño energético y motivador enfocado en un llamado a la acción claro: la reserva de una clase de prueba. Se prioriza la prueba social con testimonios visuales.',
-    imageUrl: 'https://placehold.co/1280x800/111827/F59E0B/png?text=Gym+%26+Fitness',
+    imageUrl: '/portfolio-gym-trainer.png',
     liveUrl: '/portfolio/gym-trainer',
     tags: ['Negocio Local', 'Conversión', 'Salud y Bienestar'],
   },
@@ -22,7 +22,7 @@ const portfolioItems = [
     id: 3,
     title: 'Landing Page para Software (SaaS)',
     description: 'Página limpia y moderna para una empresa de software, diseñada para comunicar características complejas de forma simple y conseguir registros para una prueba gratuita.',
-    imageUrl: 'https://placehold.co/1280x800/111827/34D399/png?text=SaaS+App',
+    imageUrl: '/portfolio-saas.png',
     liveUrl: '/portfolio/saas',
     tags: ['SaaS', 'Tecnología', 'Prueba Gratuita'],
   },
@@ -30,7 +30,7 @@ const portfolioItems = [
     id: 4,
     title: 'Landing Page para Agente Inmobiliario',
     description: 'Página elegante para promocionar una propiedad específica o captar vendedores. El diseño se centra en imágenes de alta calidad y en generar confianza.',
-    imageUrl: 'https://placehold.co/1280x800/111827/F87171/png?text=Real+Estate',
+    imageUrl: '/portfolio-real-estate.png',
     liveUrl: '/portfolio/real-estate',
     tags: ['Bienes Raíces', 'Propiedades', 'Captación de Clientes'],
   },
@@ -38,9 +38,17 @@ const portfolioItems = [
     id: 5,
     title: 'Landing Page para Coach de Negocios',
     description: 'Diseño premium y aspiracional para vender programas de coaching de alto valor. Se enfoca en la marca personal del coach y en los testimonios de éxito de sus clientes.',
-    imageUrl: 'https://placehold.co/1280x800/111827/A78BFA/png?text=Business+Coach',
+    imageUrl: '/portfolio-business-coach.png',
     liveUrl: '/portfolio/business-coach',
     tags: ['Coaching', 'Marca Personal', 'Alto Valor'],
+  },
+  {
+    id: 6,
+    title: 'Landing Page para Manicurista',
+    description: 'Diseño elegante y femenino para un estudio de uñas, enfocado en mostrar el arte del "nail art" y facilitar la reserva de citas online a través de un CTA claro.',
+    imageUrl: '/portfolio-manicurist.png',
+    liveUrl: '/portfolio/manicurist',
+    tags: ['Estética', 'Reservas Online', 'Negocio Local'],
   },
 ];
 
@@ -61,7 +69,7 @@ const PortfolioLandingPage: React.FC = () => {
           {portfolioItems.map((item) => (
             <div key={item.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col group transform transition-transform duration-300 hover:-translate-y-2">
               <div className="overflow-hidden">
-                <img src={item.imageUrl} alt={item.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={item.imageUrl} alt={item.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 aspect-[16/10]" />
               </div>
               <div className="p-6 flex-grow flex flex-col">
                 <h2 className="text-2xl font-bold text-white mb-3 font-display group-hover:text-indigo-400 transition-colors">{item.title}</h2>

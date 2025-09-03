@@ -8,7 +8,7 @@ const RealEstateLP: React.FC = () => {
         className="text-center py-24 px-4 text-white relative"
       >
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <img src="https://placehold.co/1920x1080/1E3A8A/FFFFFF/png?text=." alt="Propiedad de lujo" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
+        <img src="/real-estate-hero-background.jpg" alt="Propiedad de lujo" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 font-serif font-display">Vende Tu Casa al Mejor Precio, en Tiempo Récord</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8">Combinamos marketing de vanguardia y un servicio personalizado para asegurar la máxima rentabilidad de tu propiedad.</p>
@@ -57,7 +57,7 @@ const RealEstateLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="https://placehold.co/100x100/1E3A8A/FFFFFF/png?text=FP" alt="Familia Pérez" className="rounded-full mx-auto mb-4" />
+          <img src="/real-estate-testimonial.png" alt="Familia Pérez" className="w-24 h-24 object-cover rounded-full mx-auto mb-4" />
           <p className="text-lg italic text-gray-700 mb-4">"Intentamos vender nuestra casa por nuestra cuenta durante 6 meses sin éxito. Los contactamos y, gracias a su estrategia, recibimos tres ofertas en la primera semana. ¡Vendimos por encima del precio que pedíamos! Increíble."</p>
           <p className="font-bold text-gray-900">- Juan Pérez, Vendedor Satisfecho</p>
         </div>

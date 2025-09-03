@@ -54,7 +54,7 @@ const MarketingConsultantLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-800">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="https://placehold.co/100x100/4F46E5/FFFFFF/png?text=JS" alt="Juan Silva" className="rounded-full mx-auto mb-4" />
+          <img src="/marketing-consultant-testimonial.png" alt="Juan Silva" className="w-24 h-24 object-cover rounded-full mx-auto mb-4" />
           <p className="text-lg italic text-gray-300 mb-4">"Antes de trabajar con ellos, nuestro costo por lead era altísimo. En solo 60 días, no solo redujeron el costo en un 40%, sino que la calidad de los leads mejoró drásticamente. ¡Totalmente recomendados!"</p>
           <p className="font-bold text-white">- Juan Silva, CEO de TiendaTech</p>
         </div>
