@@ -20,11 +20,18 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './src/pages/PrivacyPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
+import PortfolioLandingPage from './pages/PortfolioLandingPage';
+import MarketingConsultantLP from './pages/lp/MarketingConsultantLP';
+import GymTrainerLP from './pages/lp/GymTrainerLP';
+import SaaSLP from './pages/lp/SaaSLP';
+import RealEstateLP from './pages/lp/RealEstateLP';
+import BusinessCoachLP from './pages/lp/BusinessCoachLP';
+
 
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
+      <div className="bg-primary text-light min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -42,6 +49,12 @@ const App: React.FC = () => {
             <Route path="/blog/guia-operador-ecommerce" element={<BlogOperadorEcommerce />} />
             <Route path="/blog/guia-consultor-especialista" element={<BlogConsultorEspecialista />} />
             <Route path="/blog/guia-moderador-comunidades" element={<BlogModeradorComunidades />} />
+            <Route path="/portfolio/landing-pages" element={<PortfolioLandingPage />} />
+            <Route path="/portfolio/marketing-consultant" element={<MarketingConsultantLP />} />
+            <Route path="/portfolio/gym-trainer" element={<GymTrainerLP />} />
+            <Route path="/portfolio/saas" element={<SaaSLP />} />
+            <Route path="/portfolio/real-estate" element={<RealEstateLP />} />
+            <Route path="/portfolio/business-coach" element={<BusinessCoachLP />} />
             <Route path="/sobre" element={<AboutPage />} />
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
