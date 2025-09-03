@@ -20,9 +20,11 @@ const ManicuristLP: React.FC = () => {
   return (
     <div className="bg-[#FFFBF5] text-stone-800 font-sans" style={{'--accent-color': '#D97706'} as React.CSSProperties}>
       {/* Hero Section */}
-      <header className="relative text-center py-24 px-4 text-white flex items-center justify-center min-h-[60vh]">
+      <header 
+        className="relative text-center py-24 px-4 text-white flex items-center justify-center min-h-[60vh] bg-center bg-cover"
+        style={{ backgroundImage: "url('/manicurist-hero.jpg')" }}
+      >
         <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
-        <img src="/manicurist-hero.jpg" alt="Manicura profesional con diseño de flores" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10 max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 font-serif font-display" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Arte en Tus Manos</h1>
             <p className="text-xl md:text-2xl mb-8" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>
