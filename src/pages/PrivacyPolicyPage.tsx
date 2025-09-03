@@ -5,7 +5,7 @@ const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <article className="prose prose-invert lg:prose-xl max-w-none prose-h1:font-display prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-accent prose-h1:to-purple-400 prose-h2:font-display prose-a:text-accent hover:prose-a:text-indigo-400 prose-p:text-medium prose-li:text-medium">
+        <article className="prose prose-invert lg:prose-xl max-w-none prose-h1:text-transparent prose-h1:bg-clip-text prose-h1:bg-gradient-to-r prose-h1:from-indigo-400 prose-h1:to-purple-500 prose-a:text-brand-accent hover:prose-a:text-indigo-400">
           <h1>Política de Privacidad</h1>
           <p className="lead">Última actualización: 30 de agosto de 2025</p>
 
@@ -104,7 +104,7 @@ const PrivacyPolicyPage: React.FC = () => {
           </p>
         </article>
         <div className="text-center mt-12 mb-8">
-            <Link to="/" className="text-accent hover:underline font-semibold">
+            <Link to="/" className="text-brand-accent hover:underline">
                 &larr; Volver al Inicio
             </Link>
         </div>

@@ -31,7 +31,7 @@ import BusinessCoachLP from './pages/lp/BusinessCoachLP';
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="bg-primary text-light min-h-screen flex flex-col">
+      <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>
