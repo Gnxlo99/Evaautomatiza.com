@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { profiles } from '../data/profiles';
@@ -19,35 +18,35 @@ const blogLinks: { [key: string]: string } = {
 const BlogIndexPage: React.FC = () => {
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 leading-relaxed font-display">
+      <div className="max-w-5xl mx-auto">
+        <header className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-400 mb-6 font-display">
                 El Blog de Eva
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-medium max-w-3xl mx-auto">
                 Hojas de ruta detalladas para cada perfil de emprendedor digital. Encuentra tu arquetipo y sigue el plan de acción paso a paso.
             </p>
         </header>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {profiles.map((profile) => (
                 <Link 
                     key={profile.id}
                     to={blogLinks[profile.id]} 
-                    className="group relative block bg-black rounded-xl shadow-lg overflow-hidden aspect-[4/5]"
+                    className="group relative block bg-secondary rounded-2xl shadow-lg overflow-hidden aspect-[4/5] border border-slate-700 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-accent"
                 >
                     {profile.imageUrl && (
                         <img 
                             src={profile.imageUrl} 
                             alt={`Imagen para ${profile.name}`} 
-                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                         />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent"></div>
                     <div className="relative p-6 h-full flex flex-col justify-end">
-                        <h2 className="text-2xl font-bold text-white mb-2 transition-colors duration-300 group-hover:text-indigo-300 font-display">{profile.name}</h2>
-                        <p className="text-indigo-200 font-semibold mb-3">{profile.mainBusinessModel}</p>
-                        <p className="text-gray-300 text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-h-0 group-hover:max-h-full">
+                        <h2 className="text-2xl font-bold text-light mb-2 transition-colors duration-300 group-hover:text-accent font-display">{profile.name}</h2>
+                        <p className="text-accent font-semibold mb-3">{profile.mainBusinessModel}</p>
+                        <p className="text-medium text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-h-0 group-hover:max-h-full">
                             {profile.description}
                         </p>
                     </div>
