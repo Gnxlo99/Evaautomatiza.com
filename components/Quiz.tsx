@@ -80,7 +80,6 @@ const Quiz: React.FC = () => {
       const affectedProfiles = question.scores[answer as keyof typeof question.scores];
       if (affectedProfiles) {
         affectedProfiles.forEach(profileId => {
-          // Weight question 3 (Fortaleza) more heavily
           const points = index === 2 ? 3 : 1;
           scores[profileId] = (scores[profileId] || 0) + points;
         });
@@ -96,7 +95,6 @@ const Quiz: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mantenemos el cálculo del perfil para saber a dónde redirigir al usuario.
     const result = calculateProfile();
     if (!result) {
         console.error("No se pudo calcular el perfil.");
@@ -104,13 +102,10 @@ const Quiz: React.FC = () => {
         return;
     }
 
-    // --- LÓGICA SIMPLIFICADA PARA EL LANZAMIENTO ---
-    // Usamos un único ID de grupo para todos los nuevos suscriptores.
     const ID_DEL_GRUPO_GENERICO = '164355959067509824';
 
     if (email) {
         try {
-            // Llamamos a la función de Netlify, siempre con el mismo ID de grupo.
             await fetch('/.netlify/functions/subscribe', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -119,43 +114,38 @@ const Quiz: React.FC = () => {
                     groupId: ID_DEL_GRUPO_GENERICO,
                 }),
             });
-            // Nota: No esperamos la respuesta ni la bloqueamos para que el usuario
-            // sea redirigido rápidamente. La suscripción ocurre en segundo plano.
             console.log('Solicitud de suscripción enviada para:', email);
-
         } catch (error) {
             console.error('Falló la llamada a la función de Netlify:', error);
         }
     }
     
-    // Redirigimos al usuario a su página de perfil correcta inmediatamente.
     navigate(`/perfil/${result.id}`);
-};
+  };
 
   const progress = ((currentQuestionIndex + (showEmailForm ? 1 : 0)) / (questions.length + 1)) * 100;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <div className="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 transition-all duration-500">
-        <div className="w-full bg-gray-700 rounded-full h-5 mb-6 relative">
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-8rem)] p-4">
+      <div className="max-w-2xl w-full bg-secondary rounded-2xl shadow-2xl p-6 md:p-8 transition-all duration-500 border border-slate-700">
+        <div className="w-full bg-slate-700 rounded-full h-4 mb-8">
           <div 
-            className="bg-brand-accent h-5 rounded-full" 
+            className="bg-gradient-to-r from-accent to-purple-500 h-4 rounded-full flex items-center justify-end" 
             style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}
-          ></div>
-          <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">
-            {`${Math.round(progress)}%`}
+          >
+             <span className="text-xs font-bold text-white pr-2">{`${Math.round(progress)}%`}</span>
           </div>
         </div>
 
         {!showEmailForm ? (
           <div className="animate-fade-in">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{questions[currentQuestionIndex].text}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-light font-display">{questions[currentQuestionIndex].text}</h2>
             <div className="flex flex-col gap-4">
               {questions[currentQuestionIndex].options.map((option, index) => (
                 <button
                   key={index}
                   onClick={() => handleAnswer(option)}
-                  className="w-full bg-brand-secondary hover:bg-brand-accent text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-left"
+                  className="w-full bg-slate-700 hover:bg-accent text-light font-semibold py-4 px-5 rounded-lg transition-all duration-300 text-left transform hover:scale-105"
                 >
                   {option}
                 </button>
@@ -164,10 +154,10 @@ const Quiz: React.FC = () => {
           </div>
         ) : (
           <div className="animate-fade-in text-center">
-            <h2 className="text-3xl font-bold mb-2 text-gray-100 font-display">Tu plan de acción está listo.</h2>
-            <h3 className="text-2xl font-bold mb-4 text-brand-accent font-display">¿Dónde lo envío?</h3>
-            <p className="text-gray-400 mb-6">
-              Te voy a mandar por mail una copia de tu análisis detallado para que la guardes y la tengas siempre a mano. Pero no tenés que esperar: apenas confirmes, vas a poder leer tu hoja de ruta completa ahora mismo en el blog. Además, vas a tener acceso a los análisis de los otros perfiles. Cero spam.
+            <h2 className="text-3xl font-bold mb-2 text-light font-display">Tu plan de acción está listo.</h2>
+            <h3 className="text-2xl font-bold mb-4 text-accent font-display">¿Dónde lo envío?</h3>
+            <p className="text-medium mb-6">
+              Recibirás una copia de tu análisis detallado para que la tengas siempre a mano. Cero spam. Podrás ver tu hoja de ruta completa al instante.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
@@ -177,14 +167,14 @@ const Quiz: React.FC = () => {
                 placeholder="tu.email@ejemplo.com"
                 required
                 disabled={isSubmitting}
-                className="bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
+                className="bg-slate-700 border border-slate-600 text-light rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-accent disabled:opacity-50"
               />
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
+                className="w-full bg-accent hover:bg-accent-hover text-white font-bold py-4 px-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 disabled:bg-slate-600 disabled:cursor-not-allowed disabled:scale-100"
               >
-                {isSubmitting ? 'ENVIANDO...' : '[ ENVIAR Y VER MI PLAN DE ACCIÓN ]'}
+                {isSubmitting ? 'ENVIANDO...' : '[ VER MI PLAN DE ACCIÓN ]'}
               </button>
             </form>
           </div>
