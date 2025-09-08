@@ -5,7 +5,7 @@ const GymTrainerLP: React.FC = () => {
     <div className="bg-black text-white font-sans" style={{'--accent-color': '#F59E0B', '--accent-color-hover': '#D97706'} as React.CSSProperties}>
       {/* Hero Section */}
       <header 
-        className="text-center py-24 px-4 relative flex items-center justify-center min-h-screen bg-cover bg-center gym-hero-bg"
+        className="gym-hero-bg bg-cover bg-center text-center py-24 px-4 relative flex items-center justify-center min-h-screen"
       >
         <div className="absolute inset-0 bg-black/70 z-0"></div>
         <div className="relative z-10 animate-fade-in-up">

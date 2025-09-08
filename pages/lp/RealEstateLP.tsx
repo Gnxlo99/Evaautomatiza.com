@@ -5,7 +5,7 @@ const RealEstateLP: React.FC = () => {
     <div className="bg-white text-gray-800 font-sans" style={{'--accent-color': '#1E3A8A', '--accent-color-hover': '#172554'} as React.CSSProperties}>
       {/* Hero Section */}
       <header 
-        className="text-center py-24 px-4 text-white relative flex items-center justify-center min-h-[70vh] bg-cover bg-center real-estate-hero-bg"
+        className="real-estate-hero-bg bg-cover bg-center text-center py-24 px-4 text-white relative flex items-center justify-center min-h-[70vh]"
       >
         <div className="absolute inset-0 bg-black/50 z-0"></div>
         <div className="relative z-10 max-w-4xl mx-auto animate-fade-in-up">

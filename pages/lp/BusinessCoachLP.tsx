@@ -6,7 +6,7 @@ const BusinessCoachLP: React.FC = () => {
       {/* Hero Section */}
       <header className="text-center py-24 px-4 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-transparent z-10"></div>
-        <div className="absolute inset-0 business-coach-hero-gradient from-gray-700/40 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 business-coach-hero-gradient"></div>
         <div className="relative z-20">
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 font-display leading-tight">
                 Escala tu Negocio de 6 a <span className="text-[var(--accent-color)]">7 Cifras</span> Anuales
