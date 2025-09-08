@@ -8,27 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Lexend', 'sans-serif'],
-            },
-            colors: {
-              'brand-accent': '#4F46E5', // Indigo 600
-              'brand-accent-hover': '#4338CA', // Indigo 700
-              'brand-dark': '#111827', // Gray 900
-              'brand-light': '#F3F4F6', // Gray 100
-              'brand-secondary': '#374151', // Gray 700
-            },
-          },
-        },
-      }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
     <style>
+      :root {
+        --brand-accent: #4F46E5;
+        --brand-accent-hover: #4338CA;
+        --brand-dark: #111827;
+        --brand-light: #F3F4F6;
+        --brand-secondary: #374151;
+      }
+
+      .font-display { font-family: 'Lexend', sans-serif; }
+      .font-sans { font-family: 'Inter', sans-serif; }
+      
+      .bg-brand-accent { background-color: var(--brand-accent); }
+      .hover\:bg-brand-accent-hover:hover { background-color: var(--brand-accent-hover); }
+      .bg-brand-dark { background-color: var(--brand-dark); }
+      .bg-brand-light { background-color: var(--brand-light); }
+      .bg-brand-secondary { background-color: var(--brand-secondary); }
+      .text-brand-accent { color: var(--brand-accent); }
+      .text-brand-light { color: var(--brand-light); }
+      .hover\:text-brand-accent:hover { color: var(--brand-accent); }
+      .focus\:ring-brand-accent:focus { --tw-ring-color: var(--brand-accent); }
+
       .gym-hero-bg {
         background-image: url('/gym-hero-background.jpg');
       }
