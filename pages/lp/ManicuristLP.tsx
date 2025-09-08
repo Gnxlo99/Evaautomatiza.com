@@ -22,7 +22,7 @@ const ManicuristLP: React.FC = () => {
       {/* Hero Section */}
       <header className="relative text-center py-24 px-4 text-white flex items-center justify-center min-h-[70vh]">
         <div className="absolute inset-0 bg-black/50 z-0"></div>
-        <img src="/manicurist-hero.jpg" alt="Manicura profesional con diseño de flores" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
+        <div className="absolute inset-0 w-full h-full bg-cover bg-center manicurist-hero-bg z-[-1]"></div>
         <div className="relative z-10 max-w-3xl mx-auto animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 font-serif font-display" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Arte en Tus Manos</h1>
             <p className="text-xl md:text-2xl mb-10" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>
