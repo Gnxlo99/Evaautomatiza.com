@@ -16,6 +16,7 @@ import BlogEditorIA from './pages/BlogEditorIA';
 import BlogOperadorEcommerce from './pages/BlogOperadorEcommerce';
 import BlogConsultorEspecialista from './pages/BlogConsultorEspecialista';
 import BlogModeradorComunidades from './pages/BlogModeradorComunidades';
+import BlogLandingPages from './pages/BlogLandingPages';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './src/pages/PrivacyPolicyPage';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
             <Route path="/blog/guia-operador-ecommerce" element={<BlogOperadorEcommerce />} />
             <Route path="/blog/guia-consultor-especialista" element={<BlogConsultorEspecialista />} />
             <Route path="/blog/guia-moderador-comunidades" element={<BlogModeradorComunidades />} />
+            <Route path="/blog/landing-pages-convierten" element={<BlogLandingPages />} />
             <Route path="/portfolio/landing-pages" element={<PortfolioLandingPage />} />
             <Route path="/portfolio/marketing-consultant" element={<MarketingConsultantLP />} />
             <Route path="/portfolio/gym-trainer" element={<GymTrainerLP />} />
