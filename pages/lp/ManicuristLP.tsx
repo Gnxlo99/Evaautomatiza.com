@@ -9,12 +9,12 @@ const ManicuristLP: React.FC = () => {
   ];
 
   const galleryImages = [
-    '/lp-assets/manicurist-gallery-1.jpg',
-    '/lp-assets/manicurist-gallery-2.jpg',
-    '/lp-assets/manicurist-gallery-3.jpg',
-    '/lp-assets/manicurist-gallery-4.jpg',
-    '/lp-assets/manicurist-gallery-5.jpg',
-    '/lp-assets/manicurist-gallery-6.jpg',
+    '/manicurist-gallery-1.jpg',
+    '/manicurist-gallery-2.jpg',
+    '/manicurist-gallery-3.jpg',
+    '/manicurist-gallery-4.jpg',
+    '/manicurist-gallery-5.jpg',
+    '/manicurist-gallery-6.jpg',
   ];
 
   return (
@@ -22,7 +22,7 @@ const ManicuristLP: React.FC = () => {
       {/* Hero Section */}
       <header className="relative text-center py-24 px-4 text-white flex items-center justify-center min-h-[70vh]">
         <div className="absolute inset-0 bg-black/50 z-0"></div>
-        <img src="/lp-assets/manicurist-hero.jpg" alt="Manicura profesional con diseño de flores" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
+        <img src="/manicurist-hero.jpg" alt="Manicura profesional con diseño de flores" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10 max-w-3xl mx-auto animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 font-serif font-display" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Arte en Tus Manos</h1>
             <p className="text-xl md:text-2xl mb-10" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.5)'}}>
@@ -69,7 +69,7 @@ const ManicuristLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/lp-assets/manicurist-testimonial.png" alt="Carla R." className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
+          <img src="/manicurist-testimonial.png" alt="Carla R." className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
           <blockquote className="text-xl italic text-stone-700 mb-6 relative leading-relaxed">
             <p>"El nivel de detalle y cuidado es de otro mundo. Nunca había tenido unas uñas tan perfectas y duraderas. El ambiente del estudio es un oasis de calma. ¡100% recomendada!"</p>
           </blockquote>
