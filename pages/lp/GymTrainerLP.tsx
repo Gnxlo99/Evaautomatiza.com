@@ -5,10 +5,9 @@ const GymTrainerLP: React.FC = () => {
     <div className="bg-black text-white font-sans" style={{'--accent-color': '#F59E0B', '--accent-color-hover': '#D97706'} as React.CSSProperties}>
       {/* Hero Section */}
       <header 
-        className="text-center py-24 px-4 relative flex items-center justify-center min-h-screen"
+        className="text-center py-24 px-4 relative flex items-center justify-center min-h-screen bg-cover bg-center gym-hero-bg"
       >
         <div className="absolute inset-0 bg-black/70 z-0"></div>
-        <img src="/gym-hero-background.jpg" alt="Fondo de gimnasio con pesas" className="absolute inset-0 w-full h-full object-cover z-[-1]" />
         <div className="relative z-10 animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4 font-display tracking-wider uppercase">
                 TRANSFORMA TU <span className="text-[var(--accent-color)]">CUERPO</span>.
