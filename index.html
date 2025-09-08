@@ -2,48 +2,32 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODE4Q0Y4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQTg1NUY3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1zaXplPSI2MCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlyeT0iTGV4ZW5kIj5FPC90ZXh0Pjwvc3ZnPg==" />
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODE4Q0Y4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQTg1NUY3Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0idXJsKCNnKSIvPjx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1zaXplPSI2MCIgZm9udC13ZWlnaHQ9ImJvbGQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iTGV4ZW5kIj5FPC90ZXh0Pjwvc3ZnPg==" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IA-Navegador de Negocios Digitales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="tailwind.css">
-    <style>
-      :root {
-        --brand-accent: #4F46E5;
-        --brand-accent-hover: #4338CA;
-        --brand-dark: #111827;
-        --brand-light: #F3F4F6;
-        --brand-secondary: #374151;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              'brand-accent': '#4F46E5', // Indigo 600
+              'brand-accent-hover': '#4338CA', // Indigo 700
+              'brand-dark': '#111827', // Gray 900
+              'brand-light': '#F3F4F6', // Gray 100
+              'brand-secondary': '#374151', // Gray 700
+            },
+          },
+        },
       }
-
-      .font-display { font-family: 'Lexend', sans-serif; }
-      .font-sans { font-family: 'Inter', sans-serif; }
-      
-      .bg-brand-accent { background-color: var(--brand-accent); }
-      .hover\:bg-brand-accent-hover:hover { background-color: var(--brand-accent-hover); }
-      .bg-brand-dark { background-color: var(--brand-dark); }
-      .bg-brand-light { background-color: var(--brand-light); }
-      .bg-brand-secondary { background-color: var(--brand-secondary); }
-      .text-brand-accent { color: var(--brand-accent); }
-      .text-brand-light { color: var(--brand-light); }
-      .hover\:text-brand-accent:hover { color: var(--brand-accent); }
-      .focus\:ring-brand-accent:focus { --tw-ring-color: var(--brand-accent); }
-
-      .gym-hero-bg {
-        background-image: url('/gym-hero-background.jpg');
-      }
-      .real-estate-hero-bg {
-        background-image: url('/real-estate-hero-background.jpg');
-      }
-      .business-coach-hero-gradient {
-        background-image: radial-gradient(ellipse at top, var(--tw-gradient-stops));
-      }
-      .manicurist-hero-bg {
-        background-image: url('/manicurist-hero.jpg');
-      }
-    </style>
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-76BBJR3J67"></script>
     <script>
