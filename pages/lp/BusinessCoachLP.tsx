@@ -2,28 +2,36 @@ import React from 'react';
 
 const BusinessCoachLP: React.FC = () => {
   return (
-    <div className="bg-black text-white font-sans" style={{'--accent-color': '#D4AF37'} as React.CSSProperties}>
+    <div className="bg-black text-white font-sans" style={{'--accent-color': '#D4AF37', '--accent-color-hover': '#E5C100'} as React.CSSProperties}>
       {/* Hero Section */}
-      <header className="text-center py-20 px-4 bg-black">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 font-display">Escala Tu Negocio de 6 a 7 Cifras Anuales</h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">Mi programa de coaching <span className="text-[var(--accent-color)] font-semibold">ACCELERATOR</span> te da el mapa, los sistemas y la mentalidad para romper tus barreras de crecimiento.</p>
-        <a href="#cta" className="border-2 border-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-black text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
-          Aplica a una Sesión Estratégica Gratuita
-        </a>
-         <p className="text-sm text-gray-500 mt-4">Plazas muy limitadas. Solo para emprendedores serios.</p>
+      <header className="text-center py-24 px-4 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700/40 via-transparent to-transparent"></div>
+        <div className="relative z-20">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 font-display leading-tight">
+                Escala tu Negocio de 6 a <span className="text-[var(--accent-color)]">7 Cifras</span> Anuales
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Mi programa de coaching <strong className="font-semibold text-white">ACCELERATOR</strong> te da el mapa, los sistemas y la mentalidad para romper tus barreras de crecimiento y convertirte en un verdadero CEO.
+            </p>
+            <a href="#cta" className="border-2 border-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-black text-[var(--accent-color)] font-bold text-lg py-4 px-12 rounded-lg shadow-lg shadow-yellow-500/20 transform transition-all duration-300 hover:scale-105">
+                Aplica a una Sesión Estratégica
+            </a>
+            <p className="text-sm text-gray-500 mt-4">Plazas muy limitadas. Solo para fundadores ambiciosos.</p>
+        </div>
       </header>
 
       {/* Problem & Solution Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 font-display">¿Trabajas más que nunca pero tus ingresos están estancados?</h2>
-          <p className="text-lg text-gray-400 mb-10">
-            Eres el cuello de botella de tu propio negocio. Atrapado en el día a día, no tienes tiempo para la estrategia. Sabes que podrías crecer más, pero no tienes claro el siguiente paso.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">¿Atrapado en el <span className="text-gray-500">"Humedal del Emprendedor"</span>?</h2>
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            Trabajas más que nunca, pero tus ingresos están estancados. Eres el cuello de botella de tu propio negocio, ahogado en el día a día sin tiempo para la estrategia. Sabes que hay un siguiente nivel, pero no tienes el mapa para llegar.
           </p>
-          <div className="bg-gray-800 p-8 rounded-lg shadow-xl border-l-4 border-[var(--accent-color)]">
-            <h3 className="text-2xl font-bold text-white mb-4 font-display">La Solución: <span className="text-[var(--accent-color)]">De Emprendedor a CEO</span></h3>
+          <div className="bg-gray-800 p-8 md:p-12 rounded-lg shadow-xl border-l-4 border-[var(--accent-color)] text-left">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display">La Solución: De <span className="text-gray-400">Emprendedor</span> a <span className="text-[var(--accent-color)]">CEO</span></h3>
             <p className="text-lg text-gray-300">
-             El crecimiento exponencial no viene de trabajar más duro, sino de forma más inteligente. Te ayudo a implementar los sistemas de marketing, ventas y operaciones que te liberarán del trabajo operativo para que te enfoques en escalar.
+             El crecimiento exponencial no viene de trabajar más duro, sino de instalar sistemas. Te ayudo a implementar las palancas de crecimiento en marketing, ventas y operaciones que te liberarán del trabajo operativo para que te enfoques en escalar tu imperio.
             </p>
           </div>
         </div>
@@ -32,19 +40,19 @@ const BusinessCoachLP: React.FC = () => {
       {/* Features & Benefits Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-5xl mx-auto">
-            <h2 className="text-center text-3xl font-bold mb-12 font-display">¿Qué Incluye el Programa <span className="text-[var(--accent-color)]">Accelerator</span>?</h2>
-          <div className="grid md:grid-cols-3 gap-10 text-left">
-            <div className="p-6 border border-gray-800 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 font-display text-white">Sesiones 1-a-1 Quincenales</h4>
-              <p className="text-gray-400"><strong>Característica:</strong> Sesiones de coaching privadas y enfocadas.<br/><strong>Beneficio:</strong> Obtienes claridad y un plan de acción concreto para tus desafíos más grandes, eliminando las conjeturas.</p>
+            <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 font-display">El Sistema <span className="text-[var(--accent-color)]">Accelerator</span></h2>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="p-8 border border-gray-800 rounded-lg bg-gray-900/50 hover:border-[var(--accent-color)]/50 transition-colors">
+              <h4 className="text-xl font-bold mb-3 font-display text-white">Sesiones Estratégicas 1-a-1</h4>
+              <p className="text-gray-400">Obtienes un plan de acción a medida para tus desafíos más grandes, eliminando las conjeturas y acelerando tus resultados.</p>
             </div>
-            <div className="p-6 border border-gray-800 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 font-display text-white">Acceso a Comunidad Exclusiva</h4>
-              <p className="text-gray-400"><strong>Característica:</strong> Un grupo privado con otros emprendedores de 6-7 cifras.<br/><strong>Beneficio:</strong> Te rodeas de una red de contactos de alto nivel, creando oportunidades de colaboración y aprendizaje.</p>
+            <div className="p-8 border border-gray-800 rounded-lg bg-gray-900/50 hover:border-[var(--accent-color)]/50 transition-colors">
+              <h4 className="text-xl font-bold mb-3 font-display text-white">Comunidad de Élite</h4>
+              <p className="text-gray-400">Accedes a una red de contactos privada con otros emprendedores de 6-7 cifras, creando oportunidades de colaboración y aprendizaje de alto nivel.</p>
             </div>
-            <div className="p-6 border border-gray-800 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 font-display text-white">Masterclasses Mensuales</h4>
-              <p className="text-gray-400"><strong>Característica:</strong> Talleres en vivo sobre temas avanzados de negocio.<br/><strong>Beneficio:</strong> Te mantienes a la vanguardia con estrategias probadas en marketing, ventas y liderazgo de equipos.</p>
+            <div className="p-8 border border-gray-800 rounded-lg bg-gray-900/50 hover:border-[var(--accent-color)]/50 transition-colors">
+              <h4 className="text-xl font-bold mb-3 font-display text-white">Playbooks de Escalado</h4>
+              <p className="text-gray-400">Obtienes acceso a mi biblioteca de sistemas probados (SOPs, plantillas, checklists) para que no tengas que reinventar la rueda.</p>
             </div>
           </div>
         </div>
@@ -53,25 +61,47 @@ const BusinessCoachLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/business-coach-testimonial.png" alt="Sofía Castro" className="w-24 h-24 object-cover rounded-full mx-auto mb-4 border-2 border-[var(--accent-color)]" />
-          <p className="text-lg italic text-gray-300 mb-4">"Estaba estancada en $10k al mes y no veía la salida. En seis meses trabajando juntos, no solo tripliqué mis ingresos, sino que ahora trabajo la mitad de horas. Su sistema me devolvió la libertad."</p>
-          <p className="font-bold text-white">- Sofía Castro, Fundadora de Creativa Studio</p>
+          <img src="/business-coach-testimonial.png" alt="Sofía Castro" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-2 border-[var(--accent-color)]" />
+          <p className="text-xl italic text-gray-300 mb-6 leading-relaxed">"Estaba estancada en $10k al mes y completamente quemada. En seis meses con él, no solo tripliqué mis ingresos, sino que ahora trabajo la mitad de horas. Su sistema no solo escaló mi negocio, me devolvió la libertad."</p>
+          <p className="font-bold text-white text-lg">- Sofía Castro, Fundadora de Creativa Studio</p>
         </div>
       </section>
 
+      {/* Who is this for Section */}
+       <section className="py-20 px-4 bg-black">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+            <div className="bg-gray-900 p-8 rounded-lg border border-green-500/30">
+                <h3 className="text-2xl font-bold font-display mb-4 text-green-400">Este programa ES para ti si...</h3>
+                <ul className="text-gray-300 space-y-3">
+                    <li className="flex items-start"><span className="text-green-400 mr-3">✔</span><span>Ya facturas al menos $5,000/mes de forma consistente.</span></li>
+                    <li className="flex items-start"><span className="text-green-400 mr-3">✔</span><span>Estás 100% comprometido y listo para ejecutar.</span></li>
+                    <li className="flex items-start"><span className="text-green-400 mr-3">✔</span><span>Vendes un producto o servicio de calidad y quieres más impacto.</span></li>
+                </ul>
+            </div>
+            <div className="bg-gray-900 p-8 rounded-lg border border-red-500/30">
+                <h3 className="text-2xl font-bold font-display mb-4 text-red-400">Este programa NO es para ti si...</h3>
+                <ul className="text-gray-300 space-y-3">
+                    <li className="flex items-start"><span className="text-red-400 mr-3">✖</span><span>Estás buscando una solución mágica o "hacerte rico rápido".</span></li>
+                    <li className="flex items-start"><span className="text-red-400 mr-3">✖</span><span>No estás dispuesto a invertir en tu negocio (y en ti mismo).</span></li>
+                    <li className="flex items-start"><span className="text-red-400 mr-3">✖</span><span>No estás abierto a recibir feedback y cambiar tu forma de operar.</span></li>
+                </ul>
+            </div>
+        </div>
+       </section>
+
       {/* Final CTA Section */}
-      <section id="cta" className="py-20 px-4 text-center bg-black">
-        <h2 className="text-3xl font-bold mb-4 font-display text-white">¿Estás Listo para el Siguiente Nivel?</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-          Esta oportunidad no es para todos. Es para dueños de negocio 100% comprometidos con el crecimiento. Si eres tú, aplica ahora para una sesión estratégica y veamos si podemos trabajar juntos.
+      <section id="cta" className="py-24 px-4 text-center bg-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-white">¿Estás Listo para el Siguiente Nivel?</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+          Si cumples los requisitos y estás decidido a construir un negocio que trabaje para ti (y no al revés), aplica ahora a una sesión estratégica gratuita.
         </p>
-        <a href="#cta" className="bg-[var(--accent-color)] hover:bg-yellow-500 text-black font-bold text-lg py-4 px-10 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105">
+        <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-12 rounded-lg shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105">
           Aplicar Ahora
         </a>
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-6 bg-gray-900 text-gray-500 text-sm">
+      <footer className="text-center py-8 bg-black text-gray-500 text-sm">
         <p>&copy; {new Date().getFullYear()} Coaching de Élite. Todos los derechos reservados.</p>
         <a href="#" className="underline hover:text-white">Política de Privacidad</a>
       </footer>
