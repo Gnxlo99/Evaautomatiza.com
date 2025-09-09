@@ -90,11 +90,11 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
         className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden group"
     >
         {post.imageUrl && (
-            <div className="overflow-hidden h-48 bg-brand-secondary">
+            <div className="overflow-hidden aspect-video">
                 <img 
                     src={post.imageUrl} 
                     alt={post.title} 
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
             </div>
         )}
@@ -130,8 +130,8 @@ const BlogIndexPage: React.FC = () => {
                 <h2 className="text-3xl font-bold text-center mb-8 font-display">Artículo Destacado</h2>
                 <Link to={featuredPost.path} className="block bg-gray-800 rounded-xl shadow-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 border border-indigo-500/50">
                     <div className="md:flex">
-                        <div className="md:w-1/3 bg-brand-secondary">
-                            <img className="h-full w-full object-contain" src={featuredPost.imageUrl} alt={featuredPost.title} />
+                        <div className="md:w-1/3">
+                            <img className="aspect-video w-full object-cover md:aspect-auto md:h-full" src={featuredPost.imageUrl} alt={featuredPost.title} />
                         </div>
                         <div className="p-8 flex flex-col justify-center md:w-2/3">
                             <div className="uppercase tracking-wide text-sm text-indigo-400 font-semibold">Lectura Esencial</div>
