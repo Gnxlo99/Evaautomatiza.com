@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { profiles } from '../data/profiles';
@@ -47,7 +48,7 @@ const BlogEditorIA: React.FC = () => {
                 <img 
                   src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
-                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  className="w-full h-auto rounded-xl shadow-2xl object-contain bg-gray-900"
                   style={{ aspectRatio: '16/9' }}
                 />
                 <figcaption className="text-center text-sm text-gray-500 mt-4">
@@ -213,7 +214,7 @@ const BlogEditorIA: React.FC = () => {
             <ul>
                 <li><strong>Monitoriza con Google Search Console:</strong> Esta herramienta te dirá para qué palabras clave estás empezando a posicionarte. A veces, te posicionarás para términos que no habías previsto. Esas son oportunidades de oro para crear nuevos artículos.</li>
                 <li><strong>El "Ciclo de Refresco":</strong> Identifica los artículos que están en la página 2 de Google. Vuelve a ellos, actualízalos con nueva información, mejora la edición y vuelve a publicarlos.</li>
-                <li><strong>Escala la Producción:</strong> Una vez que tienes un flujo de trabajo que funciona, puedes aumentar la producción a 5, 10 o incluso 20 artículos por semana. También puedes contratar a un "editor junior" para que te ayude en la fase de pulido, permitiéndote a ti centrarte únicamente en la estrategia.</li>
+                <li><strong>Escala la Producción:</strong> Una vez que tienes un flujo de trabajo que funciona, puedes aumentar la producción a 5, 10 o incluso 20 artículos por semana. También puedes contratar a un "editor junior" para que te ajude en la fase de pulido, permitiéndote a ti centrarte únicamente en la estrategia.</li>
             </ul>
 
             <h2>Conclusión: Eres el Estratega, la IA es tu Ejército</h2>
