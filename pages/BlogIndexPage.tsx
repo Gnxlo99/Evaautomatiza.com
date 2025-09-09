@@ -90,7 +90,7 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
         className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden group"
     >
         {post.imageUrl && (
-            <div className="overflow-hidden aspect-video">
+            <div className="overflow-hidden aspect-square">
                 <img 
                     src={post.imageUrl} 
                     alt={post.title} 
@@ -131,7 +131,7 @@ const BlogIndexPage: React.FC = () => {
                 <Link to={featuredPost.path} className="block bg-gray-800 rounded-xl shadow-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 border border-indigo-500/50">
                     <div className="md:flex">
                         <div className="md:w-1/3">
-                            <img className="aspect-video w-full object-cover md:aspect-auto md:h-full" src={featuredPost.imageUrl} alt={featuredPost.title} />
+                            <img className="aspect-square w-full object-cover md:aspect-auto md:h-full" src={featuredPost.imageUrl} alt={featuredPost.title} />
                         </div>
                         <div className="p-8 flex flex-col justify-center md:w-2/3">
                             <div className="uppercase tracking-wide text-sm text-indigo-400 font-semibold">Lectura Esencial</div>
