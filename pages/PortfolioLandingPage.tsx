@@ -50,6 +50,14 @@ const portfolioItems = [
     liveUrl: '/portfolio/manicurist',
     tags: ['Estética', 'Reservas Online', 'Negocio Local'],
   },
+  {
+    id: 7,
+    title: 'Landing Page para Abogado/a',
+    description: 'Diseño sobrio y profesional para un despacho de abogados, enfocado en generar confianza y captar consultas legales a través de una propuesta de valor clara y testimonios.',
+    imageUrl: '/portfolio-lawyer.png',
+    liveUrl: '/portfolio/lawyer',
+    tags: ['Servicios Legales', 'Confianza', 'Profesional'],
+  },
 ];
 
 const PortfolioLandingPage: React.FC = () => {
@@ -66,7 +74,7 @@ const PortfolioLandingPage: React.FC = () => {
         </header>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {portfolioItems.map((item) => (
+          {portfolioItems.sort((a,b) => a.id - b.id).map((item) => (
             <div key={item.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col group transform transition-transform duration-300 hover:-translate-y-2">
               <div className="overflow-hidden">
                 <img src={item.imageUrl} alt={item.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 aspect-[16/10]" />
