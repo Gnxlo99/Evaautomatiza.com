@@ -13,61 +13,71 @@ const blogPosts = [
     path: '/blog/guia-dropping-services',
     title: 'Guía Definitiva: Dropping Services',
     description: 'Para Gestores de Proyectos que quieren lanzar un negocio de servicios sin ser expertos técnicos.',
-    profile: 'El Gestor de Proyectos'
+    profile: 'El Gestor de Proyectos',
+    imageUrl: '/dropping-services-header.jpeg',
   },
   {
     path: '/blog/guia-curador-estrategico',
     title: 'Guía Definitiva: Newsletter de Curación',
     description: 'Para Curadores Estratégicos que buscan monetizar su pasión por la información.',
-    profile: 'El Curador Estratégico'
+    profile: 'El Curador Estratégico',
+    imageUrl: '/newsletter-curation-header.jpeg',
   },
   {
     path: '/blog/guia-arquitecto-digital',
     title: 'Guía Definitiva: SEO Programático',
     description: 'Para Arquitectos Digitales listos para construir imperios de ingresos pasivos.',
-    profile: 'El Arquitecto Digital'
+    profile: 'El Arquitecto Digital',
+    imageUrl: '/programmatic-seo-header.jpeg',
   },
   {
     path: '/blog/guia-conector-oportunidades',
     title: 'Guía Definitiva: Generación de Leads B2B',
     description: 'Para Conectores de Oportunidades que quieren monetizar su red de contactos.',
-    profile: 'El Conector de Oportunidades'
+    profile: 'El Conector de Oportunidades',
+    imageUrl: '/b2b-leads-header.jpeg',
   },
   {
     path: '/blog/guia-mercader-digital',
     title: 'Guía Definitiva: Flipping de Activos Digitales',
     description: 'Para Mercaderes Digitales que buscan generar ganancias rápidas comprando y vendiendo webs.',
-    profile: 'El Mercader Digital'
+    profile: 'El Mercader Digital',
+    imageUrl: '/digital-flipping-header.jpeg',
   },
   {
     path: '/blog/guia-creador-soluciones',
     title: 'Guía Definitiva: Micro-Productos Digitales',
     description: 'Para Creadores de Soluciones que quieren empaquetar su conocimiento en productos vendibles.',
-    profile: 'El Creador de Soluciones'
+    profile: 'El Creador de Soluciones',
+    imageUrl: '/micro-products-header.jpeg',
   },
   {
     path: '/blog/guia-editor-ia',
     title: 'Guía Definitiva: Sitios de Nicho con IA',
     description: 'Para Editores con IA que quieren construir imperios de contenido a gran escala.',
-    profile: 'El Editor con IA'
+    profile: 'El Editor con IA',
+    imageUrl: '/ai-niche-sites-header.jpeg',
   },
   {
     path: '/blog/guia-operador-ecommerce',
     title: 'Guía Definitiva: Amazon FBA / Mercado Libre',
     description: 'Para Operadores de E-commerce listos para construir una marca de productos físicos.',
-    profile: 'El Operador de E-commerce'
+    profile: 'El Operador de E-commerce',
+    imageUrl: '/amazon-fba-header.jpeg',
   },
   {
     path: '/blog/guia-consultor-especialista',
     title: 'Guía Definitiva: Freelancing de Alto Valor',
     description: 'Para Consultores Especialistas que quieren convertir su habilidad en un negocio premium.',
-    profile: 'El Consultor Especialista'
+    profile: 'El Consultor Especialista',
+    imageUrl: '/high-value-freelancing-header.jpeg',
   },
   {
     path: '/blog/guia-moderador-comunidades',
     title: 'Guía Definitiva: Gestión de Comunidades Pagas',
     description: 'Para Moderadores de Comunidades que buscan un ingreso estable cuidando espacios digitales.',
-    profile: 'El Moderador de Comunidades'
+    profile: 'El Moderador de Comunidades',
+    imageUrl: '/community-management-header.jpeg',
   },
 ];
 
@@ -77,16 +87,27 @@ const otherPosts = blogPosts.filter(post => !post.featured);
 const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
     <Link 
         to={post.path} 
-        className="flex flex-col p-6 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1"
+        className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden group"
     >
-        <div className="flex-grow">
-          {post.profile && <p className="text-sm font-semibold text-indigo-400 mb-2">{post.profile}</p>}
-          <h2 className="text-2xl font-bold text-white mb-3 font-display">{post.title}</h2>
-          <p className="text-gray-400 text-base">{post.description}</p>
+        {post.imageUrl && (
+            <div className="overflow-hidden h-48">
+                <img 
+                    src={post.imageUrl} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+            </div>
+        )}
+        <div className="flex-grow flex flex-col p-6">
+            <div className="flex-grow">
+                {post.profile && <p className="text-sm font-semibold text-indigo-400 mb-2">{post.profile}</p>}
+                <h2 className="text-2xl font-bold text-white mb-3 font-display">{post.title}</h2>
+                <p className="text-gray-400 text-base">{post.description}</p>
+            </div>
+            <span className="mt-4 inline-block text-brand-accent font-bold hover:underline">
+                Leer la Guía &rarr;
+            </span>
         </div>
-        <span className="mt-4 inline-block text-brand-accent font-bold hover:underline">
-            Leer la Guía &rarr;
-        </span>
     </Link>
 );
 
