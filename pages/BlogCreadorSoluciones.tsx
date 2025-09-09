@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { profiles } from '../data/profiles';
@@ -39,7 +40,7 @@ const BlogCreadorSoluciones: React.FC = () => {
                 <img 
                   src={profile.headerImageUrl} 
                   alt={`Representación visual de ${profile.mainBusinessModel}`}
-                  className="w-full h-auto rounded-xl shadow-2xl object-cover"
+                  className="w-full h-auto rounded-xl shadow-2xl object-contain bg-gray-900"
                   style={{ aspectRatio: '16/9' }}
                 />
                 <figcaption className="text-center text-sm text-gray-500 mt-4">
