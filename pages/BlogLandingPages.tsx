@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { profiles } from '../data/profiles';
 
 const BlogLandingPages: React.FC = () => {
-  // Use a relevant profile for the header image
-  const profile = profiles.find(p => p.id === 'creador-de-soluciones');
+  const headerImageUrl = '/landing-pages-header.jpeg';
 
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
@@ -39,19 +37,17 @@ const BlogLandingPages: React.FC = () => {
             La solución es una de las herramientas más potentes y malentendidas del marketing digital: la <strong>landing page</strong> (o página de aterrizaje). No es una página más. Es tu mejor vendedor. Y hoy vas a entender por qué es la clave para que dejes de tirar tu esfuerzo a la basura.
           </p>
           
-          {profile?.headerImageUrl && (
-            <figure className="my-12">
-              <img 
-                src={profile.headerImageUrl} 
-                alt="Representación visual de una landing page convirtiendo tráfico"
-                className="w-full h-auto rounded-xl shadow-2xl object-cover"
-                style={{ aspectRatio: '16/9' }}
-              />
-              <figcaption className="text-center text-sm text-gray-500 mt-4">
-                Una landing page enfoca todo el tráfico en una única acción, maximizando la conversión.
-              </figcaption>
-            </figure>
-          )}
+          <figure className="my-12">
+            <img 
+              src={headerImageUrl}
+              alt="Representación visual de una landing page convirtiendo tráfico"
+              className="w-full h-auto rounded-xl shadow-2xl object-cover"
+              style={{ aspectRatio: '16/9' }}
+            />
+            <figcaption className="text-center text-sm text-gray-500 mt-4">
+              Una landing page enfoca todo el tráfico en una única acción, maximizando la conversión.
+            </figcaption>
+          </figure>
 
           <h2>Qué es una Landing Page (y por qué NO es tu página de inicio)</h2>
           <p>
