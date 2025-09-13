@@ -8,7 +8,7 @@ const handler: Handler = async (event: HandlerEvent) => {
   }
 
   try {
-    const { email, groupId } = JSON.parse(event.body || '{}');
+    const { email, groupId, name, fields } = JSON.parse(event.body || '{}');
 
     if (!email || !groupId) {
       return { statusCode: 400, body: 'Email y groupId son requeridos.' };
@@ -21,6 +21,26 @@ const handler: Handler = async (event: HandlerEvent) => {
     }
 
     const MAILERLITE_API_URL = `https://connect.mailerlite.com/api/subscribers`;
+    
+    const payload: {
+        email: string;
+        groups: string[];
+        status: string;
+        name?: string;
+        fields?: object;
+    } = {
+        email,
+        groups: [groupId],
+        status: "active",
+    };
+
+    if (name) {
+        payload.name = name;
+    }
+
+    if (fields) {
+        payload.fields = fields;
+    }
 
     const response = await fetch(MAILERLITE_API_URL, {
       method: 'POST',
@@ -28,11 +48,7 @@ const handler: Handler = async (event: HandlerEvent) => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${MAILERLITE_API_KEY}`
       },
-      body: JSON.stringify({
-        email: email,
-        groups: [groupId],
-        status: "active",
-      })
+      body: JSON.stringify(payload)
     });
 
     const responseBody = await response.json();
