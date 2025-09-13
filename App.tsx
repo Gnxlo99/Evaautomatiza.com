@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
+import QuizIntroPage from './pages/HomePage';
 import Quiz from './components/Quiz';
 import ProfilePage from './pages/ProfilePage';
 import BlogIndexPage from './pages/BlogIndexPage';
@@ -43,7 +43,8 @@ const App: React.FC = () => {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<PortfolioLandingPage />} />
+            <Route path="/comenzar" element={<QuizIntroPage />} />
             <Route path="/generador" element={<Quiz />} />
             <Route path="/perfil/:profileId" element={<ProfilePage />} />
             <Route path="/blog" element={<BlogIndexPage />} />
@@ -63,7 +64,6 @@ const App: React.FC = () => {
             <Route path="/blog/anatomia-landing-page-convierte" element={<BlogAnatomiaLandingPage />} />
             <Route path="/blog/landing-page-vendedor-digital" element={<BlogVendedorDigital />} />
             <Route path="/blog/instagram-clientes-landing-page" element={<BlogInstagramClientes />} />
-            <Route path="/portfolio/landing-pages" element={<PortfolioLandingPage />} />
             <Route path="/portfolio/marketing-consultant" element={<MarketingConsultantLP />} />
             <Route path="/portfolio/gym-trainer" element={<GymTrainerLP />} />
             <Route path="/portfolio/saas" element={<SaaSLP />} />
