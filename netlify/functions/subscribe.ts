@@ -25,13 +25,11 @@ const handler: Handler = async (event: HandlerEvent) => {
     const payload: {
         email: string;
         groups: string[];
-        status: string;
         name?: string;
         fields?: object;
     } = {
         email,
         groups: [groupId],
-        status: "active",
     };
 
     if (name) {
