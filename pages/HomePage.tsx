@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HomePage: React.FC = () => {
+const QuizIntroPage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
       <div className="max-w-2xl w-full">
@@ -40,4 +39,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default QuizIntroPage;
