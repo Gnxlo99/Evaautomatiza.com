@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +8,36 @@ const blogPosts = [
     description: 'Descubre por qué las landing pages son la clave para dejar de tirar tu esfuerzo a la basura y empezar a convertir visitantes.',
     imageUrl: '/landing-pages-blog-card.jpeg',
     featured: true,
+  },
+  {
+    path: '/blog/5-errores-landing-page',
+    title: '5 Errores Comunes en tu Landing Page que te Hacen Perder Ventas',
+    description: 'Identifica y corrige los errores que están saboteando tus conversiones y empieza a ver resultados reales.',
+    imageUrl: '/blog-errores-lp.jpeg',
+  },
+  {
+    path: '/blog/landing-page-vs-sitio-web',
+    title: 'Landing Page vs. Sitio Web: ¿Cuál necesitas?',
+    description: 'Entiende la diferencia fundamental y aprende a usar la herramienta correcta para cada objetivo de tu negocio.',
+    imageUrl: '/blog-lp-vs-web.jpeg',
+  },
+  {
+    path: '/blog/anatomia-landing-page-convierte',
+    title: 'La Anatomía de una Landing Page que Convierte (Guía paso a paso)',
+    description: 'El plano exacto, sección por sección, para construir una página diseñada para la máxima conversión.',
+    imageUrl: '/blog-anatomia-lp.jpeg',
+  },
+  {
+    path: '/blog/landing-page-vendedor-digital',
+    title: 'La Landing Page como tu Vendedor Digital 24/7',
+    description: 'Cómo transformar una simple página en tu mejor vendedor, uno que nunca duerme y siempre cierra.',
+    imageUrl: '/blog-vendedor-digital-lp.jpeg',
+  },
+  {
+    path: '/blog/instagram-clientes-landing-page',
+    title: 'Cómo Conseguir Clientes de Instagram con una Landing Page',
+    description: 'Convierte seguidores en clientes. La estrategia exacta para usar el "link en bio" de forma inteligente.',
+    imageUrl: '/blog-instagram-lp.jpeg',
   },
   {
     path: '/blog/guia-dropping-services',
@@ -91,11 +120,11 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
         className="flex flex-col bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition-colors duration-300 transform hover:-translate-y-1 overflow-hidden group"
     >
         {post.imageUrl && (
-            <div className="overflow-hidden aspect-square bg-gray-900">
+            <div className="overflow-hidden aspect-[16/10] bg-gray-900">
                 <img 
                     src={post.imageUrl} 
                     alt={post.title} 
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
             </div>
         )}
@@ -106,7 +135,7 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
                 <p className="text-gray-400 text-base">{post.description}</p>
             </div>
             <span className="mt-4 inline-block text-brand-accent font-bold hover:underline">
-                Leer la Guía &rarr;
+                Leer artículo &rarr;
             </span>
         </div>
     </Link>
@@ -116,7 +145,7 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
 const BlogIndexPage: React.FC = () => {
   return (
     <div className="min-h-screen p-4 sm:p-6 md:p-8">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <header className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-4 font-display">
                 El Blog de Eva Automatiza
@@ -132,7 +161,7 @@ const BlogIndexPage: React.FC = () => {
                 <Link to={featuredPost.path} className="block bg-gray-800 rounded-xl shadow-2xl overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300 border border-indigo-500/50">
                     <div className="md:flex">
                         <div className="md:w-1/3 bg-gray-900">
-                            <img className="aspect-square w-full object-contain md:aspect-auto md:h-full" src={featuredPost.imageUrl} alt={featuredPost.title} />
+                            <img className="aspect-square w-full object-cover md:aspect-auto md:h-full" src={featuredPost.imageUrl} alt={featuredPost.title} />
                         </div>
                         <div className="p-8 flex flex-col justify-center md:w-2/3">
                             <div className="uppercase tracking-wide text-sm text-indigo-400 font-semibold">Lectura Esencial</div>
@@ -145,9 +174,9 @@ const BlogIndexPage: React.FC = () => {
         )}
 
         <section>
-            <h2 className="text-3xl font-bold text-center mb-8 font-display">Todas las Guías</h2>
-            <div className="grid gap-8 md:grid-cols-2">
-                {otherPosts.map((post) => (
+            <h2 className="text-3xl font-bold text-center mb-8 font-display">Todas las Guías y Artículos</h2>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {otherPosts.sort((a, b) => a.title.localeCompare(b.title)).map((post) => (
                     <BlogCard key={post.path} post={post} />
                 ))}
             </div>
