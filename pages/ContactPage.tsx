@@ -60,6 +60,8 @@ const ContactPage: React.FC = () => {
           <form 
             name="contact" 
             method="POST"
+            // FIX: Replaced non-standard 'netlify' and 'netlify-honeypot' attributes
+            // with 'data-netlify' and 'data-netlify-honeypot' to comply with React/TypeScript standards for custom attributes.
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit} 
