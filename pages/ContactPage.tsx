@@ -2,52 +2,43 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ContactPage: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [objective, setObjective] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    objective: '',
+    message: '',
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<{ status: 'idle' | 'success' | 'error'; message: string }>({ status: 'idle', message: '' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const encode = (data: { [key: string]: string }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFormStatus({ status: 'idle', message: '' });
 
-    // ID del grupo de MailerLite para interesados en Landing Pages
-    const ID_GRUPO_CONTACTO_LP = '165141147050304595'; 
-
-    try {
-      const response = await fetch('/.netlify/functions/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: email,
-          name: name,
-          groupId: ID_GRUPO_CONTACTO_LP,
-          fields: {
-            objetivo_de_tu_proyecto: objective,
-            mensaje_adicional: message,
-          },
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.');
-      }
-      
-      setFormStatus({ status: 'success', message: '¡Gracias! Tu mensaje ha sido enviado. Te responderé en menos de 24 horas.' });
-      // Limpiar formulario
-      setName('');
-      setEmail('');
-      setObjective('');
-      setMessage('');
-
-    } catch (error: any) {
-      setFormStatus({ status: 'error', message: error.message || 'Algo salió mal. Por favor, intenta de nuevo más tarde.' });
-    } finally {
-      setIsSubmitting(false);
-    }
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData })
+    })
+      .then(() => {
+        setFormStatus({ status: 'success', message: '¡Gracias! Tu mensaje ha sido enviado. Te responderé en menos de 24 horas.' });
+        setFormData({ name: '', email: '', objective: '', message: '' });
+      })
+      .catch(error => {
+        setFormStatus({ status: 'error', message: 'Algo salió mal. Por favor, intenta de nuevo más tarde.' });
+      })
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
@@ -66,7 +57,21 @@ const ContactPage: React.FC = () => {
             <p>{formStatus.message}</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+          <form 
+            name="contact" 
+            method="POST"
+            data-netlify="true" 
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit} 
+            className="mt-8 space-y-6"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                No llenar si eres humano: <input name="bot-field" />
+              </label>
+            </p>
+            
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                 Nombre
@@ -75,8 +80,8 @@ const ContactPage: React.FC = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={formData.name}
+                onChange={handleChange}
                 required
                 disabled={isSubmitting}
                 className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
@@ -90,8 +95,8 @@ const ContactPage: React.FC = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 required
                 disabled={isSubmitting}
                 className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
@@ -105,8 +110,8 @@ const ContactPage: React.FC = () => {
                 id="objective"
                 name="objective"
                 rows={3}
-                value={objective}
-                onChange={(e) => setObjective(e.target.value)}
+                value={formData.objective}
+                onChange={handleChange}
                 required
                 disabled={isSubmitting}
                 placeholder="Ej: Validar una idea, capturar leads para mi servicio, vender un producto, etc."
@@ -121,8 +126,8 @@ const ContactPage: React.FC = () => {
                 id="message"
                 name="message"
                 rows={3}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                value={formData.message}
+                onChange={handleChange}
                 disabled={isSubmitting}
                 className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
               />
