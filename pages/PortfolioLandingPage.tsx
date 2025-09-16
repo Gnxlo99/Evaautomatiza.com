@@ -72,6 +72,16 @@ const portfolioItems = [
     testimonial: "'En un campo donde la confianza lo es todo, esta página comunica profesionalismo. Los clientes llegan informados.'",
     clientName: "Lic. Ramos, Abogado"
   },
+  {
+    id: 8,
+    title: 'Landing Page para Clínica Dental',
+    description: '<b>Problema:</b> Una clínica dental moderna tenía dificultades para que los pacientes agendaran su primera cita a través de su web.<br/><b>Solución:</b> Una página limpia y tranquilizadora, enfocada en la tecnología sin dolor y con un formulario de reserva simple.<br/><b>Resultado:</b> Aumento del 150% en las solicitudes de citas online para nuevos pacientes.',
+    imageUrl: '/portfolio-dentist.png',
+    liveUrl: '/portfolio/dentist',
+    tags: ['Salud', 'Reservas Online', 'Confianza'],
+    testimonial: "'La nueva página transmite la calma y profesionalismo de nuestra clínica. Los pacientes llegan sintiéndose seguros.'",
+    clientName: "Dra. Elena Valdés, Odontóloga"
+  },
 ];
 
 const PortfolioLandingPage: React.FC = () => {
