@@ -18,7 +18,7 @@ const GymTrainerLP: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
                 Nuestro programa de 12 semanas te da el plan, el apoyo y la motivación para lograr resultados reales y duraderos. Sin excusas.
             </p>
-            <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-12 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-110 uppercase tracking-widest">
+            <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-110 uppercase tracking-widest">
                 Reserva tu Clase de Prueba GRATIS
             </a>
         </div>
@@ -92,7 +92,7 @@ const GymTrainerLP: React.FC = () => {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
           No esperes al próximo lunes. Tu primera clase es completamente gratis y sin compromiso. ¿Qué tienes que perder, además de tus excusas?
         </p>
-        <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-12 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-110 uppercase tracking-widest">
+        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-110 uppercase tracking-widest">
           ¡Sí, Quiero mi Clase GRATIS!
         </a>
       </section>
