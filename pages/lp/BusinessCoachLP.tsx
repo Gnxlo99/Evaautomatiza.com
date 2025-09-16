@@ -14,7 +14,7 @@ const BusinessCoachLP: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
                 Mi programa de coaching <strong className="font-semibold text-white">ACCELERATOR</strong> te da el mapa, los sistemas y la mentalidad para romper tus barreras de crecimiento y convertirte en un verdadero CEO.
             </p>
-            <a href="#cta" className="border-2 border-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-black text-[var(--accent-color)] font-bold text-lg py-4 px-12 rounded-lg shadow-lg shadow-yellow-500/20 transform transition-all duration-300 hover:scale-105">
+            <a href="#cta" className="inline-block border-2 border-[var(--accent-color)] hover:bg-[var(--accent-color)] hover:text-black text-[var(--accent-color)] font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-lg shadow-lg shadow-yellow-500/20 transform transition-all duration-300 hover:scale-105">
                 Aplica a una Sesión Estratégica
             </a>
             <p className="text-sm text-gray-500 mt-4">Plazas muy limitadas. Solo para fundadores ambiciosos.</p>
@@ -95,7 +95,7 @@ const BusinessCoachLP: React.FC = () => {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
           Si cumples los requisitos y estás decidido a construir un negocio que trabaje para ti (y no al revés), aplica ahora a una sesión estratégica gratuita.
         </p>
-        <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-12 rounded-lg shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105">
+        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-lg shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105">
           Aplicar Ahora
         </a>
       </section>
