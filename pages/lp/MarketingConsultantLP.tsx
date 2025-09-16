@@ -15,7 +15,7 @@ const MarketingConsultantLP: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
                 Deja de gastar en anuncios que no funcionan. Implementamos un sistema de marketing predecible que atrae clientes cualificados listos para comprar.
             </p>
-            <a href="#cta" className="bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-indigo-500/30 transform transition-all duration-300 hover:scale-110">
+            <a href="#cta" className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-lg shadow-indigo-500/30 transform transition-all duration-300 hover:scale-110">
                 Agenda tu Auditoría Gratuita
             </a>
             <p className="mt-4 text-sm text-gray-400">100% Gratis y Sin Compromiso</p>
@@ -62,7 +62,7 @@ const MarketingConsultantLP: React.FC = () => {
             </div>
             <div className="bg-gray-800/50 border border-gray-700 p-8 rounded-xl transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20">
                 <div className="mb-4 inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500/10 text-indigo-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /><path d="M12 18c-1.657 0-3-.895-3-2s1.343-2 3-2 3-.895 3-2-1.343-2-3-2m0 8c1.11 0 2.08-.402 2.599-1M12 18v-1m0-11v.01" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /><path d="M12 18c-1.657 0-3-.895-3-2s1.343 2 3 2 3-.895 3-2-1.343-2-3-2m0 8c1.11 0 2.08-.402 2.599-1M12 18v-1m0-11v.01" /></svg>
                 </div>
               <h4 className="text-xl font-bold mb-3 font-display">3. Automatización y Nutrición</h4>
               <p className="text-gray-400">Implementamos sistemas de email marketing que convierten leads en clientes de forma automática, construyendo relaciones y confianza a escala.</p>
@@ -88,7 +88,7 @@ const MarketingConsultantLP: React.FC = () => {
         <p className="text-xl text-indigo-200 max-w-3xl mx-auto mb-10">
           Agenda una llamada de 30 minutos sin costo. Analizaremos tu estrategia actual y te daremos un plan de acción claro para alcanzar tus objetivos. Sin compromiso, solo valor.
         </p>
-        <a href="#cta" className="bg-white text-indigo-600 font-bold text-lg py-4 px-10 rounded-lg shadow-2xl transform transition-transform duration-300 hover:scale-110">
+        <a href="#cta" className="inline-block bg-white text-indigo-600 font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-2xl transform transition-transform duration-300 hover:scale-110">
           ¡Quiero mi Auditoría Gratuita!
         </a>
       </section>
