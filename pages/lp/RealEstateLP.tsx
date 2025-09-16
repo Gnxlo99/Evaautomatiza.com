@@ -11,7 +11,7 @@ const RealEstateLP: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold mb-4 font-serif font-display leading-tight" style={{textShadow: '2px 2px 6px rgba(0,0,0,0.7)'}}>Venda su Propiedad al Mejor Precio, en Tiempo Récord</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-10" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.7)'}}>Combinamos un marketing digital de vanguardia y un servicio de guante blanco para asegurar la máxima rentabilidad de su hogar.</p>
-            <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-lg py-4 px-12 rounded-sm shadow-2xl transform transition-transform duration-300 hover:scale-105">
+            <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-sm shadow-2xl transform transition-transform duration-300 hover:scale-105">
                 Obtenga su Tasación Gratuita
             </a>
         </div>
@@ -76,7 +76,7 @@ const RealEstateLP: React.FC = () => {
         <p className="text-xl max-w-3xl mx-auto mb-10">
           No deje dinero sobre la mesa. Solicite una tasación profesional y gratuita de su propiedad hoy mismo. Sin compromiso, solo información de valor para su decisión.
         </p>
-        <a href="#cta" className="bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-lg py-4 px-12 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105">
+        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105">
           Quiero Saber Cuánto Vale mi Casa
         </a>
       </section>
