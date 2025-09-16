@@ -12,7 +12,7 @@ const SaaSLP: React.FC = () => {
           SyncFlow es la plataforma todo-en-uno que tu equipo necesita para colaborar sin fricción. Centraliza tareas, comunicación y archivos en un solo lugar.
         </p>
         <div className="flex justify-center items-center gap-4">
-            <a href="#cta" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-green-500/30 transform transition-transform duration-300 hover:scale-105">
+            <a href="#cta" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-lg shadow-green-500/30 transform transition-transform duration-300 hover:scale-105">
                 Empieza tu Prueba Gratuita
             </a>
         </div>
@@ -84,7 +84,7 @@ const SaaSLP: React.FC = () => {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
           Únete a los equipos de alto rendimiento que ya confían en SyncFlow para entregar sus proyectos a tiempo y dentro del presupuesto.
         </p>
-        <a href="#cta" className="bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-green-500/30 transform transition-transform duration-300 hover:scale-105">
+        <a href="#cta" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-lg shadow-green-500/30 transform transition-transform duration-300 hover:scale-105">
           Empieza tu Prueba Gratuita AHORA
         </a>
       </section>
