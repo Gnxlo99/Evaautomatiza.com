@@ -71,14 +71,44 @@ const RealEstateLP: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section id="cta" className="py-24 px-4 text-center bg-gray-800 text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif font-display">Descubra el Verdadero Valor de su Hogar</h2>
-        <p className="text-xl max-w-3xl mx-auto mb-10">
-          No deje dinero sobre la mesa. Solicite una tasación profesional y gratuita de su propiedad hoy mismo. Sin compromiso, solo información de valor para su decisión.
-        </p>
-        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-sm shadow-lg transform transition-transform duration-300 hover:scale-105">
-          Quiero Saber Cuánto Vale mi Casa
-        </a>
+      <section id="cta" className="py-24 px-4 bg-gray-800 text-white">
+        <div className="max-w-xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif font-display">Descubra el Verdadero Valor de su Hogar</h2>
+            <p className="text-xl max-w-3xl mx-auto mb-10">
+              Complete el formulario para recibir una tasación profesional y gratuita de su propiedad. Sin compromiso.
+            </p>
+            <div className="bg-white p-8 rounded-lg shadow-2xl text-left text-gray-800">
+                 <form name="real-estate-cta" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="real-estate-cta" />
+                    <p className="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+                    <div className="space-y-6">
+                        <div>
+                            <label htmlFor="name-re" className="block text-sm font-bold text-gray-700 mb-2">Nombre</label>
+                            <input type="text" id="name-re" name="name" required className="w-full bg-gray-100 border border-gray-300 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label htmlFor="email-re" className="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email-re" name="email" required className="w-full bg-gray-100 border border-gray-300 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                            </div>
+                            <div>
+                                <label htmlFor="phone-re" className="block text-sm font-bold text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" id="phone-re" name="phone" required className="w-full bg-gray-100 border border-gray-300 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="address-re" className="block text-sm font-bold text-gray-700 mb-2">Dirección de la Propiedad</label>
+                            <input type="text" id="address-re" name="address" required className="w-full bg-gray-100 border border-gray-300 rounded-sm p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                        <div>
+                            <button type="submit" className="w-full bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-white font-bold text-lg py-4 px-6 rounded-sm shadow-lg transform transition-all duration-300 hover:scale-105">
+                                Quiero Saber Cuánto Vale mi Casa
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
       </section>
 
       {/* Footer */}
