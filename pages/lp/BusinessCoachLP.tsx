@@ -90,14 +90,42 @@ const BusinessCoachLP: React.FC = () => {
        </section>
 
       {/* Final CTA Section */}
-      <section id="cta" className="py-24 px-4 text-center bg-gray-900">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-white">¿Estás Listo para el Siguiente Nivel?</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-          Si cumples los requisitos y estás decidido a construir un negocio que trabaje para ti (y no al revés), aplica ahora a una sesión estratégica gratuita.
-        </p>
-        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-lg shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105">
-          Aplicar Ahora
-        </a>
+      <section id="cta" className="py-24 px-4 bg-gray-900">
+        <div className="max-w-xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-white">Aplica a tu Sesión Estratégica</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+              Si cumples los requisitos, completa el formulario. Revisaré tu aplicación personalmente y me pondré en contacto si eres un buen candidato.
+            </p>
+            <div className="bg-black p-8 rounded-lg shadow-2xl text-left border border-gray-700">
+                 <form name="business-coach-cta" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="business-coach-cta" />
+                    <p className="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+                    <div className="space-y-6">
+                        <div>
+                            <label htmlFor="name-coach" className="block text-sm font-bold text-gray-300 mb-2">Nombre</label>
+                            <input type="text" id="name-coach" name="name" required className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                        <div>
+                            <label htmlFor="email-coach" className="block text-sm font-bold text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email-coach" name="email" required className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                        <div>
+                            <label htmlFor="website-coach" className="block text-sm font-bold text-gray-300 mb-2">Web de tu Negocio</label>
+                            <input type="url" id="website-coach" name="website" required placeholder="https://www.tu-negocio.com" className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                         <div>
+                            <label htmlFor="revenue-coach" className="block text-sm font-bold text-gray-300 mb-2">Facturación Mensual (Aprox.)</label>
+                            <input type="text" id="revenue-coach" name="revenue" required placeholder="Ej: $8,000 USD" className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                        </div>
+                        <div>
+                            <button type="submit" className="w-full bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-6 rounded-lg shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105">
+                                Enviar Aplicación
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
       </section>
 
       {/* Footer */}
