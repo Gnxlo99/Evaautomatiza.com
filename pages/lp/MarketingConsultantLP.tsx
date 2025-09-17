@@ -84,13 +84,37 @@ const MarketingConsultantLP: React.FC = () => {
 
       {/* Final CTA Section */}
       <section id="cta" className="py-24 px-4 text-center bg-gradient-to-r from-indigo-600 to-purple-600">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">¿Listo para Dejar de Adivinar y Empezar a Vender?</h2>
-        <p className="text-xl text-indigo-200 max-w-3xl mx-auto mb-10">
-          Agenda una llamada de 30 minutos sin costo. Analizaremos tu estrategia actual y te daremos un plan de acción claro para alcanzar tus objetivos. Sin compromiso, solo valor.
-        </p>
-        <a href="#cta" className="inline-block bg-white text-indigo-600 font-bold text-base sm:text-lg py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-2xl transform transition-transform duration-300 hover:scale-110">
-          ¡Quiero mi Auditoría Gratuita!
-        </a>
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-white">¿Listo para Dejar de Adivinar y Empezar a Vender?</h2>
+          <p className="text-xl text-indigo-200 max-w-3xl mx-auto mb-10">
+            Completa el formulario y agendaremos tu auditoría gratuita de 30 minutos. Analizaremos tu estrategia y te daremos un plan de acción claro. Sin compromiso.
+          </p>
+          <div className="bg-brand-dark p-8 rounded-lg shadow-2xl text-left">
+            <form name="marketing-consultant-cta" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="marketing-consultant-cta" />
+                <p className="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+                <div className="space-y-6">
+                    <div>
+                        <label htmlFor="name-marketing" className="block text-sm font-bold text-gray-300 mb-2">Nombre Completo</label>
+                        <input type="text" id="name-marketing" name="name" required className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow" />
+                    </div>
+                    <div>
+                        <label htmlFor="email-marketing" className="block text-sm font-bold text-gray-300 mb-2">Email de Trabajo</label>
+                        <input type="email" id="email-marketing" name="email" required className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow" />
+                    </div>
+                    <div>
+                        <label htmlFor="website-marketing" className="block text-sm font-bold text-gray-300 mb-2">Sitio Web Actual</label>
+                        <input type="url" id="website-marketing" name="website" required placeholder="https://www.ejemplo.com" className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow" />
+                    </div>
+                    <div>
+                        <button type="submit" className="w-full bg-white text-indigo-600 font-bold text-lg py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            ¡Quiero mi Auditoría Gratuita!
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
