@@ -87,14 +87,38 @@ const GymTrainerLP: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section id="cta" className="py-24 px-4 text-center bg-black">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-[var(--accent-color)] uppercase">Tu Transformación Empieza con un Clic</h2>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-          No esperes al próximo lunes. Tu primera clase es completamente gratis y sin compromiso. ¿Qué tienes que perder, además de tus excusas?
-        </p>
-        <a href="#cta" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-base sm:text-lg py-3 px-8 sm:py-4 sm:px-12 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-110 uppercase tracking-widest">
-          ¡Sí, Quiero mi Clase GRATIS!
-        </a>
+      <section id="cta" className="py-24 px-4 bg-black">
+        <div className="max-w-xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-[var(--accent-color)] uppercase">Tu Transformación Empieza Aquí</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+            No esperes al próximo lunes. Rellena el formulario para reservar tu clase de prueba gratuita. Sin compromiso. ¿Qué tienes que perder, además de tus excusas?
+          </p>
+          <div className="bg-gray-900 p-8 rounded-lg shadow-2xl text-left border border-gray-700">
+            <form name="gym-trainer-cta" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="gym-trainer-cta" />
+              <p className="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+              <div className="space-y-6">
+                <div>
+                  <label htmlFor="name-gym" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">Nombre</label>
+                  <input type="text" id="name-gym" name="name" required className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                </div>
+                <div>
+                  <label htmlFor="email-gym" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">Email</label>
+                  <input type="email" id="email-gym" name="email" required className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                </div>
+                <div>
+                  <label htmlFor="phone-gym" className="block text-sm font-bold text-gray-300 mb-2 uppercase tracking-wider">Teléfono</label>
+                  <input type="tel" id="phone-gym" name="phone" required className="w-full bg-gray-800 border border-gray-600 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] transition-shadow" />
+                </div>
+                <div>
+                  <button type="submit" className="w-full bg-[var(--accent-color)] hover:bg-[var(--accent-color-hover)] text-black font-bold text-lg py-4 px-6 rounded-md shadow-lg shadow-yellow-500/30 transform transition-all duration-300 hover:scale-105 uppercase tracking-widest">
+                    ¡Sí, Quiero mi Clase GRATIS!
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
