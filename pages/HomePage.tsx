@@ -1,42 +1,78 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const QuizIntroPage: React.FC = () => {
+const painPoints = [
+  {
+    id: 'autoridad',
+    title: 'Quiero verme más profesional',
+    description: 'Necesito una web que genere confianza al instante y me posicione como un experto en mi sector.',
+  },
+  {
+    id: 'automatizacion',
+    title: 'Quiero agendar citas en automático',
+    description: 'Necesito un sistema que trabaje por mí, capturando datos o agendando reuniones 24/7.',
+  },
+  {
+    id: 'venta',
+    title: 'Quiero vender más',
+    description: 'Necesito una página 100% enfocada en convertir visitantes en clientes para un producto o servicio.',
+  }
+];
+
+const HomePage: React.FC = () => {
+  const [selectedPain, setSelectedPain] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleSelect = (painId: string) => {
+    setSelectedPain(painId);
+  };
+
+  const handleContinue = () => {
+    if (selectedPain) {
+      navigate('/resultado', { state: { painPoint: selectedPain } });
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
-      <div className="max-w-2xl w-full">
-        <header className="mb-8 animate-fade-in-down">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-4 font-display">
-            <span className="block">Basta de buscar.</span>
-            <span className="block">Es hora de construir.</span>
+      <div className="max-w-3xl w-full animate-fade-in">
+        <header className="mb-10">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-8 font-display leading-tight">
+            Tu negocio merece una web que funcione. ¿Cuál es tu prioridad AHORA?
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-300 font-medium">
-            No más "ideas millonarias". Un análisis de 90 segundos para encontrar el modelo de negocio online que vos podés empezar. Sin humo.
-          </h2>
         </header>
 
-        <main className="mb-10 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <p className="text-gray-400 text-base md:text-lg leading-relaxed">
-            Tenés veintipico, un laburo que paga las cuentas pero te come el alma, y mil pestañas abiertas con "ideas de negocio" que nunca empezás. Sabés que la IA es una locura, pero no tenés idea de cómo usarla para algo tuyo. Estás en un bucle: investigás, te abrumás con opciones, no hacés nada. Y al día siguiente, el mismo problema otra vez. Yo estaba igual. Creé esta herramienta para romper ese ciclo.
-          </p>
+        <main className="mb-10">
+          <div className="space-y-4 max-w-lg mx-auto">
+            {painPoints.map((pain) => (
+              <button
+                key={pain.id}
+                onClick={() => handleSelect(pain.id)}
+                className={`w-full text-left p-6 border-2 rounded-lg transition-all duration-200 ${
+                  selectedPain === pain.id
+                    ? 'bg-brand-accent border-indigo-400 shadow-lg scale-105'
+                    : 'bg-brand-secondary border-gray-600 hover:bg-gray-600'
+                }`}
+              >
+                <h3 className="font-bold text-xl text-white">{pain.title}</h3>
+                <p className="text-gray-300">{pain.description}</p>
+              </button>
+            ))}
+          </div>
         </main>
 
-        <footer className="animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <Link
-            to="/generador"
-            className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+        <footer className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+          <button
+            onClick={handleContinue}
+            disabled={!selectedPain}
+            className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-4 px-12 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
           >
-            [ ROMPER EL BUCLE ]
-          </Link>
-          <div className="mt-8">
-            <Link to="/sobre" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
-              Sobre esta herramienta
-            </Link>
-          </div>
+            [ CONTINUAR ]
+          </button>
         </footer>
       </div>
     </div>
   );
 };
 
-export default QuizIntroPage;
+export default HomePage;
