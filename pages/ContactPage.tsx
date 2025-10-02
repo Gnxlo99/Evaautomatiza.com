@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const objectives = [
+  "Quiero una landing page para capturar leads",
+  "Necesito validar una nueva idea de negocio",
+  "Quiero vender un producto o servicio específico",
+  "Otro (lo describo en el mensaje)"
+];
+
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,6 +30,10 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.objective) {
+      setFormStatus({ status: 'error', message: 'Por favor, selecciona un objetivo para tu proyecto.' });
+      return;
+    }
     setIsSubmitting(true);
     setFormStatus({ status: 'idle', message: '' });
 
@@ -60,8 +71,6 @@ const ContactPage: React.FC = () => {
           <form 
             name="contact" 
             method="POST"
-            // FIX: Replaced non-standard 'netlify' and 'netlify-honeypot' attributes
-            // with 'data-netlify' and 'data-netlify-honeypot' to comply with React/TypeScript standards for custom attributes.
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit} 
@@ -104,22 +113,26 @@ const ContactPage: React.FC = () => {
                 className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
               />
             </div>
+            
             <div>
-              <label htmlFor="objective" className="block text-sm font-medium text-gray-300 mb-2">
-                Objetivo de tu proyecto
-              </label>
-              <textarea
-                id="objective"
-                name="objective"
-                rows={3}
-                value={formData.objective}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                placeholder="Ej: Validar una idea, capturar leads para mi servicio, vender un producto, etc."
-                className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
-              />
+                <label className="block text-sm font-medium text-gray-300 mb-2">Objetivo de tu proyecto</label>
+                <div className="space-y-3">
+                    {objectives.map((obj) => (
+                        <label key={obj} className="flex items-center bg-gray-700 border border-gray-600 rounded-lg p-3 has-[:checked]:bg-brand-accent has-[:checked]:border-brand-accent transition-colors">
+                            <input
+                                type="radio"
+                                name="objective"
+                                value={obj}
+                                checked={formData.objective === obj}
+                                onChange={handleChange}
+                                className="h-4 w-4 text-brand-accent-hover bg-gray-600 border-gray-500 focus:ring-brand-accent-hover"
+                            />
+                            <span className="ml-3 text-white">{obj}</span>
+                        </label>
+                    ))}
+                </div>
             </div>
+
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                 Mensaje adicional (Opcional)
@@ -131,6 +144,7 @@ const ContactPage: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 disabled={isSubmitting}
+                placeholder="Añade aquí cualquier detalle que consideres importante."
                 className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
               />
             </div>
