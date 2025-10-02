@@ -1,194 +1,94 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { profiles } from '../data/profiles';
-import { Profile } from '../types';
 
-const questions = [
+const quizQuestions = [
   {
-    text: 'Inversión: ¿Con cuánta plata contás para arrancar?',
-    options: ['Cero', 'Menos de $100.000', 'Más de $100.000'],
-    scores: {
-      'Cero': ['gestor-de-proyectos', 'curador-estrategico', 'creador-de-soluciones', 'editor-con-ia', 'consultor-especialista', 'moderador-de-comunidades'],
-      'Menos de $100.000': ['arquitecto-digital', 'conector-de-oportunidades', 'mercader-digital'],
-      'Más de $100.000': ['operador-de-ecommerce'],
-    }
+    id: 1,
+    text: '¿Cuál es el objetivo principal que buscas con una nueva presencia online?',
+    options: [
+      { text: 'Conseguir más clientes o agendar más citas.' },
+      { text: 'Establecer mi marca y mostrar mi trabajo profesionalmente.' },
+      { text: 'Vender productos o servicios directamente online.' },
+      { text: 'Validar una idea de negocio antes de invertir más.' },
+    ],
   },
   {
-    text: 'Dedicación: Siendo realista, ¿cuántas horas a la semana puedes dedicarle?',
-    options: ['1-5', '5-15', 'Más de 15'],
-    scores: {
-        '1-5': ['curador-estrategico', 'mercader-digital', 'creador-de-soluciones'],
-        '5-15': ['gestor-de-proyectos', 'arquitecto-digital', 'editor-con-ia', 'consultor-especialista'],
-        'Más de 15': ['conector-de-oportunidades', 'operador-de-ecommerce', 'moderador-de-comunidades'],
-    }
+    id: 2,
+    text: '¿A quién te diriges principalmente?',
+    options: [
+        { text: 'A clientes locales en mi ciudad o región.' },
+        { text: 'A un público nacional o internacional.' },
+        { text: 'A otras empresas (B2B).' },
+        { text: 'Aún no estoy seguro, necesito ayuda para definirlo.' },
+    ],
   },
   {
-    text: 'Fortaleza: ¿Con qué te sientes más cómodo?',
-    options: ['Organizando y gestionando', 'Analizando e investigando', 'Creando sistemas', 'Contacto uno a uno'],
-    scores: {
-        'Organizando y gestionando': ['gestor-de-proyectos'],
-        'Analizando e investigando': ['curador-estrategico'],
-        'Creando sistemas': ['arquitecto-digital'],
-        'Contacto uno a uno': ['conector-de-oportunidades', 'consultor-especialista'],
-    }
-  },
-  {
-    text: 'Riesgo: ¿Qué tan cómodo te sientes con la incertidumbre?',
-    options: ['Prefiero un ingreso lento pero seguro', 'Dispuesto a arriesgar un poco', 'Busco el mayor potencial'],
-    scores: {
-        'Prefiero un ingreso lento pero seguro': ['consultor-especialista', 'moderador-de-comunidades', 'curador-estrategico'],
-        'Dispuesto a arriesgar un poco': ['gestor-de-proyectos', 'arquitecto-digital', 'creador-de-soluciones', 'editor-con-ia', 'operador-de-ecommerce'],
-        'Busco el mayor potencial': ['conector-de-oportunidades', 'mercader-digital'],
-    }
-  },
-  {
-    text: 'Interés: ¿Qué área te genera más curiosidad?',
-    options: ['Servicios y Clientes', 'Contenido e Información', 'Productos Digitales', 'Activos e Inversiones'],
-    scores: {
-        'Servicios y Clientes': ['gestor-de-proyectos', 'conector-de-oportunidades', 'consultor-especialista'],
-        'Contenido e Información': ['curador-estrategico', 'editor-con-ia'],
-        'Productos Digitales': ['arquitecto-digital', 'creador-de-soluciones', 'moderador-de-comunidades'],
-        'Activos e Inversiones': ['mercader-digital', 'operador-de-ecommerce'],
-    }
+    id: 3, // This is the classifier
+    text: 'Finalmente, ¿cuál de estas opciones describe mejor tu situación actual?',
+    options: [
+      { text: 'Tengo una idea o un negocio, pero no tengo una web y no sé por dónde empezar.', stage: 'stage3' },
+      { text: 'Ya sé que necesito una web profesional y estoy evaluando opciones para construirla.', stage: 'stage4' },
+      { text: 'Necesito lanzar YA. Estoy decidido a invertir en una página que me traiga clientes.', stage: 'stage5' },
+    ],
   },
 ];
 
+
 const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<string[]>([]);
-  const [showEmailForm, setShowEmailForm] = useState(false);
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [key, setKey] = useState(0); // For re-triggering animations
   const navigate = useNavigate();
 
-  const handleAnswer = (answer: string) => {
-    const newAnswers = [...answers, answer];
-    setAnswers(newAnswers);
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      setShowEmailForm(true);
-    }
-  };
+  useEffect(() => {
+    setProgress(((currentQuestionIndex) / quizQuestions.length) * 100);
+  }, [currentQuestionIndex]);
 
-  const calculateProfile = (): Profile | undefined => {
-    const scores: { [key: string]: number } = {};
-    profiles.forEach(p => scores[p.id] = 0);
+  const handleAnswer = (option: { text: string; stage?: string }) => {
+    setIsAnswered(true);
+    setProgress(((currentQuestionIndex + 1) / quizQuestions.length) * 100);
 
-    answers.forEach((answer, index) => {
-      const question = questions[index];
-      const affectedProfiles = question.scores[answer as keyof typeof question.scores];
-      if (affectedProfiles) {
-        affectedProfiles.forEach(profileId => {
-          // Weight question 3 (Fortaleza) more heavily
-          const points = index === 2 ? 3 : 1;
-          scores[profileId] = (scores[profileId] || 0) + points;
-        });
-      }
-    });
-    
-    const sortedProfiles = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-    const topProfileId = sortedProfiles[0][0];
-    return profiles.find(p => p.id === topProfileId);
-  };
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    const isLastQuestion = currentQuestionIndex === quizQuestions.length - 1;
 
-    // Mantenemos el cálculo del perfil para saber a dónde redirigir al usuario.
-    const result = calculateProfile();
-    if (!result) {
-        console.error("No se pudo calcular el perfil.");
-        setIsSubmitting(false);
-        return;
-    }
-
-    // --- LÓGICA SIMPLIFICADA PARA EL LANZAMIENTO ---
-    // Usamos un único ID de grupo para todos los nuevos suscriptores.
-    const ID_DEL_GRUPO_GENERICO = '164355959067509824';
-
-    if (email) {
-        try {
-            // Llamamos a la función de Netlify, siempre con el mismo ID de grupo.
-            await fetch('/.netlify/functions/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: email,
-                    groupId: ID_DEL_GRUPO_GENERICO,
-                }),
-            });
-            // Nota: No esperamos la respuesta ni la bloqueamos para que el usuario
-            // sea redirigido rápidamente. La suscripción ocurre en segundo plano.
-            console.log('Solicitud de suscripción enviada para:', email);
-
-        } catch (error) {
-            console.error('Falló la llamada a la función de Netlify:', error);
+    setTimeout(() => {
+        if (isLastQuestion && option.stage) {
+            navigate('/resultado', { state: { stage: option.stage } });
+        } else {
+            setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+            setIsAnswered(false);
+            setKey(prevKey => prevKey + 1); // Change key to re-mount the question component
         }
-    }
-    
-    // Redirigimos al usuario a su página de perfil correcta inmediatamente.
-    navigate(`/perfil/${result.id}`);
-};
+    }, 500);
+  };
 
-  const progress = ((currentQuestionIndex + (showEmailForm ? 1 : 0)) / (questions.length + 1)) * 100;
+  const currentQuestion = quizQuestions[currentQuestionIndex];
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 transition-all duration-500">
-        <div className="w-full bg-gray-700 rounded-full h-5 mb-6 relative">
+        <div className="w-full bg-gray-700 rounded-full h-2.5 mb-6">
           <div 
-            className="bg-brand-accent h-5 rounded-full" 
+            className="bg-brand-accent h-2.5 rounded-full" 
             style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}
           ></div>
-          <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">
-            {`${Math.round(progress)}%`}
-          </div>
         </div>
 
-        {!showEmailForm ? (
-          <div className="animate-fade-in">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{questions[currentQuestionIndex].text}</h2>
-            <div className="flex flex-col gap-4">
-              {questions[currentQuestionIndex].options.map((option, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAnswer(option)}
-                  className="w-full bg-brand-secondary hover:bg-brand-accent text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-left"
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="animate-fade-in text-center">
-            <h2 className="text-3xl font-bold mb-2 text-gray-100 font-display">Tu plan de acción está listo.</h2>
-            <h3 className="text-2xl font-bold mb-4 text-brand-accent font-display">¿Dónde lo envío?</h3>
-            <p className="text-gray-400 mb-6">
-              Te voy a mandar por mail una copia de tu análisis detallado para que la guardes y la tengas siempre a mano. Pero no tenés que esperar: apenas confirmes, vas a poder leer tu hoja de ruta completa ahora mismo en el blog. Además, vas a tener acceso a los análisis de los otros perfiles. Cero spam.
-            </p>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="tu.email@ejemplo.com"
-                required
-                disabled={isSubmitting}
-                className="bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent disabled:opacity-50"
-              />
+        <div key={key} className="animate-fade-in">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{currentQuestion.text}</h2>
+          <div className="flex flex-col gap-4">
+            {currentQuestion.options.map((option, index) => (
               <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold py-3 px-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
+                key={index}
+                onClick={() => handleAnswer(option)}
+                disabled={isAnswered}
+                className="w-full bg-brand-secondary hover:bg-brand-accent text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-left disabled:bg-brand-accent disabled:opacity-75"
               >
-                {isSubmitting ? 'ENVIANDO...' : '[ ENVIAR Y VER MI PLAN DE ACCIÓN ]'}
+                {option.text}
               </button>
-            </form>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
