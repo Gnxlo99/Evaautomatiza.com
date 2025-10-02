@@ -162,13 +162,6 @@ const ContactPage: React.FC = () => {
             )}
           </form>
         )}
-        
-        <div className="mt-12">
-            <blockquote className="bg-gray-800 p-6 rounded-lg border-l-4 border-indigo-500">
-                <p className="text-gray-300 italic">"Eva entendió mi visión al instante y entregó una landing page de alta calidad en menos de 48 horas. Los resultados fueron inmediatos. ¡100% recomendada!"</p>
-                <cite className="block text-right text-gray-400 text-sm mt-3 not-italic font-semibold">- Carlos G., Consultor B2B</cite>
-            </blockquote>
-        </div>
 
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
