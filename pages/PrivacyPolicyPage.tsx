@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,10 +23,10 @@ const PrivacyPolicyPage: React.FC = () => {
           <h3>Datos que nos Proporcionas Directamente</h3>
           <ul>
             <li>
-              <strong>Información de Contacto:</strong> Recopilamos tu dirección de correo electrónico cuando la proporcionas para recibir los resultados de tu perfil del "Navegador de Negocios Digitales". Si nos contactas a través de nuestro formulario de contacto, recopilaremos tu nombre, dirección de correo electrónico y el contenido de tu mensaje.
+              <strong>Información de Contacto:</strong> Recopilamos tu información de contacto (nombre, email, WhatsApp) cuando la proporcionas a través de nuestros formularios, por ejemplo, para solicitar una muestra de diseño gratuita o para contactarnos.
             </li>
-            <li>
-              <strong>Respuestas del Cuestionario:</strong> Recopilamos tus respuestas a las preguntas del cuestionario para generar tu perfil de emprendedor digital. Estas respuestas se utilizan para determinar tu perfil y no se asocian a tu información personal de forma pública.
+             <li>
+              <strong>Respuestas al Diagnóstico:</strong> Recopilamos tus respuestas a las preguntas del diagnóstico inicial para ofrecerte ejemplos y soluciones relevantes.
             </li>
           </ul>
           <h3>Datos que Recopilamos Automáticamente</h3>
@@ -41,8 +42,8 @@ const PrivacyPolicyPage: React.FC = () => {
           <h2>3. Cómo Usamos tu Información</h2>
           <p>Tener información precisa sobre ti nos permite ofrecerte una experiencia fluida, eficiente y personalizada. Específicamente, podemos usar la información recopilada sobre ti para:</p>
           <ul>
-            <li>Proporcionarte los resultados personalizados del cuestionario "Navegador de Negocios Digitales".</li>
-            <li>Enviarte tu perfil y análisis detallado por correo electrónico, así como contenido relacionado y guías.</li>
+            <li>Proporcionarte los servicios que solicitas, como la muestra de diseño gratuita o responder a tus consultas.</li>
+            <li>Enviarte comunicaciones relacionadas con nuestros servicios, como tu muestra de diseño, propuestas o información de seguimiento.</li>
             <li>Enviarte newsletters, ofertas promocionales y otra información sobre nuestros productos y servicios que creemos que pueden ser de tu interés. Puedes optar por no recibir estas comunicaciones en cualquier momento siguiendo el enlace de "cancelar suscripción" en cada correo.</li>
             <li>Responder a tus comentarios, preguntas y solicitudes de soporte.</li>
             <li>Analizar el uso del Sitio para mejorar nuestros servicios y la experiencia del usuario.</li>
@@ -97,6 +98,7 @@ const PrivacyPolicyPage: React.FC = () => {
           </p>
 
           <h2>10. Contacto</h2>
+          {/* FIX: The file was truncated here. Completing the component and adding the default export. */}
           <p>
             Si tienes alguna pregunta o comentario sobre esta Política de Privacidad, no dudes en contactarnos en:
             <br />
