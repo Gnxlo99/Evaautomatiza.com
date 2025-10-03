@@ -28,7 +28,7 @@ const BlogAnatomiaLandingPage: React.FC = () => {
             Hoy no vamos a hablar de teorías. Vamos a diseccionar una landing page perfecta, sección por sección. Este es el plano que utilizan las empresas de más rápido crecimiento.
           </p>
           <p>
-            Usa esta guía como una checklist para construir tu próxima página o para auditar la que ya tienes. Cada elemento tiene una función. Asegúrate de que todos estén trabajando para ti.
+            Usa esta guía como una checklist para construir tu próxima página o para auditar la que ya tienes y evitar los <Link to="/blog/5-errores-landing-page">5 errores más comunes</Link>. Cada elemento tiene una función. Asegúrate de que todos estén trabajando para ti.
           </p>
           
           <figure className="my-12">
@@ -96,7 +96,7 @@ const BlogAnatomiaLandingPage: React.FC = () => {
 
           <h2>Sección 5: El Cierre - La Llamada a la Acción Final</h2>
           <p>
-            Has presentado tu caso. Es hora de pedir la venta de nuevo, con confianza. Esta es tu última oportunidad para convertir al visitante.
+            Has presentado tu caso. Es hora de pedir la venta de nuevo, con confianza. Esta es tu última oportunidad para convertir al visitante, transformando tu página en tu <Link to="/blog/landing-page-vendedor-digital">mejor vendedor digital</Link>.
           </p>
           <h3>Componentes Clave:</h3>
           <ul>
