@@ -186,7 +186,7 @@ const BlogDroppingServices: React.FC = () => {
           <p>El Dropping Services no se trata de ser el más talentoso en una habilidad técnica. <strong>Se trata de ser el mejor director de orquesta</strong>. Tu habilidad para planificar, comunicar, anticipar riesgos y mantener a todos en la misma página es el verdadero motor de este negocio.</p>
           <p>Empieza pequeño, con un solo servicio. Consigue tu primer cliente, gestiona el proyecto de forma impecable y aprende. Luego, optimiza tu proceso y repite. Con el tiempo, podrás ampliar tu catálogo de servicios y tu equipo de freelancers, convirtiendo tu talento para la gestión en un negocio online rentable y escalable.</p>
           <p><strong>El plano ya lo tienes. Es hora de empezar a construir.</strong></p>
-          <p>Si después de leer esto sientes que la adrenalina corre por tus venas, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+          <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
          <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
