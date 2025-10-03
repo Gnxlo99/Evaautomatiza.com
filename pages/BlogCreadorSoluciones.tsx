@@ -159,7 +159,7 @@ const BlogCreadorSoluciones: React.FC = () => {
             <p>Tu superpoder no es solo resolver problemas, es <strong>empaquetar esas soluciones</strong> de una forma que pueda ayudar a miles de personas. Cada micro-producto que creas es un activo digital que trabaja para ti, un pequeño motor de ingresos que se alimenta de tu creatividad y tu empatía.</p>
             <p>Este modelo de negocio te permite empezar pequeño, lanzar rápido y construir un catálogo de productos que reflejen tu conocimiento único. No hay límite para el número de "salsas secretas" que puedes embotellar y vender.</p>
             <p><strong>Has identificado el dolor. Has diseñado la cura. Es hora de ponerla en el mercado.</strong></p>
-            <p>Si sientes una chispa de emoción al pensar en crear tu primer producto y ver llegar esa primera notificación de venta, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+            <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
