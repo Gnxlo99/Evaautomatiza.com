@@ -64,7 +64,7 @@ const RealEstateLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/real-estate-testimonial.png" alt="Familia Pérez" className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
+          <img src="/real-estate-testimonial.png" alt="Testimonio de la Familia Pérez" className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
           <p className="text-xl italic text-gray-700 mb-6 leading-relaxed">"Intentamos vender nuestra casa por nuestra cuenta durante 6 meses sin éxito. Los contactamos y, gracias a su estrategia, recibimos tres ofertas en la primera semana. ¡Vendimos por encima del precio que pedíamos! Un servicio impecable de principio a fin."</p>
           <p className="font-bold text-gray-900 text-lg">- Familia Pérez, Vendedores Satisfechos</p>
         </div>
