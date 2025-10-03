@@ -152,7 +152,7 @@ const BlogMercaderDigital: React.FC = () => {
             <p>Ser un Mercader Digital no es solo especular. Es un arte que requiere visión, disciplina y agallas. Tienes la habilidad única de ver el potencial donde otros solo ven un producto terminado. Compras basándote en la lógica, mejoras basándote en la estrategia y vendes basándote en el valor que has creado.</p>
             <p>Este camino es volátil y no garantiza ganancias, pero para aquellos con el estómago y la astucia necesarios, ofrece una de las rutas más rápidas y emocionantes para generar capital en el mundo online.</p>
             <p><strong>El mercado está abierto. Es hora de empezar a cazar.</strong></p>
-            <p>Si sientes la adrenalina al pensar en cerrar tu primer trato y ver el retorno de tu inversión, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+            <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
