@@ -80,7 +80,7 @@ const GymTrainerLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/gym-trainer-testimonial.png" alt="Maria Fernanda" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-4 border-[var(--accent-color)]" />
+          <img src="/gym-trainer-testimonial.png" alt="Testimonio de María Fernanda, cliente satisfecha" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-4 border-[var(--accent-color)]" />
           <p className="text-xl italic text-gray-300 mb-6">"Pensé que a mis 40 ya era imposible recuperar mi figura. Este programa no solo me ayudó a perder 10 kilos, sino que me devolvió una energía que no sentía desde hace años. ¡Gracias por cambiar mi vida!"</p>
           <p className="font-bold text-white text-lg">- María Fernanda, Cliente Satisfecha</p>
         </div>
