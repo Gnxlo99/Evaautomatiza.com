@@ -28,7 +28,7 @@ const BlogErroresLandingPage: React.FC = () => {
             La buena noticia es que no tienes que rediseñar todo desde cero. Lo más probable es que estés cometiendo uno de los cinco errores capitales que sabotean el 90% de las landing pages.
           </p>
           <p>
-            Hoy vamos a diagnosticar tu página. Identifica estos errores, corrígelos, y verás cómo tu tasa de conversión empieza a despegar.
+            Hoy vamos a diagnosticar tu página. Identifica estos errores, corrígelos, y verás cómo tu tasa de conversión empieza a despegar. Si quieres el plano completo de cómo construirla bien desde el principio, consulta nuestra guía sobre la <Link to="/blog/anatomia-landing-page-convierte">anatomía de una landing page que convierte</Link>.
           </p>
           
           <figure className="my-12">
@@ -60,7 +60,7 @@ const BlogErroresLandingPage: React.FC = () => {
 
           <h2>Error 2: Ofreces un Buffet Libre de Opciones (Múltiples CTAs)</h2>
           <p>
-            Este es el asesino silencioso de las conversiones. Pones un botón para "Comprar Ahora", otro para "Saber Más", un enlace al blog, iconos de redes sociales, y el menú de navegación completo de tu web. Crees que estás dando opciones, pero en realidad estás causando parálisis por análisis.
+            Este es el asesino silencioso de las conversiones. Pones un botón para "Comprar Ahora", otro para "Saber Más", un enlace al blog, iconos de redes sociales, y el menú de navegación completo de tu web. Crees que estás dando opciones, pero en realidad estás causando parálisis por análisis. Este error se deriva de confundir una <Link to="/blog/landing-page-vs-sitio-web">landing page con un sitio web</Link>.
           </p>
           <h3>La Solución: El Objetivo Único y Obsesivo</h3>
           <ul>
@@ -95,7 +95,7 @@ const BlogErroresLandingPage: React.FC = () => {
 
           <h2>Error 5: Tu Página es un Desastre en el Móvil</h2>
           <p>
-            Más del 60% de tu tráfico probablemente viene de dispositivos móviles. Si tu página tarda una eternidad en cargar en un celular, si el texto es diminuto o si los botones son imposibles de pulsar con un pulgar, estás tirando la mayoría de tu dinero a la basura.
+            Más del 60% de tu tráfico probablemente viene de dispositivos móviles. Si tu página tarda una eternidad en cargar en un celular, si el texto es diminuto o si los botones son imposibles de pulsar con un pulgar, estás tirando la mayoría de tu dinero a la basura. Es especialmente crítico si usas tu landing page para captar <Link to="/blog/instagram-clientes-landing-page">clientes desde Instagram</Link>.
           </p>
           <h3>La Solución: Piensa en "Mobile-First"</h3>
           <ul>
