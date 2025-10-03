@@ -67,14 +67,14 @@ const BlogLpVsWeb: React.FC = () => {
 
           <h2>La Landing Page: Tu "Vendedor Especialista"</h2>
           <p>
-            Ahora, piensa en una landing page como un <strong>vendedor enfocado y altamente entrenado, enviado a una misión específica</strong>. No se distrae, no habla de otra cosa. Solo tiene un objetivo en mente.
+            Ahora, piensa en una landing page como un <Link to="/blog/landing-page-vendedor-digital"><strong>vendedor enfocado y altamente entrenado</strong></Link>, enviado a una misión específica. No se distrae, no habla de otra cosa. Solo tiene un objetivo en mente.
           </p>
           <h3>El Objetivo de la Landing Page: Convertir</h3>
           <p>
             El propósito de una landing page es servir a <strong>una única audiencia</strong> con <strong>un único objetivo</strong>. Es una página independiente, creada específicamente para una campaña de marketing. El visitante que llega aquí lo hace porque hizo clic en un anuncio, un email o un post que le prometía algo muy específico.
           </p>
           <p>
-            Una landing page está diseñada para <strong>eliminar la exploración</strong> y fomentar la <strong>acción</strong>. No hay menú de navegación. No hay enlaces al blog. Solo hay información sobre la oferta específica y un claro llamado a la acción (CTA).
+            Una landing page está diseñada para <strong>eliminar la exploración</strong> y fomentar la <strong>acción</strong>. No hay menú de navegación. No hay enlaces al blog. Solo hay información sobre la oferta específica y un claro llamado a la acción (CTA). Para entender sus componentes, puedes leer sobre la <Link to="/blog/anatomia-landing-page-convierte">anatomía de una landing page</Link>.
           </p>
           <blockquote>
             <p><strong>En resumen:</strong> Tu landing page es una máquina de conversión. Su único trabajo es convertir el tráfico de una campaña en leads o ventas.</p>
@@ -96,7 +96,7 @@ const BlogLpVsWeb: React.FC = () => {
             <li><strong>Estás pagando por tráfico (Google Ads, Facebook Ads, etc.):</strong> ¡Esta es la regla de oro! Cada centavo que inviertes en publicidad debe dirigirse a una página 100% optimizada para esa oferta.</li>
             <li><strong>Promocionas una oferta específica:</strong> Un ebook, un webinar, un descuento, una prueba gratuita. Cada oferta merece su propia landing page.</li>
             <li><strong>Quieres validar una idea de negocio:</strong> Antes de construir el producto, construye la landing page. Si la gente deja su email, tienes un negocio.</li>
-            <li><strong>Buscas capturar leads de un canal específico:</strong> Como el "link en bio" de tu Instagram o un QR en un evento.</li>
+            <li><strong>Buscas capturar leads de un canal específico:</strong> Como el <Link to="/blog/instagram-clientes-landing-page">"link en bio" de tu Instagram</Link> o un QR en un evento.</li>
           </ul>
 
           <h2>La Conclusión: No es una Batalla, es un Equipo</h2>
