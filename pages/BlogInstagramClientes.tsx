@@ -25,7 +25,7 @@ const BlogInstagramClientes: React.FC = () => {
             Tienes un perfil de Instagram increíble. Publicas contenido de valor, interactúas con tu audiencia y tus seguidores crecen. En cada publicación, diligentemente escribes la frase: "link en bio". Pero ese enlace, ese único y preciado enlace, está traicionando todo tu esfuerzo.
           </p>
           <p>
-            La mayoría de la gente envía ese tráfico a su página de inicio. Y ahí es donde el sueño de conseguir clientes se convierte en una pesadilla de clics perdidos. ¿Por qué? Porque tu página de inicio es un laberinto de opciones.
+            La mayoría de la gente envía ese tráfico a su página de inicio. Y ahí es donde el sueño de conseguir clientes se convierte en una pesadilla de clics perdidos. ¿Por qué? Porque tu página de inicio es un laberinto de opciones. Es la diferencia fundamental entre una <Link to="/blog/landing-page-vs-sitio-web">landing page y un sitio web</Link>.
           </p>
           <p>
             Hoy vas a aprender a construir el puente perfecto entre tu audiencia de Instagram y tu lista de clientes. Ese puente es una <strong>landing page específica para tu "link en bio"</strong>.
@@ -61,6 +61,9 @@ const BlogInstagramClientes: React.FC = () => {
           <p>El objetivo principal es mover a la gente del "terreno alquilado" de Instagram (donde el algoritmo controla tu alcance) a tu "terreno propio": <strong>tu lista de correo electrónico</strong>.</p>
           
           <h3>¿Qué debe tener tu Landing Page para Instagram?</h3>
+          <p>
+            Debe seguir los principios de la <Link to="/blog/anatomia-landing-page-convierte">anatomía de una landing page de alta conversión</Link>.
+          </p>
           <ul>
             <li><strong>Un Título que Refleje tu Marca:</strong> Algo simple como "Bienvenido/a a la comunidad de [Tu Marca]".</li>
             <li><strong>Una Oferta Principal Irresistible (Lead Magnet):</strong> Este es el corazón de la página. Ofrece algo de inmenso valor a cambio de su email.</li>
