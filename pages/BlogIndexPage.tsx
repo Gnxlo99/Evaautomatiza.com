@@ -138,7 +138,7 @@ const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => (
             <div className="overflow-hidden aspect-[16/10] bg-gray-900">
                 <img 
                     src={post.imageUrl} 
-                    alt={post.title} 
+                    alt={`Imagen del artículo del blog: ${post.title}`} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
             </div>
