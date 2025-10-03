@@ -51,7 +51,7 @@ const BlogVendedorDigital: React.FC = () => {
             Un buen vendedor no empieza recitando las características de un producto. Empieza con una pregunta potente o una afirmación que capta la atención del cliente. "Hola, ¿sabías que el 90% de las empresas pierden dinero por X?".
           </p>
           <p>
-            Tu sección "Above the Fold" hace exactamente eso. El <strong>título</strong> es tu gancho. No dice "Somos la Empresa X", dice "Deja de Perder Dinero en Anuncios que no Funcionan". Ataca el dolor, promete una solución. Es el apretón de manos y la primera frase que deja al cliente con ganas de más.
+            Tu sección "Above the Fold" hace exactamente eso, como explicamos en nuestra guía sobre la <Link to="/blog/anatomia-landing-page-convierte">anatomía de una landing page</Link>. El <strong>título</strong> es tu gancho. No dice "Somos la Empresa X", dice "Deja de Perder Dinero en Anuncios que no Funcionan". Ataca el dolor, promete una solución. Es el apretón de manos y la primera frase que deja al cliente con ganas de más.
           </p>
 
           <h2>La Presentación de Ventas (El Cuerpo del Copy)</h2>
@@ -72,7 +72,7 @@ const BlogVendedorDigital: React.FC = () => {
 
           <h2>La Superación de Objeciones (La Prueba Social y las FAQ)</h2>
           <p>
-            El cliente está interesado, pero ahora vienen las dudas. "¿Y si no funciona?", "¿Es de fiar esta empresa?", "¿No será demasiado complicado?". Un vendedor hábil se anticipa a estas objeciones y las resuelve.
+            El cliente está interesado, pero ahora vienen las dudas. "¿Y si no funciona?", "¿Es de fiar esta empresa?", "¿No será demasiado complicado?". Un vendedor hábil se anticipa a estas objeciones y las resuelve. Evitar los <Link to="/blog/5-errores-landing-page">errores comunes</Link> aquí es crucial.
           </p>
           <blockquote>
             <p>Tu sección de <strong>prueba social</strong> (testimonios, logos) es tu vendedor diciendo: "No tienes que fiarte solo de mi palabra. Mira lo que dice Juan, que estaba en tu misma situación, y ahora ha conseguido estos resultados".</p>
