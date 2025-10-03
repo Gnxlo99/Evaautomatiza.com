@@ -43,7 +43,7 @@ const ResultPage: React.FC = () => {
   const navigate = useNavigate();
   const { painPoint } = location.state || { painPoint: 'venta' }; 
 
-  const [formData, setFormData] = useState({ name: '', whatsapp: '', email: '', brandInfo: '' });
+  const [formData, setFormData] = useState({ name: '', whatsapp: '', email: '' });
   const [status, setStatus] = useState({ success: false, message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -118,12 +118,11 @@ const ResultPage: React.FC = () => {
                   <div id="contact-form-section" className="animate-fade-in">
                     <p className="text-center text-gray-400 mb-4 mt-6">¡Excelente! Solo necesitamos unos pocos datos para empezar.</p>
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <input type="text" name="name" placeholder="Tu Nombre" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
-                        <input type="tel" name="whatsapp" placeholder="Tu WhatsApp" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
-                        <input type="email" name="email" placeholder="Tu Email" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
-                        <textarea name="brandInfo" rows={2} placeholder="Tu Instagram o nombre de tu marca" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                        <input type="text" name="name" value={formData.name} placeholder="Tu Nombre" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
+                        <input type="tel" name="whatsapp" value={formData.whatsapp} placeholder="Tu WhatsApp (para enviar la muestra)" required onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
+                        <input type="email" name="email" value={formData.email} placeholder="Tu Email (Opcional)" onChange={handleChange} className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-accent"/>
                         <button type="submit" disabled={isSubmitting} className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-3 px-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600">
-                            {isSubmitting ? 'ENVIANDO...' : 'Recibir Mi Muestra Gratuita'}
+                            {isSubmitting ? 'ENVIANDO...' : '¡Recibir mi muestra gratuita en WhatsApp!'}
                         </button>
                         {status.message && !status.success && <p className="text-red-400 text-center">{status.message}</p>}
                     </form>
