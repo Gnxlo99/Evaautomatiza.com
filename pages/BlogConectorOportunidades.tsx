@@ -160,7 +160,7 @@ const BlogConectorOportunidades: React.FC = () => {
           <p>Tu valor no está en una herramienta o en un software. <strong>Tu valor reside en tu habilidad para iniciar conversaciones valiosas que de otra manera no ocurrirían</strong>. Eres el aceite que engrasa el motor del comercio, el catalizador que crea oportunidades de la nada.</p>
           <p>Este modelo de negocio te pone en el centro de la acción y te recompensa directamente por tu habilidad más natural: conectar con la gente. No hay límite para tus ingresos porque no hay límite para las oportunidades que puedes crear.</p>
           <p><strong>El plan ya lo tienes. Es hora de empezar a conectar.</strong></p>
-          <p>Si sientes que la energía se dispara al pensar en cerrar tu primer trato, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+          <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
