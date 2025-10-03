@@ -230,9 +230,7 @@ const BlogOperadorEcommerce: React.FC = () => {
             <p>
                 <strong>El mercado está lleno de oportunidades esperando a ser descubiertas por un analista como tú.</strong>
             </p>
-            <p>
-                Si sientes una oleada de energía al pensar en analizar datos de mercado y construir tu propia marca de productos físicos, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.
-            </p>
+            <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
