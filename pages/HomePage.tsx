@@ -38,7 +38,8 @@ const HomePage: React.FC = () => {
       <div className="max-w-3xl w-full animate-fade-in">
         <header className="mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-8 font-display leading-tight">
-            Tu negocio merece una web que funcione. ¿Cuál es tu prioridad AHORA?
+            <span className="block">Tu negocio merece una web que funcione.</span>
+            <span className="block mt-2 text-indigo-300">¿Cuál es tu prioridad AHORA?</span>
           </h1>
         </header>
 
