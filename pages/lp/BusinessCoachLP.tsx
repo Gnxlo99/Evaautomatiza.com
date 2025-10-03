@@ -61,7 +61,7 @@ const BusinessCoachLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/business-coach-testimonial.png" alt="Sofía Castro" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-2 border-[var(--accent-color)]" />
+          <img src="/business-coach-testimonial.png" alt="Testimonio de Sofía Castro, Fundadora de Creativa Studio" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-2 border-[var(--accent-color)]" />
           <p className="text-xl italic text-gray-300 mb-6 leading-relaxed">"Estaba estancada en $10k al mes y completamente quemada. En seis meses con él, no solo tripliqué mis ingresos, sino que ahora trabajo la mitad de horas. Su sistema no solo escaló mi negocio, me devolvió la libertad."</p>
           <p className="font-bold text-white text-lg">- Sofía Castro, Fundadora de Creativa Studio</p>
         </div>
