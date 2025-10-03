@@ -229,9 +229,7 @@ const BlogModeradorComunidades: React.FC = () => {
             <p>
                 <strong>El mundo necesita más anfitriones y menos gritones. Y tú tienes todo para ser uno de los mejores.</strong>
             </p>
-            <p>
-                Si sientes que tu vocación es crear orden y conexión en el caos digital, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.
-            </p>
+            <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
