@@ -8,10 +8,10 @@ const PortfolioLandingPage: React.FC = () => {
        {/* New Hero/CTA Section */}
        <section className="bg-gray-900 text-center py-20 px-4">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 font-display">
-            ¿Listo para lanzar tu negocio en 24 horas?
+            Lanza tu Negocio con una Landing Page de Alta Conversión
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Una landing page de alta conversión es la forma más rápida y efectiva de validar tu idea y empezar a conseguir clientes. Yo las construyo por ti.
+            Es la forma más rápida y efectiva de validar tu idea y empezar a conseguir clientes. Yo las construyo por ti.
           </p>
           <Link
             to="/comenzar"
@@ -36,7 +36,7 @@ const PortfolioLandingPage: React.FC = () => {
             {portfolioItems.sort((a,b) => a.id - b.id).map((item) => (
               <div key={item.id} className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col group transform transition-transform duration-300 hover:-translate-y-2 border border-transparent hover:border-indigo-500/50">
                 <div className="overflow-hidden">
-                  <img src={item.imageUrl} alt={item.title} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 aspect-[16/10]" />
+                  <img src={item.imageUrl} alt={`Ejemplo de Landing Page para ${item.title}`} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 aspect-[16/10]" />
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <h3 className="text-2xl font-bold text-white mb-3 font-display group-hover:text-indigo-400 transition-colors">{item.title}</h3>
