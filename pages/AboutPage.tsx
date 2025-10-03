@@ -7,22 +7,22 @@ const AboutPage: React.FC = () => {
       <div className="max-w-3xl mx-auto w-full text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 font-display leading-tight">
-            Claridad en el Caos.
+            Deja de Adivinar. Empieza a Convertir.
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Me llamo Eva. Y creé esta herramienta por una razón muy simple: <strong>estaba harta</strong>.
+            Me llamo Eva. Y durante años, vi a emprendedores brillantes con ideas increíbles fracasar por una razón simple: <strong>no sabían cómo conseguir clientes online.</strong>
           </p>
           <p className="text-lg text-gray-400 mb-6">
-            Harta de tener veintipico, un trabajo que pagaba las cuentas pero me comía el alma, y mil pestañas abiertas con "ideas de negocio" que nunca empezaba. Estaba atrapada en un bucle: investigar, abrumarme con opciones, no hacer nada. Y al día siguiente, el mismo problema otra vez.
+            Creaban webs complejas, se perdían en redes sociales y gastaban dinero en anuncios que no llevaban a ninguna parte. Su problema no era su producto. Su problema era que no tenían un sistema para convertir la atención en ingresos.
           </p>
           <p className="text-lg text-gray-400 mb-8">
-            Esta herramienta es mi respuesta. Es <strong>un filtro, no un motor de ideas</strong>. En lugar de darte 100 opciones genéricas, he destilado 10 arquetipos de emprendedores digitales reales y sostenibles. Mi misión es darte un punto de partida claro y accionable para que dejes de buscar y, de una vez por todas, empieces a construir.
+            Creé <strong>Eva Automatiza</strong> para solucionar exactamente eso. No construyo webs de 20 páginas. Construyo máquinas de conversión: landing pages de alto rendimiento, diseñadas con un único objetivo en mente. Mi misión es darte la herramienta más rápida y efectiva para validar tu oferta y empezar a crecer.
           </p>
           <Link
-            to="/generador"
+            to="/comenzar"
             className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-3 px-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
           >
-            &larr; Volver al test
+            Obtén tu Diagnóstico Gratuito
           </Link>
         </div>
       </div>
