@@ -171,7 +171,7 @@ const BlogCuradorEstrategico: React.FC = () => {
           <p>En un mundo ahogado por el contenido, la gente no necesita más información. <strong>Necesita un guía de confianza</strong>. Tu superpoder como Curador Estratégico es precisamente ese: encontrar claridad en medio del caos.</p>
           <p>Este modelo de negocio es un maratón, no un sprint. Se basa en la consistencia, la calidad y la confianza que construyes con cada edición que envías. Empieza hoy, elige tu nicho, encuentra tus primeras 10 fuentes y prepárate para compartir tus hallazgos con el mundo.</p>
           <p><strong>El ruido es el problema. Tú eres la solución.</strong></p>
-          <p>Si después de leer esto sientes una energía renovada para empezar a organizar la información del mundo, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+          <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
