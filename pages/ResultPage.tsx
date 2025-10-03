@@ -9,7 +9,7 @@ const painPointData: { [key: string]: { title: string; portfolioIds: number[] } 
   },
   automatizacion: {
     title: 'automatizar tus citas',
-    portfolioIds: [6, 2], // Manicurist, Gym Trainer
+    portfolioIds: [8, 2], // Dentist, Gym Trainer
   },
   venta: {
     title: 'vender más',
