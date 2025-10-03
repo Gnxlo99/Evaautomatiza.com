@@ -74,7 +74,7 @@ const DentistLP: React.FC = () => {
       <section id="testimonial" className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
             <div className="bg-white p-10 rounded-lg shadow-xl relative">
-                <img src="/dentist-testimonial.png" alt="Paciente Satisfecho" className="w-20 h-20 object-cover rounded-full mx-auto -mt-16 mb-6 border-4 border-white shadow-lg" />
+                <img src="/dentist-testimonial.png" alt="Testimonio de Marcos L., paciente de la clínica" className="w-20 h-20 object-cover rounded-full mx-auto -mt-16 mb-6 border-4 border-white shadow-lg" />
                 <blockquote className="text-xl italic text-gray-700 mb-6">
                     "Tenía mucho miedo de ir al dentista, pero la Dra. Valdés y su equipo me hicieron sentir increíblemente cómodo. El tratamiento fue completamente indoloro y los resultados son fantásticos. ¡Por fin puedo sonreír sin complejos!"
                 </blockquote>
