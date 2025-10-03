@@ -75,7 +75,7 @@ const MarketingConsultantLP: React.FC = () => {
       <section className="py-20 px-4 bg-brand-dark">
         <div className="max-w-3xl mx-auto">
             <div className="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
-                <img src="/marketing-consultant-testimonial.png" alt="Juan Silva" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-4 border-indigo-500" />
+                <img src="/marketing-consultant-testimonial.png" alt="Testimonio de Juan Silva, CEO de TiendaTech" className="w-24 h-24 object-cover rounded-full mx-auto mb-6 border-4 border-indigo-500" />
                 <p className="text-xl italic text-gray-300 mb-6">"Pasamos de un marketing impredecible a un flujo constante de leads cualificados en menos de 60 días. No solo redujeron nuestro costo por lead en un 40%, sino que la calidad mejoró drásticamente. Imprescindibles."</p>
                 <p className="font-bold text-white text-lg">- Juan Silva, CEO de TiendaTech</p>
             </div>
