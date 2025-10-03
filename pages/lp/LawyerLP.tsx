@@ -64,7 +64,7 @@ const LawyerLP: React.FC = () => {
             <h2 className="text-4xl font-bold font-display text-gray-900 mb-12">Lo que Dicen Nuestros Clientes</h2>
             <div className="bg-white p-10 rounded-lg shadow-xl relative">
                 <div className="absolute top-0 left-10 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-8 border-b-white -mt-2"></div>
-                <img src="/lawyer-testimonial.png" alt="Cliente Satisfecho" className="w-20 h-20 object-cover rounded-full mx-auto -mt-20 mb-6 border-4 border-white shadow-lg" />
+                <img src="/lawyer-testimonial.png" alt="Testimonio de J. Pérez, cliente de derecho de familia" className="w-20 h-20 object-cover rounded-full mx-auto -mt-20 mb-6 border-4 border-white shadow-lg" />
                 <blockquote className="text-xl italic text-gray-700 mb-6">
                     "En el momento más complicado de mi vida, encontré no solo un abogado/a excepcional, sino un consejero de confianza. Su profesionalismo y calma me guiaron a través del proceso y lograron un resultado que superó mis expectativas. Eternamente agradecido/a."
                 </blockquote>
