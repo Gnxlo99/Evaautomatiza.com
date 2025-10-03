@@ -72,7 +72,7 @@ const SaaSLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/saas-testimonial.png" alt="Laura Álvarez" className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
+          <img src="/saas-testimonial.png" alt="Testimonio de Laura Álvarez, Project Manager" className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
           <p className="text-xl italic text-gray-700 mb-6 leading-relaxed">"SyncFlow ha revolucionado nuestra forma de trabajar. Hemos reducido nuestras reuniones a la mitad y la productividad ha aumentado un 30%. Es la primera herramienta que todo el equipo ha adoptado sin quejas."</p>
           <p className="font-bold text-gray-900 text-lg">- Laura Álvarez, Project Manager en Innovatech</p>
         </div>
