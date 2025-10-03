@@ -35,7 +35,7 @@ const BlogLandingPages: React.FC = () => {
             El problema no es tu tráfico. El problema es a dónde lo estás enviando.
           </p>
           <p>
-            La solución es una de las herramientas más potentes y malentendidas del marketing digital: la <strong>landing page</strong> (o página de aterrizaje). No es una página más. Es tu mejor vendedor. Y hoy vas a entender por qué es la clave para que dejes de tirar tu esfuerzo a la basura.
+            La solución es una de las herramientas más potentes y malentendidas del marketing digital: la <strong>landing page</strong> (o página de aterrizaje). No es una página más. Es tu <Link to="/blog/landing-page-vendedor-digital">mejor vendedor</Link>. Y hoy vas a entender por qué es la clave para que dejes de tirar tu esfuerzo a la basura.
           </p>
           
           <figure className="my-12">
@@ -52,7 +52,7 @@ const BlogLandingPages: React.FC = () => {
 
           <h2>Qué es una Landing Page (y por qué NO es tu página de inicio)</h2>
           <p>
-            Confundir tu página de inicio (homepage) con una landing page es el error #1. Es como intentar clavar un clavo con un destornillador.
+            Confundir tu página de inicio (homepage) con una landing page es el error #1. Si quieres entender a fondo la diferencia, tenemos una guía sobre <Link to="/blog/landing-page-vs-sitio-web">Landing Page vs. Sitio Web</Link>.
           </p>
           <p>
             Tu <strong>Homepage</strong> es el <strong>RECEPCIONISTA</strong> de un hotel. Su trabajo es saludar y señalar en 10 direcciones distintas: "el bar está por allá, los ascensores a la izquierda, el blog al fondo..." Su objetivo es que el visitante explore.
@@ -78,9 +78,9 @@ const BlogLandingPages: React.FC = () => {
             <li><strong>Permite la Hiper-Segmentación:</strong> Puedes crear una landing page diferente para cada tipo de cliente. Una para abogados, una para dentistas, una para startups. Hablarle directamente a cada segmento con un mensaje personalizado aumenta drásticamente la conexión y la conversión.</li>
           </ul>
           
-          <h2>Anatomía de una Landing Page que Vende: Los 10 Elementos Clave</h2>
+          <h2><Link to="/blog/anatomia-landing-page-convierte">La Anatomía de una Landing Page que Vende</Link>: Los 10 Elementos Clave</h2>
           <p>
-            Crear una landing page efectiva es seguir un plano. Estos son los 10 bloques que no te pueden faltar.
+            Crear una landing page efectiva es seguir un plano. Estos son los 10 bloques que no te pueden faltar y que debes asegurar para no cometer los <Link to="/blog/5-errores-landing-page">5 errores más comunes</Link>.
           </p>
           <ol>
             <li><strong>Título que Engancha:</strong> Claro, corto y enfocado en el beneficio principal. Debe responder a la pregunta: "¿Qué hay aquí para mí?".</li>
