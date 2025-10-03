@@ -164,7 +164,7 @@ const BlogArquitectoDigital: React.FC = () => {
           <p>El SEO Programático no se trata de "engañar a Google". Se trata de usar la lógica y los sistemas para satisfacer la demanda de información a una escala que es imposible de alcanzar manualmente. <strong>Se trata de dar respuestas ultra-específicas a miles de personas que buscan exactamente eso.</strong></p>
           <p>Tu mente, que ve estructuras y procesos en todo, es la herramienta perfecta para este trabajo. Estás construyendo un activo que, una vez lanzado, puede crecer y generar ingresos con una intervención mínima. Es la máxima expresión de "trabajar de forma inteligente, no dura".</p>
           <p><strong>El plano ya lo tienes. Es hora de empezar a construir.</strong></p>
-          <p>Si al leer esto sientes una oleada de emoción por empezar a estructurar datos y diseñar sistemas, empieza hoy mismo con la Fase 1. Si todavía tienes dudas sobre si este es tu camino ideal, vuelve al IA-Navegador y explora tus otros perfiles recomendados.</p>
+          <p>Este es solo uno de los muchos caminos para construir un negocio digital. Si este modelo de negocio resuena contigo, ¡es hora de empezar! Si aún tienes dudas o quieres explorar otras estrategias, en nuestra web encontrarás más recursos para guiarte.</p>
         </article>
         <div className="text-center mt-12 mb-8">
             <Link to="/" className="text-brand-accent hover:underline">
