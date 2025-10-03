@@ -68,7 +68,7 @@ const ManicuristLP: React.FC = () => {
       {/* Social Proof Section */}
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <img src="/manicurist-testimonial.png" alt="Carla R." className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
+          <img src="/manicurist-testimonial.png" alt="Testimonio de Carla R., cliente frecuente" className="w-24 h-24 object-cover rounded-full mx-auto mb-6" />
           <blockquote className="text-xl italic text-stone-700 mb-6 relative leading-relaxed">
             <p>"El nivel de detalle y cuidado es de otro mundo. Nunca había tenido unas uñas tan perfectas y duraderas. El ambiente del estudio es un oasis de calma. ¡100% recomendada!"</p>
           </blockquote>
