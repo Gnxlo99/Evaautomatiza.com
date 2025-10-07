@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const processSteps = [
+  {
+    step: '01',
+    title: 'Diagnóstico Rápido',
+    description: 'Responde una única pregunta para que entendamos tu principal objetivo de negocio. Menos de 10 segundos.',
+  },
+  {
+    step: '02',
+    title: 'Solución a Medida',
+    description: 'Te mostramos ejemplos de landing pages de alta conversión diseñadas específicamente para alcanzar metas como la tuya.',
+  },
+  {
+    step: '03',
+    title: 'Lanzamiento en 24h',
+    description: 'Si te gusta lo que ves, solicita una muestra de diseño gratuita. Tu nueva landing page, lista en 24 horas.',
+  }
+];
+
+
 const painPoints = [
   {
     id: 'autoridad',
@@ -34,43 +53,69 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-center p-4">
-      <div className="max-w-3xl w-full animate-fade-in">
-        <header className="mb-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-8 font-display leading-tight">
-            <span className="block">Tu negocio merece una web que funcione.</span>
-            <span className="block mt-2 text-indigo-300">¿Cuál es tu prioridad AHORA?</span>
+    <div className="min-h-screen p-4 sm:p-6 md:p-8">
+      <div className="max-w-4xl mx-auto">
+        <header className="text-center mb-16 animate-fade-in-down">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 font-display leading-tight">
+            Descubre la Landing Page <br /> Perfecta para tu Negocio
           </h1>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            No todas las páginas son iguales. Nuestro diagnóstico gratuito te muestra la estrategia y el diseño exacto que necesitas para convertir visitantes en clientes.
+          </p>
         </header>
 
-        <main className="mb-10">
-          <div className="space-y-4 max-w-lg mx-auto">
-            {painPoints.map((pain) => (
-              <button
-                key={pain.id}
-                onClick={() => handleSelect(pain.id)}
-                className={`w-full text-left p-6 border-2 rounded-lg transition-all duration-200 ${
-                  selectedPain === pain.id
-                    ? 'bg-brand-accent border-indigo-400 shadow-lg scale-105'
-                    : 'bg-brand-secondary border-gray-600 hover:bg-gray-600'
-                }`}
-              >
-                <h3 className="font-bold text-xl text-white">{pain.title}</h3>
-                <p className="text-gray-300">{pain.description}</p>
-              </button>
-            ))}
-          </div>
-        </main>
+        <main className="space-y-16">
+          <section className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-3xl font-bold text-center mb-10 text-indigo-300 font-display">
+              Nuestro Proceso en 3 Pasos
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 text-left">
+              {processSteps.map((step) => (
+                <div key={step.step} className="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                  <div className="flex items-baseline mb-4">
+                    <span className="text-4xl font-bold text-indigo-400 font-display">{step.step}</span>
+                    <h3 className="text-2xl font-bold text-white ml-3 font-display">{step.title}</h3>
+                  </div>
+                  <p className="text-gray-400">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        <footer className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <button
-            onClick={handleContinue}
-            disabled={!selectedPain}
-            className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-4 px-12 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
-          >
-            [ CONTINUAR ]
-          </button>
-        </footer>
+          <section className="bg-gray-800/50 border border-gray-700 rounded-2xl p-8 md:p-12 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <h2 className="text-3xl font-bold text-indigo-300 font-display mb-2">
+              Paso 1: Empecemos el Diagnóstico
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              ¿Cuál es tu prioridad AHORA?
+            </p>
+
+            <div className="space-y-4 max-w-lg mx-auto mb-8">
+              {painPoints.map((pain) => (
+                <button
+                  key={pain.id}
+                  onClick={() => handleSelect(pain.id)}
+                  className={`w-full text-left p-6 border-2 rounded-xl transition-all duration-300 transform ${
+                    selectedPain === pain.id
+                      ? 'bg-gray-700 border-indigo-500 shadow-lg scale-105'
+                      : 'bg-brand-secondary border-gray-700 hover:bg-gray-600 hover:border-gray-500'
+                  }`}
+                >
+                  <h3 className="font-bold text-xl text-white">{pain.title}</h3>
+                  <p className="text-gray-300">{pain.description}</p>
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={handleContinue}
+              disabled={!selectedPain}
+              className="inline-block bg-brand-accent hover:bg-brand-accent-hover text-white font-bold text-lg py-4 px-12 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:scale-100"
+            >
+              Ver mi Solución &rarr;
+            </button>
+          </section>
+        </main>
       </div>
     </div>
   );
