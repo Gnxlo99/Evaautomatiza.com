@@ -66,27 +66,38 @@ const Quiz: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <div className="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 transition-all duration-500">
-        <div className="w-full bg-gray-700 rounded-full h-2.5 mb-6">
-          <div 
-            className="bg-brand-accent h-2.5 rounded-full" 
-            style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}
-          ></div>
-        </div>
+      <div className="max-w-2xl w-full text-center">
+        <header className="mb-10 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 font-display leading-tight">
+                Diagnóstico Gratuito
+            </h1>
+            <p className="text-lg text-gray-300 max-w-xl mx-auto">
+                Responde 3 preguntas rápidas (toma menos de 30 segundos) y te mostraremos ejemplos de landing pages diseñadas específicamente para tu objetivo.
+            </p>
+        </header>
 
-        <div key={key} className="animate-fade-in">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{currentQuestion.text}</h2>
-          <div className="flex flex-col gap-4">
-            {currentQuestion.options.map((option, index) => (
-              <button
-                key={index}
-                onClick={() => handleAnswer(option)}
-                disabled={isAnswered}
-                className="w-full bg-brand-secondary hover:bg-brand-accent text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-left disabled:bg-brand-accent disabled:opacity-75"
-              >
-                {option.text}
-              </button>
-            ))}
+        <div className="w-full bg-gray-800 rounded-xl shadow-2xl p-6 md:p-8 transition-all duration-500">
+          <div className="w-full bg-gray-700 rounded-full h-2.5 mb-6">
+            <div 
+              className="bg-brand-accent h-2.5 rounded-full" 
+              style={{ width: `${progress}%`, transition: 'width 0.5s ease-in-out' }}
+            ></div>
+          </div>
+
+          <div key={key} className="animate-fade-in">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100 font-display">{currentQuestion.text}</h2>
+            <div className="flex flex-col gap-4">
+              {currentQuestion.options.map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer(option)}
+                  disabled={isAnswered}
+                  className="w-full bg-brand-secondary hover:bg-brand-accent text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 text-left disabled:bg-brand-accent disabled:opacity-75"
+                >
+                  {option.text}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
