@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import QuizIntroPage from './pages/HomePage';
@@ -40,7 +40,7 @@ import AgendaProPage from './pages/AgendaProPage';
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
@@ -78,12 +78,12 @@ const App: React.FC = () => {
             <Route path="/contacto" element={<ContactPage />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
             <Route path="/politica-de-cookies" element={<CookiePolicyPage />} />
-            <Route path="/agenda-pro" element={<AgendaProPage />} />
+            <Route path="/agenda" element={<AgendaProPage />} />
           </Routes>
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
