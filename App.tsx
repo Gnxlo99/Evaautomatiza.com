@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import QuizIntroPage from './pages/HomePage';
@@ -40,7 +40,7 @@ import AgendaProPage from './pages/AgendaProPage';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
@@ -83,7 +83,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
