@@ -7,7 +7,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 // 3. En el desplegable, selecciona la pestaña 'appointments'.
 // 4. En el otro desplegable, selecciona 'Valores separados por comas (.csv)'.
 // 5. Haz clic en 'Publicar' y copia el enlace generado aquí.
-const GOOGLE_SHEET_CSV_URL = 'YOUR_GOOGLE_SHEET_PUBLISHED_CSV_URL_HERE';
+const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1_mfGQviGJH8D1o4CMNCiEojYckDs7Zt7Reb30WV1YSc/pub?gid=1727940845&single=true&output=csv';
 const MAKE_WEBHOOK_URL = 'https://hook.eu2.make.com/r6d6fb09vbgp2h27e8la9etmr9gu3bx2';
 
 // Utility to parse CSV text into an array of objects
@@ -49,12 +49,16 @@ const AgendaProPage: React.FC = () => {
     const fetchBookedSlots = async () => {
       setIsLoading(true);
       setError(null);
+      // FIX: This check for a placeholder URL was commented out as the URL is now configured.
+      // This resolves a static analysis error where the comparison would always be false.
+      /*
       if (GOOGLE_SHEET_CSV_URL === 'YOUR_GOOGLE_SHEET_PUBLISHED_CSV_URL_HERE') {
         setError('Por favor, un desarrollador debe configurar la URL de Google Sheets en el código.');
         setIsLoading(false);
         setBookedSlots([]); 
         return;
       }
+      */
 
       try {
         const response = await fetch(`${GOOGLE_SHEET_CSV_URL}&t=${new Date().getTime()}`); // Bust cache
@@ -180,13 +184,16 @@ const AgendaProPage: React.FC = () => {
           )}
         </div>
         
+        {/* FIX: This check for a placeholder URL was commented out as the URL is now configured.
+            This resolves a static analysis error where the comparison would always be false. */}
+        {/*
         {GOOGLE_SHEET_CSV_URL === 'YOUR_GOOGLE_SHEET_PUBLISHED_CSV_URL_HERE' && (
             <div className="mt-8 bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-lg text-center">
                 <h3 className="font-bold">Modo de Demostración</h3>
                 <p>Para conectar tus horarios, un desarrollador debe reemplazar la URL <strong>GOOGLE_SHEET_CSV_URL</strong> en <code>pages/AgendaProPage.tsx</code> con la URL de tu Google Sheet publicado como CSV.</p>
             </div>
         )}
-
+        */}
       </div>
 
       {selectedSlot && (
