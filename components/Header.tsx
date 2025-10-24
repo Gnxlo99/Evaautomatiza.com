@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 style={({ isActive }) => isActive ? activeLinkStyle : undefined}
               >
-                Descubre tu Perfil
+                Diagnóstico Gratuito
               </NavLink>
               <NavLink
                 to="/blog"
@@ -47,13 +47,6 @@ const Header: React.FC = () => {
                 style={({ isActive }) => isActive ? activeLinkStyle : undefined}
               >
                 Sobre Eva
-              </NavLink>
-              <NavLink
-                to="/agenda"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                style={({ isActive }) => isActive ? activeLinkStyle : undefined}
-              >
-                Agenda
               </NavLink>
               <NavLink
                 to="/contacto"
