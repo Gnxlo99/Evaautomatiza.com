@@ -10,8 +10,11 @@ const Footer: React.FC = () => {
              <Link to="/" className="text-gray-400 hover:text-white transition-colors duration-300">
               Inicio
             </Link>
+            <Link to="/portfolio" className="text-gray-400 hover:text-white transition-colors duration-300">
+              Portafolio
+            </Link>
             <Link to="/comenzar" className="text-gray-400 hover:text-white transition-colors duration-300">
-              Diagnóstico Gratuito
+              Descubre tu Perfil
             </Link>
             <Link to="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">
               Blog
