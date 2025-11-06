@@ -1,8 +1,8 @@
 import React from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
+import QuizIntroPage from './pages/HomePage';
 import Quiz from './components/Quiz';
 import ProfilePage from './pages/ProfilePage';
 import BlogIndexPage from './pages/BlogIndexPage';
@@ -24,7 +24,7 @@ import BlogVendedorDigital from './pages/BlogVendedorDigital';
 import BlogInstagramClientes from './pages/BlogInstagramClientes';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import PrivacyPolicyPage from './src/pages/PrivacyPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import PortfolioLandingPage from './pages/PortfolioLandingPage';
 import MarketingConsultantLP from './pages/lp/MarketingConsultantLP';
@@ -35,67 +35,56 @@ import BusinessCoachLP from './pages/lp/BusinessCoachLP';
 import ManicuristLP from './pages/lp/ManicuristLP';
 import LawyerLP from './pages/lp/LawyerLP';
 import DentistLP from './pages/lp/DentistLP';
-import ResultPage from './pages/ResultPage';
-import GraciasPage from './pages/GraciasPage';
+import AIAgentLP from './pages/lp/AIAgentLP';
 
-const AppContent: React.FC = () => {
-  const location = useLocation();
-  const funnelRoutes = ['/comenzar', '/resultado', '/gracias'];
-  const isFunnelRoute = funnelRoutes.includes(location.pathname);
-
-  return (
-    <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
-      {!isFunnelRoute && <Header />}
-      <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<PortfolioLandingPage />} />
-          <Route path="/comenzar" element={<HomePage />} />
-          <Route path="/generador" element={<Quiz />} />
-          <Route path="/resultado" element={<ResultPage />} />
-          <Route path="/gracias" element={<GraciasPage />} />
-          <Route path="/perfil/:profileId" element={<ProfilePage />} />
-          <Route path="/blog" element={<BlogIndexPage />} />
-          <Route path="/blog/guia-dropping-services" element={<BlogDroppingServices />} />
-          <Route path="/blog/guia-curador-estrategico" element={<BlogCuradorEstrategico />} />
-          <Route path="/blog/guia-arquitecto-digital" element={<BlogArquitectoDigital />} />
-          <Route path="/blog/guia-conector-oportunidades" element={<BlogConectorOportunidades />} />
-          <Route path="/blog/guia-mercader-digital" element={<BlogMercaderDigital />} />
-          <Route path="/blog/guia-creador-soluciones" element={<BlogCreadorSoluciones />} />
-          <Route path="/blog/guia-editor-ia" element={<BlogEditorIA />} />
-          <Route path="/blog/guia-operador-ecommerce" element={<BlogOperadorEcommerce />} />
-          <Route path="/blog/guia-consultor-especialista" element={<BlogConsultorEspecialista />} />
-          <Route path="/blog/guia-moderador-comunidades" element={<BlogModeradorComunidades />} />
-          <Route path="/blog/landing-pages-convierten" element={<BlogLandingPages />} />
-          <Route path="/blog/5-errores-landing-page" element={<BlogErroresLandingPage />} />
-          <Route path="/blog/landing-page-vs-sitio-web" element={<BlogLpVsWeb />} />
-          <Route path="/blog/anatomia-landing-page-convierte" element={<BlogAnatomiaLandingPage />} />
-          <Route path="/blog/landing-page-vendedor-digital" element={<BlogVendedorDigital />} />
-          <Route path="/blog/instagram-clientes-landing-page" element={<BlogInstagramClientes />} />
-          <Route path="/portfolio/marketing-consultant" element={<MarketingConsultantLP />} />
-          <Route path="/portfolio/gym-trainer" element={<GymTrainerLP />} />
-          <Route path="/portfolio/saas" element={<SaaSLP />} />
-          <Route path="/portfolio/real-estate" element={<RealEstateLP />} />
-          <Route path="/portfolio/business-coach" element={<BusinessCoachLP />} />
-          <Route path="/portfolio/manicurist" element={<ManicuristLP />} />
-          <Route path="/portfolio/lawyer" element={<LawyerLP />} />
-          <Route path="/portfolio/dentist" element={<DentistLP />} />
-          <Route path="/sobre" element={<AboutPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
-          <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
-          <Route path="/politica-de-cookies" element={<CookiePolicyPage />} />
-        </Routes>
-      </main>
-      {!isFunnelRoute && <Footer />}
-    </div>
-  );
-};
 
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <AppContent />
+      <div className="bg-brand-dark text-brand-light min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<AIAgentLP />} />
+            <Route path="/portfolio" element={<PortfolioLandingPage />} />
+            <Route path="/comenzar" element={<QuizIntroPage />} />
+            <Route path="/generador" element={<Quiz />} />
+            <Route path="/perfil/:profileId" element={<ProfilePage />} />
+            <Route path="/blog" element={<BlogIndexPage />} />
+            <Route path="/blog/guia-dropping-services" element={<BlogDroppingServices />} />
+            <Route path="/blog/guia-curador-estrategico" element={<BlogCuradorEstrategico />} />
+            <Route path="/blog/guia-arquitecto-digital" element={<BlogArquitectoDigital />} />
+            <Route path="/blog/guia-conector-oportunidades" element={<BlogConectorOportunidades />} />
+            <Route path="/blog/guia-mercader-digital" element={<BlogMercaderDigital />} />
+            <Route path="/blog/guia-creador-soluciones" element={<BlogCreadorSoluciones />} />
+            <Route path="/blog/guia-editor-ia" element={<BlogEditorIA />} />
+            <Route path="/blog/guia-operador-ecommerce" element={<BlogOperadorEcommerce />} />
+            <Route path="/blog/guia-consultor-especialista" element={<BlogConsultorEspecialista />} />
+            <Route path="/blog/guia-moderador-comunidades" element={<BlogModeradorComunidades />} />
+            <Route path="/blog/landing-pages-convierten" element={<BlogLandingPages />} />
+            <Route path="/blog/5-errores-landing-page" element={<BlogErroresLandingPage />} />
+            <Route path="/blog/landing-page-vs-sitio-web" element={<BlogLpVsWeb />} />
+            <Route path="/blog/anatomia-landing-page-convierte" element={<BlogAnatomiaLandingPage />} />
+            <Route path="/blog/landing-page-vendedor-digital" element={<BlogVendedorDigital />} />
+            <Route path="/blog/instagram-clientes-landing-page" element={<BlogInstagramClientes />} />
+            <Route path="/portfolio/marketing-consultant" element={<MarketingConsultantLP />} />
+            <Route path="/portfolio/gym-trainer" element={<GymTrainerLP />} />
+            <Route path="/portfolio/saas" element={<SaaSLP />} />
+            <Route path="/portfolio/real-estate" element={<RealEstateLP />} />
+            <Route path="/portfolio/business-coach" element={<BusinessCoachLP />} />
+            <Route path="/portfolio/manicurist" element={<ManicuristLP />} />
+            <Route path="/portfolio/lawyer" element={<LawyerLP />} />
+            <Route path="/portfolio/dentist" element={<DentistLP />} />
+            <Route path="/sobre" element={<AboutPage />} />
+            <Route path="/contacto" element={<ContactPage />} />
+            <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />} />
+            <Route path="/politica-de-cookies" element={<CookiePolicyPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </HashRouter>
   );
-}
+};
 
 export default App;
