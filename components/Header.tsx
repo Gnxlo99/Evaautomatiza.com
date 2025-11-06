@@ -28,11 +28,18 @@ const Header: React.FC = () => {
                 Inicio
               </NavLink>
               <NavLink
+                to="/portfolio"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                style={({ isActive }) => isActive ? activeLinkStyle : undefined}
+              >
+                Portafolio
+              </NavLink>
+              <NavLink
                 to="/comenzar"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 style={({ isActive }) => isActive ? activeLinkStyle : undefined}
               >
-                Diagnóstico Gratuito
+                Descubre tu Perfil
               </NavLink>
               <NavLink
                 to="/blog"
