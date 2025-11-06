@@ -186,8 +186,8 @@ const ProfilePage: React.FC = () => {
           
         </article>
          <div className="text-center mt-12 mb-8">
-            <Link to="/" className="text-brand-accent hover:underline">
-                &larr; Volver al Inicio
+            <Link to="/comenzar" className="text-brand-accent hover:underline">
+                &larr; Volver a hacer el test
             </Link>
         </div>
       </div>
