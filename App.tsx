@@ -24,7 +24,7 @@ import BlogVendedorDigital from './pages/BlogVendedorDigital';
 import BlogInstagramClientes from './pages/BlogInstagramClientes';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import PrivacyPolicyPage from './src/pages/PrivacyPolicyPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import PortfolioLandingPage from './pages/PortfolioLandingPage';
 import MarketingConsultantLP from './pages/lp/MarketingConsultantLP';
