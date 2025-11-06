@@ -6,9 +6,16 @@ const AIAgentLP: React.FC = () => {
     <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
   );
 
-  const [formData, setFormData] = useState({ name: '', email: '', website: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<{ status: 'idle' | 'success' | 'error'; message: string }>({ status: 'idle', message: '' });
+
+  const handleScrollToCta = () => {
+    const ctaSection = document.getElementById('cta');
+    if (ctaSection) {
+      ctaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +39,7 @@ const AIAgentLP: React.FC = () => {
     })
     .then(() => {
         setFormStatus({ status: 'success', message: '¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto para agendar la demo.' });
-        setFormData({ name: '', email: '', website: '' });
+        setFormData({ name: '', email: '', phone: '' });
     })
     .catch(error => {
         setFormStatus({ status: 'error', message: 'Algo salió mal. Por favor, intenta de nuevo.' });
@@ -58,9 +65,12 @@ const AIAgentLP: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
             Tu Agente de Ventas a medida en WhatsApp e Instagram. 100% configurado, gestionado y optimizado por expertos (DFY).
           </p>
-          <a href="#cta" className="inline-block bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105">
+          <button 
+            onClick={handleScrollToCta}
+            className="inline-block bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105"
+          >
             Agenda una Demo de 15 Minutos
-          </a>
+          </button>
         </div>
       </header>
       
@@ -176,9 +186,12 @@ const AIAgentLP: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl font-bold font-display mb-6">¿Listo para transformar la manera en que vendés online?</h2>
             <p className="text-xl opacity-90 mb-8">Únete a las PyMEs que ya están respondiendo sus conversaciones con IA y multiplicando sus ventas.</p>
-             <a href="#cta" className="inline-block bg-white hover:bg-slate-100 text-blue-600 font-bold text-lg py-4 px-10 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+             <button
+                onClick={handleScrollToCta}
+                className="inline-block bg-white hover:bg-slate-100 text-blue-600 font-bold text-lg py-4 px-10 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+             >
                 Agenda tu Demo Ahora
-            </a>
+            </button>
         </div>
       </section>
 
@@ -237,8 +250,8 @@ const AIAgentLP: React.FC = () => {
                     <input type="email" id="email-eva" name="email" required value={formData.email} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
                   </div>
                   <div>
-                    <label htmlFor="website-eva" className="block text-sm font-semibold text-gray-700 mb-2">Sitio Web o Instagram de tu Negocio</label>
-                    <input type="text" id="website-eva" name="website" required placeholder="Ej: https://instagram.com/tu_negocio" value={formData.website} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                    <label htmlFor="phone-eva" className="block text-sm font-semibold text-gray-700 mb-2">Número de Contacto</label>
+                    <input type="tel" id="phone-eva" name="phone" required placeholder="Ej: +54 9 11 12345678" value={formData.phone} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
                   </div>
                   <div>
                     <button type="submit" disabled={isSubmitting} className="w-full bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105 disabled:bg-blue-300 disabled:cursor-not-allowed">
