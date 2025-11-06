@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AIAgentLP: React.FC = () => {
     
   const CheckIcon = () => (
     <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
   );
+
+  const [formData, setFormData] = useState({ name: '', email: '', website: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState<{ status: 'idle' | 'success' | 'error'; message: string }>({ status: 'idle', message: '' });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const encode = (data: { [key: string]: string }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormStatus({ status: 'idle', message: '' });
+
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "eva-ia-demo", ...formData })
+    })
+    .then(() => {
+        setFormStatus({ status: 'success', message: '¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto para agendar la demo.' });
+        setFormData({ name: '', email: '', website: '' });
+    })
+    .catch(error => {
+        setFormStatus({ status: 'error', message: 'Algo salió mal. Por favor, intenta de nuevo.' });
+    })
+    .finally(() => setIsSubmitting(false));
+  };
+
 
   return (
     <div className="bg-white text-gray-800 font-sans" style={{'--accent-color-dark': '#2563EB', '--accent-color-light': '#38BDF8'} as React.CSSProperties}>
@@ -91,9 +126,9 @@ const AIAgentLP: React.FC = () => {
           <div>
             <h2 className="text-4xl font-bold font-display text-gray-900 mb-6">EVA IA no es una herramienta, es tu nuevo empleado más eficiente.</h2>
             <div className="space-y-6">
-                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div><div><h4 className="text-xl font-bold">Experto a Medida</h4><p className="text-gray-600">Entrenamos a tu agente IA con la personalidad y el conocimiento de tu negocio. Es como clonar a tu mejor vendedor, pero hacerlo infalible.</p></div></div>
-                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg></div><div><h4 className="text-xl font-bold">Filtro Humano Inteligente</h4><p className="text-gray-600">Tu equipo deja de perder tiempo. La IA gestiona el 90% de las conversaciones y solo deriva a un humano cuando el cliente está listo para comprar.</p></div></div>
-                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><div><h4 className="text-xl font-bold">Gestión Completa (DFY)</h4><p className="text-gray-600">Olvídate de la complejidad técnica. Nosotros nos encargamos de las APIs, la automatización y el mantenimiento. Tú solo ves los resultados.</p></div></div>
+                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg></div><div><h4 className="text-xl font-bold">Experto a Medida</h4><p className="text-gray-600">Entrenamos a tu agente IA con la personalidad y el conocimiento de tu negocio. Es como clonar a tu mejor vendedor, pero hacerlo infalible.</p></div></div>
+                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg></div><div><h4 className="text-xl font-bold">Filtro Humano Inteligente</h4><p className="text-gray-600">Tu equipo deja de perder tiempo. La IA gestiona el 90% de las conversaciones y solo deriva a un humano cuando el cliente está listo para comprar.</p></div></div>
+                <div className="flex items-start"><div className="w-12 h-12 flex-shrink-0 mr-4 flex items-center justify-center rounded-full bg-blue-100 text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><div><h4 className="text-xl font-bold">Gestión Completa (DFY)</h4><p className="text-gray-600">Olvídate de la complejidad técnica. Nosotros nos encargamos de las APIs, la automatización y el mantenimiento. Tú solo ves los resultados.</p></div></div>
             </div>
           </div>
           <div className="bg-white p-2 rounded-xl shadow-2xl border border-slate-200">
@@ -180,29 +215,40 @@ const AIAgentLP: React.FC = () => {
           <p className="text-lg text-gray-600 mb-8">Completa el formulario y te contactaremos para agendar una demostración en vivo y sin compromiso.</p>
           
           <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200 text-left">
-            <form name="eva-ia-demo" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-              <input type="hidden" name="form-name" value="eva-ia-demo" />
-              <p className="hidden"><label>No llenar si eres humano: <input name="bot-field" /></label></p>
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="name-eva" className="block text-sm font-semibold text-gray-700 mb-2">Nombre</label>
-                  <input type="text" id="name-eva" name="name" required className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
+            {formStatus.status === 'success' ? (
+              <div className="text-center py-10">
+                <div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
-                <div>
-                  <label htmlFor="email-eva" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                  <input type="email" id="email-eva" name="email" required className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
-                </div>
-                <div>
-                  <label htmlFor="website-eva" className="block text-sm font-semibold text-gray-700 mb-2">Sitio Web o Instagram de tu Negocio</label>
-                  <input type="text" id="website-eva" name="website" required placeholder="Ej: https://instagram.com/tu_negocio" className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
-                </div>
-                <div>
-                  <button type="submit" className="w-full bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105">
-                    Agendar mi Demo
-                  </button>
-                </div>
+                <h3 className="text-2xl font-bold font-display mb-2 text-green-700">¡Solicitud Enviada!</h3>
+                <p className="text-gray-700">{formStatus.message}</p>
               </div>
-            </form>
+            ) : (
+              <form name="eva-ia-demo" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="eva-ia-demo" />
+                <p className="hidden"><label>No llenar si eres humano: <input name="bot-field" /></label></p>
+                <div className="space-y-6">
+                  <div>
+                    <label htmlFor="name-eva" className="block text-sm font-semibold text-gray-700 mb-2">Nombre</label>
+                    <input type="text" id="name-eva" name="name" required value={formData.name} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                  </div>
+                  <div>
+                    <label htmlFor="email-eva" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email-eva" name="email" required value={formData.email} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                  </div>
+                  <div>
+                    <label htmlFor="website-eva" className="block text-sm font-semibold text-gray-700 mb-2">Sitio Web o Instagram de tu Negocio</label>
+                    <input type="text" id="website-eva" name="website" required placeholder="Ej: https://instagram.com/tu_negocio" value={formData.website} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                  </div>
+                  <div>
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105 disabled:bg-blue-300 disabled:cursor-not-allowed">
+                      {isSubmitting ? 'Enviando...' : 'Agendar mi Demo'}
+                    </button>
+                  </div>
+                  {formStatus.status === 'error' && <p className="text-red-500 text-center">{formStatus.message}</p>}
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>
