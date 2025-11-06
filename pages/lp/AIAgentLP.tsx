@@ -147,34 +147,62 @@ const AIAgentLP: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Pricing & Form Section */}
       <section id="cta" className="py-20 px-4 bg-slate-50">
-        <div className="max-w-md mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-4xl font-bold font-display text-gray-900 mb-4">Simple y Transparente</h2>
           <p className="text-lg text-gray-600 mb-10">Un único plan con todo incluido para que te enfoques en crecer.</p>
-          <div className="bg-white rounded-2xl shadow-2xl p-8 border-2 border-[var(--accent-color-dark)] relative">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border-2 border-[var(--accent-color-dark)] relative mb-16">
             <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[var(--accent-color-dark)] text-white font-bold py-1 px-4 rounded-full uppercase text-sm tracking-wider">Plan Único</div>
-            <div className="my-8">
-                <p className="text-gray-600 font-semibold">Instalación (Pago Único)</p>
-                <p className="text-5xl font-extrabold text-gray-900 mt-2">AR$50.000</p>
+            <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-center md:text-right md:border-r md:pr-8">
+                    <p className="text-gray-600 font-semibold">Instalación (Pago Único)</p>
+                    <p className="text-5xl font-extrabold text-gray-900 mt-2">AR$50.000</p>
+                </div>
+                <div className="text-center md:text-left">
+                    <p className="text-gray-600 font-semibold">Servicio Mensual (DFY)</p>
+                    <p className="text-5xl font-extrabold text-gray-900 mt-2">$100 <span className="text-2xl font-bold">USD</span></p>
+                    <p className="text-gray-500 text-sm mt-1">/ mes</p>
+                </div>
             </div>
-            <hr className="border-slate-200" />
-            <div className="my-8">
-                <p className="text-gray-600 font-semibold">Servicio Mensual (DFY)</p>
-                <p className="text-5xl font-extrabold text-gray-900 mt-2">$100 <span className="text-2xl font-bold">USD</span></p>
-                <p className="text-gray-500 text-sm mt-1">/ mes</p>
-            </div>
-            <ul className="text-left space-y-3 text-gray-700 mb-10">
+            <hr className="my-8 border-slate-200" />
+            <ul className="text-left space-y-3 text-gray-700 mb-8">
                 <li className="flex items-center"><CheckIcon /><span>Entrenamiento y personalización del Agente IA.</span></li>
                 <li className="flex items-center"><CheckIcon /><span>Integración con WhatsApp e Instagram.</span></li>
                 <li className="flex items-center"><CheckIcon /><span>Hasta 2.000 consultas/mes incluidas.</span></li>
                 <li className="flex items-center"><CheckIcon /><span>Mantenimiento y optimización por expertos.</span></li>
                 <li className="flex items-center"><CheckIcon /><span>Soporte técnico prioritario.</span></li>
             </ul>
-            <a href="#cta" className="block w-full bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105">
-              Comienza a Vender 24/7
-            </a>
             <p className="text-xs text-gray-500 mt-6">Nota: Los costos por conversación de Meta (WhatsApp) se facturan por separado de forma transparente.</p>
+          </div>
+          
+          <h3 className="text-3xl font-bold font-display text-gray-900 mb-4">Solicita tu Demo de 15 Minutos</h3>
+          <p className="text-lg text-gray-600 mb-8">Completa el formulario y te contactaremos para agendar una demostración en vivo y sin compromiso.</p>
+          
+          <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200 text-left">
+            <form name="eva-ia-demo" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="eva-ia-demo" />
+              <p className="hidden"><label>No llenar si eres humano: <input name="bot-field" /></label></p>
+              <div className="space-y-6">
+                <div>
+                  <label htmlFor="name-eva" className="block text-sm font-semibold text-gray-700 mb-2">Nombre</label>
+                  <input type="text" id="name-eva" name="name" required className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
+                </div>
+                <div>
+                  <label htmlFor="email-eva" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                  <input type="email" id="email-eva" name="email" required className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
+                </div>
+                <div>
+                  <label htmlFor="website-eva" className="block text-sm font-semibold text-gray-700 mb-2">Sitio Web o Instagram de tu Negocio</label>
+                  <input type="text" id="website-eva" name="website" required placeholder="Ej: https://instagram.com/tu_negocio" className="w-full bg-slate-50 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow" />
+                </div>
+                <div>
+                  <button type="submit" className="w-full bg-[var(--accent-color-dark)] hover:bg-blue-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-blue-500/30 transform transition-transform duration-300 hover:scale-105">
+                    Agendar mi Demo
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
