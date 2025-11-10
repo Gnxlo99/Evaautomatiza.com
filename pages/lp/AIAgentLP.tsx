@@ -63,7 +63,7 @@ const AIAgentLP: React.FC = () => {
             EVA IA atiende, califica y agenda por vos. 24/7.
           </p>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Tu nuevo Agente de Ventas en WhatsApp e Instagram. 100% configurado y gestionado por nosotros para que solo te ocupes de cerrar las ventas que importan.
+            Tu nuevo Agente de Ventas para WhatsApp. 100% configurado y gestionado por nosotros para que solo te ocupes de cerrar las ventas que importan.
           </p>
           <button 
             onClick={handleScrollToCta}
@@ -102,7 +102,7 @@ const AIAgentLP: React.FC = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold font-display text-gray-900 mb-12">Dejalo en nuestras manos. Tu IA lista en 3 pasos.</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center"><div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg></div><h3 className="text-2xl font-bold font-display text-gray-900 mb-2">1. Conectamos tus Canales</h3><p className="text-gray-600">Integramos a EVA IA en tu WhatsApp e Instagram. Vos no tocás nada técnico.</p></div>
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center"><div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg></div><h3 className="text-2xl font-bold font-display text-gray-900 mb-2">1. Conectamos tu Canal</h3><p className="text-gray-600">Integramos a EVA IA en tu WhatsApp. Vos no tocás nada técnico.</p></div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center"><div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><h3 className="text-2xl font-bold font-display text-gray-900 mb-2">2. La Entrenamos por Vos</h3><p className="text-gray-600">Nos das tu información de productos y servicios, y la entrenamos para que responda como un experto de tu equipo.</p></div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-200 text-center"><div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg></div><h3 className="text-2xl font-bold font-display text-gray-900 mb-2">3. Recibís Leads y Ventas</h3><p className="text-gray-600">Tu equipo solo interviene para cerrar ventas, mientras EVA IA filtra y califica leads 24/7 en piloto automático.</p></div>
           </div>
@@ -143,8 +143,7 @@ const AIAgentLP: React.FC = () => {
                     <p className="text-5xl font-extrabold text-gray-900 my-4">$55 <span className="text-xl font-semibold text-gray-500">USD/mes</span></p>
                     <ul className="text-left space-y-3 text-gray-700 mb-8">
                         <li className="flex items-center"><CheckIcon /><span>Hasta 2.000 conversaciones/mes</span></li>
-                        <li className="flex items-center"><CheckIcon /><span>Integración WhatsApp e <b>Instagram</b></span></li>
-                        <li className="flex items-center"><CheckIcon /><span><b>Integración con Calendario y CRM</b></span></li>
+                        <li className="flex items-center"><CheckIcon /><span>Integración WhatsApp</span></li>
                         <li className="flex items-center"><CheckIcon /><span>Soporte <b>prioritario</b></span></li>
                     </ul>
                     <button onClick={handleScrollToCta} className="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/30">Empezar Prueba Gratis</button>
