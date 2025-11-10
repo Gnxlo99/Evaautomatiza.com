@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 
+// Componente auxiliar para las burbujas de chat
+const ChatMessage = ({ message, isUser, time }: { message: string, isUser: boolean, time: string }) => (
+    <div className={`flex items-end ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
+        <div className={`rounded-lg px-3 py-2 max-w-[80%] ${isUser ? 'bg-emerald-200 text-gray-800' : 'bg-white text-gray-800 shadow-sm'}`}>
+            <p className="text-sm">{message}</p>
+            <p className={`text-xs mt-1 text-right ${isUser ? 'text-emerald-700/80' : 'text-gray-400'}`}>{time}</p>
+        </div>
+    </div>
+);
+
+
 const AIAgentLP: React.FC = () => {
     
   const CheckIcon = () => (
@@ -109,14 +120,62 @@ const AIAgentLP: React.FC = () => {
         </div>
       </section>
 
+      {/* How it Works / Chat Example Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="text-center lg:text-left">
+            <h2 className="text-4xl font-bold font-display text-gray-900 mb-6">Mirá a EVA en Acción</h2>
+            <p className="text-lg text-gray-600 mb-4">
+              EVA no es un simple chatbot. Es un agente inteligente que entiende la intención de tus clientes, responde sus dudas frecuentes y filtra las conversaciones para que tu equipo solo intervenga cuando es realmente necesario.
+            </p>
+            <p className="text-lg text-gray-600">
+              Así es como convierte una simple consulta nocturna en un lead calificado y agendado, listo para que lo cierres al día siguiente.
+            </p>
+          </div>
+          
+          {/* Phone Mockup */}
+          <div className="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+            <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+            <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+            <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+            <div className="rounded-[2rem] overflow-hidden w-full h-full bg-emerald-50" style={{backgroundImage: "url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg')", backgroundSize: 'cover', backgroundPosition: 'center'}}>
+              <div className="absolute inset-0 bg-black/10"></div>
+              {/* Chat Header */}
+              <div className="relative bg-emerald-800 text-white p-3 flex items-center shadow-md z-10">
+                <div className="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-xl mr-3 border-2 border-white/50">
+                  E
+                </div>
+                <div>
+                  <p className="font-bold">EVA IA (Tu Empresa)</p>
+                  <p className="text-xs text-emerald-200">en línea</p>
+                </div>
+              </div>
+
+              {/* Chat Body */}
+              <div className="relative p-4 h-[calc(100%-60px)] overflow-y-auto z-10">
+                  <ChatMessage message="Hola, me pasas info sobre el servicio de diseño web?" isUser={true} time="10:32 PM" />
+                  <ChatMessage message="¡Hola! Claro. Soy EVA, la asistente virtual. Para darte la info correcta, ¿buscás crear una web desde cero o rediseñar una existente?" isUser={false} time="10:32 PM" />
+                  <ChatMessage message="Desde cero. Quiero saber precios." isUser={true} time="10:33 PM" />
+                  <ChatMessage message="¡Perfecto! Nuestros proyectos de diseño web a medida comienzan en AR$ 250.000. Incluyen todo lo que necesitás para lanzar tu negocio online. ¿Te gustaría agendar una llamada gratuita de 15 minutos para que un especialista te asesore sin compromiso?" isUser={false} time="10:33 PM" />
+                  <ChatMessage message="Dale, me interesa." isUser={true} time="10:34 PM" />
+                  <ChatMessage message="Genial. ¿Qué día y horario te quedaría cómodo la próxima semana?" isUser={false} time="10:34 PM" />
+                  <ChatMessage message="El martes por la mañana puedo" isUser={true} time="10:35 PM" />
+                  <ChatMessage message="¡Agendado! Martes a las 10 AM. Recibirás una confirmación por email. ¡Gracias por tu consulta!" isUser={false} time="10:35 PM" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 bg-white">
+      <section id="pricing" className="py-20 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl font-bold font-display text-gray-900 mb-4">Planes para cada Etapa de tu Negocio</h2>
             <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Empezá gratis. Sin tarjeta de crédito. Cancelá cuando quieras.</p>
             
             <div className="text-center mb-12">
-                <div className="bg-slate-100 p-4 rounded-xl inline-block">
+                <div className="bg-white p-4 rounded-xl inline-block border border-slate-200 shadow-sm">
                     <p className="font-semibold text-gray-800">Instalación y Entrenamiento (Pago Único)</p>
                     <p className="text-4xl font-extrabold text-gray-900 font-display mt-1">AR$ 50.000</p>
                 </div>
@@ -125,7 +184,7 @@ const AIAgentLP: React.FC = () => {
             <div className="grid lg:grid-cols-3 gap-8 items-center">
                 
                 {/* Starter Plan */}
-                <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <div className="bg-white p-8 rounded-2xl border border-slate-200">
                     <h3 className="text-2xl font-bold font-display text-indigo-600">Starter</h3>
                     <p className="text-5xl font-extrabold text-gray-900 my-4">$35 <span className="text-xl font-semibold text-gray-500">USD/mes</span></p>
                     <ul className="text-left space-y-3 text-gray-700 mb-8">
@@ -137,7 +196,7 @@ const AIAgentLP: React.FC = () => {
                 </div>
 
                 {/* Pro Plan */}
-                <div className="bg-white p-8 rounded-2xl border-2 border-indigo-600 shadow-2xl relative">
+                <div className="bg-white p-10 rounded-2xl border-2 border-indigo-600 shadow-2xl relative">
                     <div className="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white font-bold py-1 px-4 rounded-full uppercase text-sm tracking-wider">Más Popular</div>
                     <h3 className="text-2xl font-bold font-display text-indigo-600">Pro</h3>
                     <p className="text-5xl font-extrabold text-gray-900 my-4">$55 <span className="text-xl font-semibold text-gray-500">USD/mes</span></p>
@@ -150,7 +209,7 @@ const AIAgentLP: React.FC = () => {
                 </div>
 
                 {/* Premium Plan */}
-                <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <div className="bg-white p-8 rounded-2xl border border-slate-200">
                     <h3 className="text-2xl font-bold font-display text-indigo-600">Premium</h3>
                      <p className="text-5xl font-extrabold text-gray-900 my-4">Desde $99 <span className="text-xl font-semibold text-gray-500">USD/mes</span></p>
                     <ul className="text-left space-y-3 text-gray-700 mb-8">
@@ -168,12 +227,12 @@ const AIAgentLP: React.FC = () => {
       </section>
 
       {/* CTA Form Section */}
-      <section id="cta" className="py-20 px-4 bg-slate-50">
+      <section id="cta" className="py-20 px-4 bg-white">
           <div className="max-w-lg mx-auto">
             <h3 className="text-3xl font-bold font-display text-gray-900 mb-4 text-center">Empezá tu Prueba Gratuita de 5 Días</h3>
             <p className="text-lg text-gray-600 mb-8 text-center">Completá el formulario y te contactaremos para configurar tu agente IA. Sin compromiso.</p>
             
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200 text-left">
+            <div className="bg-slate-50 rounded-2xl shadow-xl p-8 border border-slate-200 text-left">
               {formStatus.status === 'success' ? (
                 <div className="text-center py-10">
                   <div className="mx-auto mb-4 w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-600">
@@ -189,15 +248,15 @@ const AIAgentLP: React.FC = () => {
                   <div className="space-y-6">
                     <div>
                       <label htmlFor="name-eva" className="block text-sm font-semibold text-gray-700 mb-2">Nombre</label>
-                      <input type="text" id="name-eva" name="name" required value={formData.name} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-100 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                      <input type="text" id="name-eva" name="name" required value={formData.name} onChange={handleChange} disabled={isSubmitting} className="w-full bg-white border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
                     </div>
                     <div>
                       <label htmlFor="email-eva" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                      <input type="email" id="email-eva" name="email" required value={formData.email} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-100 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                      <input type="email" id="email-eva" name="email" required value={formData.email} onChange={handleChange} disabled={isSubmitting} className="w-full bg-white border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
                     </div>
                     <div>
                       <label htmlFor="phone-eva" className="block text-sm font-semibold text-gray-700 mb-2">Número de Contacto</label>
-                      <input type="tel" id="phone-eva" name="phone" required placeholder="Ej: +54 9 11 12345678" value={formData.phone} onChange={handleChange} disabled={isSubmitting} className="w-full bg-slate-100 border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
+                      <input type="tel" id="phone-eva" name="phone" required placeholder="Ej: +54 9 11 12345678" value={formData.phone} onChange={handleChange} disabled={isSubmitting} className="w-full bg-white border border-slate-300 text-gray-900 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--accent-color-dark)] transition-shadow disabled:opacity-50" />
                     </div>
                     <div>
                       <button type="submit" disabled={isSubmitting} className="w-full bg-[var(--accent-color-dark)] hover:bg-indigo-700 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg shadow-indigo-500/30 transform transition-transform duration-300 hover:scale-105 disabled:bg-indigo-300 disabled:cursor-not-allowed">
